@@ -7,3 +7,6 @@ Personal Site for Jordan Tranchina
 
 
 -   making additional changes 1
+
+
+-   Making changes in atom for github hosted personal site
