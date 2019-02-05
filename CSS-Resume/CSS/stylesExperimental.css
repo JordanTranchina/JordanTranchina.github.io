@@ -1,0 +1,208 @@
+/* Color Pallete-------------------
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EDF2F4 - blue/white
+#EE2329 -red
+*/
+
+/* Fonts--------------------------- */
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Hairline.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Hairline-Italic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Thin-Italic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-ExtraLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-ExtraLight-Italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Light-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Regular-Italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Bold-Italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Black.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Black-Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-UltraBlack.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-UltraBlack-Italic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+
+/* Global Styles--------------------------- */
+body {
+  background: #181818;
+  color: #FFFFFF;
+  font-family: 'Interstate', Helvetica, sans-serif;
+}
+
+
+
+/* Header & Footer Styles------------------- */
+h1 {
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 400;
+}
+h2 {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+}
+h3, p, ul {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+
+/* Work Experience Styles--------------------------- */
+
+
+
+/* Education Styles--------------------------- */
+
+
+
+/* Skills Styles--------------------------- */
+#skills_list {
+  color: magenta;
+}
+
+/* List Styles--------------------------- */
+ul {
+  list-style: none;
+}
+li {
+    margin-bottom: 10px;
+}
+/* Link Styles--------------------------- */
+a{
+  color: #8D99AE;
+}
+a:hover{
+  color: #EDF2F4;
+}
+.nav {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  /* setting up hover fill linear left */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient( to right, #FFFFFF 50%, #6F6F6F 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  /* On OffHover, reverse hover fill linear left*/
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* setting up underline linear left  */
+  display: inline-block;
+}
+.nav:hover {
+  /* OnHover, execute hover fill linear left */
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-position: 0%;
+}
+/* adding in underline for underline linear left*/
+.nav::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+/* OnHover, execute underline linear left */
+.nav:hover::after {
+    width: 100%;
+    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/* Social Icon Styles--------------------------- */
+.icon_social {
+  width: 24px;
+  height: 24px;
+  fill: #6F6F6F;
+  transition: fill 1s;
+}
+.icon_social:hover {
+  width: 24px;
+  height: 24px;
+  fill: #FFFFFF;
+}
