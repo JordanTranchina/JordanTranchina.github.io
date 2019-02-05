@@ -190,7 +190,7 @@ a:hover{
 }
 /* OnHover, execute underline linear left */
 .nav:hover::after {
-    width: 100%;
+    width: 1.2rem;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
