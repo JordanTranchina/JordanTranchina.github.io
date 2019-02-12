@@ -113,7 +113,7 @@ body {
 
 
 
-/* Header & Footer Styles------------------- */
+/* Text Styles------------------- */
 h1 {
   font-family: inherit;
   font-size: 3rem;
@@ -129,20 +129,12 @@ h3, p, ul {
   font-size: 1rem;
   font-weight: 300;
 }
-
-
-/* Work Experience Styles--------------------------- */
-
-
-
-/* Education Styles--------------------------- */
-
-
-
-/* Skills Styles--------------------------- */
-#skills_list {
-  color: magenta;
+b {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
+
 
 /* List Styles--------------------------- */
 ul {
