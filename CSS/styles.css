@@ -143,6 +143,30 @@ ul {
 li {
     margin-bottom: 10px;
 }
+
+/* Skill Bar Styles------------------- */
+.rear_skill_bar {
+  width: 225px;
+  background-color: #929292; /* Background bar color */
+  border-radius: 100px;
+}
+.front_skill_bar {
+  padding: 10px; /* Add some padding */
+  background-color: #4E4E4E; /* Foreground bar color */
+  border-radius: 100px;
+}
+.sketch {width: 68%;}
+.flinto {width: 68%;}
+.invision {width: 60%;}
+.mural {width: 60%;}
+.powerpoint {width: 77%;}
+.excel {width: 77%;}
+.word {width: 60%;}
+.html {width: 34%;}
+.css {width: 34%;}
+.javascript {width: 34%;}
+
+
 /* Link Styles--------------------------- */
 a{
   color: #8D99AE;
