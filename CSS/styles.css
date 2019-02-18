@@ -141,8 +141,26 @@ ul {
   list-style: none;
 }
 li {
-    margin-bottom: 10px;
+  margin-bottom: 32px;
 }
+
+
+/* Skill Bar Styles------------------- */
+.work_box {
+  /* box style*/
+  width: 316px;
+  height: 186px;
+  background-color: #9a9a9a;
+
+  /* internal box text style */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
 
 /* Skill Bar Styles------------------- */
 .rear_skill_bar {
