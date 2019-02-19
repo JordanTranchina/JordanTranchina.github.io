@@ -141,8 +141,76 @@ ul {
   list-style: none;
 }
 li {
-    margin-bottom: 10px;
+  margin-bottom: 32px;
 }
+
+
+
+/* Personal Icon Styles--------------------------- */
+.icon_personal {
+  width: 24px;
+  height: 24px;
+}
+
+/* Client Icon Styles--------------------------- */
+.icon_client {
+  width: 40px;
+  height: 40px;
+  fill: #6F6F6F;
+  display: inline-block;
+  margin:auto;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.icon_client:hover {
+  width: 64px;
+  height: 64px;
+  fill: #FFFFFF;
+  display: inline-block;
+  margin:auto;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-position: 0%;
+}
+
+/* Skill Bar Styles------------------- */
+.work_box {
+  /* box style*/
+  width: 316px;
+  height: 186px;
+  background-color: #9a9a9a;
+
+  /* internal box text style */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+
+/* Skill Bar Styles------------------- */
+.rear_skill_bar {
+  width: 225px;
+  background-color: #929292; /* Background bar color */
+  border-radius: 100px;
+}
+.front_skill_bar {
+  padding: 10px; /* Add some padding */
+  background-color: #4E4E4E; /* Foreground bar color */
+  border-radius: 100px;
+}
+.sketch {width: 68%;}
+.flinto {width: 68%;}
+.invision {width: 60%;}
+.mural {width: 60%;}
+.powerpoint {width: 77%;}
+.excel {width: 77%;}
+.word {width: 60%;}
+.html {width: 34%;}
+.css {width: 34%;}
+.javascript {width: 34%;}
+
+
 /* Link Styles--------------------------- */
 a{
   color: #8D99AE;
