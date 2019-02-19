@@ -110,7 +110,17 @@ body {
   color: #FFFFFF;
   font-family: 'Interstate', Helvetica, sans-serif;
 }
-
+.container {
+  display: grid;
+  grid-template-columns: 16px auto 16px auto 16px auto 16px auto 16px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "margin column1 gutter column2 gutter column3 gutter column4 margin"
+    "container_nav"
+    "container_coverimg"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
 
 
 /* Text Styles------------------- */
@@ -210,18 +220,22 @@ li {
 .css {width: 34%;}
 .javascript {width: 34%;}
 
-
-/* Link Styles--------------------------- */
-a{
+/* Body link Styles--------------------------- */
+/* a{
   color: #8D99AE;
 }
 a:hover{
   color: #EDF2F4;
-}
-.nav {
+} */
+
+
+/* Nav Styles--------------------------- */
+
+.nav_tab {
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 2rem;
+  color: #8D99AE;
   /* setting up hover fill linear left */
   -webkit-background-clip: text;
   background-clip: text;
@@ -234,13 +248,14 @@ a:hover{
   /* setting up underline linear left  */
   display: inline-block;
 }
-.nav:hover {
+.nav_tab:hover {
+  color: #EDF2F4;
   /* OnHover, execute hover fill linear left */
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-position: 0%;
 }
 /* adding in underline for underline linear left*/
-.nav::after {
+.nav_tab::after {
     content: '';
     display: block;
     width: 0;
@@ -249,7 +264,7 @@ a:hover{
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 /* OnHover, execute underline linear left */
-.nav:hover::after {
+.nav_tab:hover::after {
     width: 1.2rem;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
