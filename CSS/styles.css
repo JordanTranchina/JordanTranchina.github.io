@@ -145,6 +145,32 @@ li {
 }
 
 
+
+/* Personal Icon Styles--------------------------- */
+.icon_personal {
+  width: 24px;
+  height: 24px;
+}
+
+/* Client Icon Styles--------------------------- */
+.icon_client {
+  width: 40px;
+  height: 40px;
+  fill: #6F6F6F;
+  display: inline-block;
+  margin:auto;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.icon_client:hover {
+  width: 64px;
+  height: 64px;
+  fill: #FFFFFF;
+  display: inline-block;
+  margin:auto;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-position: 0%;
+}
+
 /* Skill Bar Styles------------------- */
 .work_box {
   /* box style*/
