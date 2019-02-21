@@ -144,12 +144,16 @@ b {
   grid-template-columns: auto auto auto auto auto auto auto auto;
   column-gap: 16px;
   list-style-type: none;
+  align-content: center;
+}
+#nav_icon {
+  justify-content: end;
 }
 .nav_tab {
-  justify-items: start;
+  justify-content: start;
 }
-.nav_text {
-  justify-items: end;
+#nav_text {
+  justify-content: end;
 }
 
 
