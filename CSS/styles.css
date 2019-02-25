@@ -138,6 +138,14 @@ b {
   font-weight: 500;
 }
 
+/* Body link Styles--------------------------- */
+a{
+  color: #8D99AE;
+}
+a:hover{
+  color: #EDF2F4;
+}
+
 /* Nav Styles--------------------------- */
 #nav_container {
   display: grid;
@@ -216,7 +224,21 @@ li {
 }
 
 
-/* Client Icon Styles--------------------------- */
+/* Work Box Styles------------------- */
+.work_box {
+  /* box style*/
+  width: 316px;
+  height: 186px;
+  background-color: #9a9a9a;
+
+  /* internal box text style */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #e2e2e2;
+  text-decoration: none;
+}
 .icon_client {
   width: 40px;
   height: 40px;
@@ -235,22 +257,6 @@ li {
   background-position: 0%;
 }
 
-/* Work Box Styles------------------- */
-.work_box {
-  /* box style*/
-  width: 316px;
-  height: 186px;
-  background-color: #9a9a9a;
-
-  /* internal box text style */
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #e2e2e2;
-  text-decoration: none;
-}
-
 
 /* Skill Bar Styles------------------- */
 .rear_skill_bar {
@@ -259,7 +265,7 @@ li {
   border-radius: 100px;
 }
 .front_skill_bar {
-  padding: 10px; /* Add some padding */
+  padding: 8px; /* Add some padding */
   background-color: #4E4E4E; /* Foreground bar color */
   border-radius: 100px;
 }
@@ -273,14 +279,6 @@ li {
 .html {width: 34%;}
 .css {width: 34%;}
 .javascript {width: 34%;}
-
-/* Body link Styles--------------------------- */
-/* a{
-  color: #8D99AE;
-}
-a:hover{
-  color: #EDF2F4;
-} */
 
 
 /* Social Icon Styles--------------------------- */
