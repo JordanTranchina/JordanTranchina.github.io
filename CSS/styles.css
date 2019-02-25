@@ -139,12 +139,40 @@ b {
 }
 
 /* Nav Styles--------------------------- */
-
+#nav_container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  column-gap: 16px;
+  list-style-type: none;
+  align-content: center;
+  max-height: 64px;
+}
+#icon_personal {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 20px;
+}
 .nav_tab {
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #8D99AE;
+  justify-self: center;
+  align-self: center;
+}
+#nav_text {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Nav Style - Effects------------------------- */
+.nav_tab_hover_effect {
   /* setting up hover fill linear left */
   -webkit-background-clip: text;
   background-clip: text;
@@ -157,14 +185,14 @@ b {
   /* setting up underline linear left  */
   display: inline-block;
 }
-.nav_tab:hover {
+.nav_tab_hover_effect:hover {
   color: #EDF2F4;
   /* OnHover, execute hover fill linear left */
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-position: 0%;
 }
 /* adding in underline for underline linear left*/
-.nav_tab::after {
+.nav_tab_hover_effect::after {
     content: '';
     display: block;
     width: 0;
@@ -173,62 +201,11 @@ b {
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 /* OnHover, execute underline linear left */
-.nav_tab:hover::after {
-    width: 1.2rem;
+.nav_tab_hover_effect:hover::after {
+    width: 1ch;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-.nav_tab_list {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
-  column-gap: 16px;
-  list-style-type: none;
-  align-content: center;
-}
-.nav_tab {
-  justify-content: start;
-}
-#nav_text {
-  justify-content: start;
-}
-#navbar {
-  display: grid;
-  grid-auto-flow: column; /* setting navbar to column format */
-  grid-gap: 20px;
-  display: grid;
-  max-height: 40px;
-}
-#logo {
-  display: grid;
-  justify-content: start;
-  align-content: center;
-  width: 12px;
-  height: 12px;
-}
-#link_about {
-  display: grid;
-  justify-content: center; /* centering content locally */
-  align-content: center; /* middling content locally */
-}
-#link_work {
-  display: grid;
-  justify-content: center; /* centering content locally */
-  align-content: center; /* middling content locally */
-}
-#link_skills {
-  display: grid;
-  justify-content: center; /* centering content locally */
-  align-content: center; /* middling content locally */
-}
-#link_contact {
-  display: grid;
-  justify-content: center; /* centering content locally */
-  align-content: center; /* middling content locally */
-}
-#nav_text {
-  display: grid;
-  justify-content: end; /* centering content locally */
-  align-content: center; /* middling content locally */
-}
+
 
 /* List Styles--------------------------- */
 ul {
