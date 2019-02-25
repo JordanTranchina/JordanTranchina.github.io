@@ -110,7 +110,10 @@ body {
   color: #FFFFFF;
   font-family: 'Interstate', Helvetica, sans-serif;
 }
-
+main {
+  margin-left: 16px;
+  margin-right: 16px;
+}
 
 
 /* Text Styles------------------- */
@@ -135,22 +138,83 @@ b {
   font-weight: 500;
 }
 
+/* Nav Styles--------------------------- */
+#nav_container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  column-gap: 16px;
+  list-style-type: none;
+  align-content: center;
+  max-height: 64px;
+}
+#icon_personal {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 20px;
+}
+.nav_tab {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #8D99AE;
+  justify-self: center;
+  align-self: center;
+}
+#nav_text {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Nav Style - Effects------------------------- */
+.nav_tab_hover_effect {
+  /* setting up hover fill linear left */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient( to right, #FFFFFF 50%, #6F6F6F 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  /* On OffHover, reverse hover fill linear left*/
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* setting up underline linear left  */
+  display: inline-block;
+}
+.nav_tab_hover_effect:hover {
+  color: #EDF2F4;
+  /* OnHover, execute hover fill linear left */
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-position: 0%;
+}
+/* adding in underline for underline linear left*/
+.nav_tab_hover_effect::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+/* OnHover, execute underline linear left */
+.nav_tab_hover_effect:hover::after {
+    width: 1ch;
+    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
 
 /* List Styles--------------------------- */
 ul {
   list-style: none;
 }
 li {
-  margin-bottom: 32px;
+  margin-bottom: 16px
 }
 
-
-
-/* Personal Icon Styles--------------------------- */
-.icon_personal {
-  width: 24px;
-  height: 24px;
-}
 
 /* Client Icon Styles--------------------------- */
 .icon_client {
@@ -171,7 +235,7 @@ li {
   background-position: 0%;
 }
 
-/* Skill Bar Styles------------------- */
+/* Work Box Styles------------------- */
 .work_box {
   /* box style*/
   width: 316px;
@@ -210,49 +274,14 @@ li {
 .css {width: 34%;}
 .javascript {width: 34%;}
 
-
-/* Link Styles--------------------------- */
-a{
+/* Body link Styles--------------------------- */
+/* a{
   color: #8D99AE;
 }
 a:hover{
   color: #EDF2F4;
-}
-.nav {
-  font-family: 'Interstate', Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 2rem;
-  /* setting up hover fill linear left */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient( to right, #FFFFFF 50%, #6F6F6F 50%);
-  background-size: 200% 100%;
-  background-position: 100%;
-  /* On OffHover, reverse hover fill linear left*/
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  /* setting up underline linear left  */
-  display: inline-block;
-}
-.nav:hover {
-  /* OnHover, execute hover fill linear left */
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  background-position: 0%;
-}
-/* adding in underline for underline linear left*/
-.nav::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #FFFFFF;
-    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-/* OnHover, execute underline linear left */
-.nav:hover::after {
-    width: 1.2rem;
-    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
+} */
+
 
 /* Social Icon Styles--------------------------- */
 .icon_social {

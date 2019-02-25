@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+body {
+  color: #FFFFFF;
+  background: #181818;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  display: grid;
+  grid-auto-flow: column; /* setting navbar to column format */
+  grid-gap: 20px;
+  display: grid;
+  max-height: 40px;
+}
+#logo {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+}
+#link_about {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#link_work {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#link_skills {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#link_contact {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#nav_text {
+  display: grid;
+  justify-content: end; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+
+/* _______________________________ */
+.nav_tab {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #8D99AE;
+  /* setting up hover fill linear left */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient( to right, #FFFFFF 50%, #6F6F6F 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  /* On OffHover, reverse hover fill linear left*/
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* setting up underline linear left  */
+  display: inline-block;
+}
+.nav_tab:hover {
+  color: #EDF2F4;
+  /* OnHover, execute hover fill linear left */
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  background-position: 0%;
+}
+/* adding in underline for underline linear left*/
+.nav_tab::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+/* OnHover, execute underline linear left */
+.nav_tab:hover::after {
+    width: 1.2rem;
+    transition: width 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
