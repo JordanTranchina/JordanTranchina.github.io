@@ -139,28 +139,12 @@ b {
 }
 
 /* Nav Styles--------------------------- */
-#navbar {
-  display: grid;
-  grid-auto-flow: column; /* setting navbar to column format */
-  grid-gap: 20px;
-  display: grid;
-  max-height: 40px;
-}
-#icon_personal {
-  display: grid;
-  justify-content: start;
-  align-content: center;
-  width: 48px;
-  height: 48px;
-}
+
 .nav_tab {
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #8D99AE;
-  display: grid;
-  justify-content: center;
-  align-content: center;
   /* setting up hover fill linear left */
   -webkit-background-clip: text;
   background-clip: text;
@@ -171,9 +155,10 @@ b {
   /* On OffHover, reverse hover fill linear left*/
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   /* setting up underline linear left  */
-  /* justify-content: start; */
+  display: inline-block;
 }
 .nav_tab:hover {
+  color: #EDF2F4;
   /* OnHover, execute hover fill linear left */
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-position: 0%;
@@ -189,7 +174,7 @@ b {
 }
 /* OnHover, execute underline linear left */
 .nav_tab:hover::after {
-    width: 1ch;
+    width: 1.2rem;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .nav_tab_list {
@@ -199,8 +184,50 @@ b {
   list-style-type: none;
   align-content: center;
 }
+.nav_tab {
+  justify-content: start;
+}
 #nav_text {
-  justify-self: right;
+  justify-content: start;
+}
+#navbar {
+  display: grid;
+  grid-auto-flow: column; /* setting navbar to column format */
+  grid-gap: 20px;
+  display: grid;
+  max-height: 40px;
+}
+#logo {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  width: 12px;
+  height: 12px;
+}
+#link_about {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#link_work {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#link_skills {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#link_contact {
+  display: grid;
+  justify-content: center; /* centering content locally */
+  align-content: center; /* middling content locally */
+}
+#nav_text {
+  display: grid;
+  justify-content: end; /* centering content locally */
+  align-content: center; /* middling content locally */
 }
 
 /* List Styles--------------------------- */
