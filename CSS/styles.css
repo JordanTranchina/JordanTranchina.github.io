@@ -160,6 +160,7 @@ a:hover{
   column-gap: 16px;
   list-style-type: none;
   align-content: center;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .nav_container.open {
   max-height: 100%;
