@@ -115,7 +115,6 @@ main {
   margin-right: 16px;
 }
 
-
 /* Text Styles------------------- */
 h1 {
   font-family: inherit;
@@ -147,18 +146,66 @@ a:hover{
 }
 
 /* Nav Styles--------------------------- */
-#nav_container {
+.nav_container {
+  /* styles */
+  background-color: #cfcfcf;
+  max-height: 64px;
+  top: 0;
+  left: 0;
+  width: 100%; /* full width constant*/
+  position: fixed;
+  /* grid */
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
   column-gap: 16px;
   list-style-type: none;
   align-content: center;
-  max-height: 64px;
 }
+.nav_container.open {
+  max-height: 100%;
+  height: 400%;
+  background-color: #3FF400;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  justify-self: center; /* Horizontal */
+  align-self: center; /* Vertical */
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: red;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+
+/* rotate menu bars */
+.active .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+  /* transform: translateY(11px) translateX(0) rotate(45deg); */
+  transition: 0.3s;
+}
+.active .bar2 {
+  opacity: 0;
+  transition: .1s
+}
+.active .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+  /* transform: translateY(-11px) translateX(0) rotate(-45deg); */
+  transition: 0.3s;
+}
+
+
 #icon_personal {
   display: grid;
-  justify-content: start;
-  align-content: center;
+  justify-content: start; /* Horizontal */
+  align-content: center; /* Vertical */
   width: 24px;
   height: 24px;
   padding: 20px;
@@ -168,15 +215,15 @@ a:hover{
   font-weight: 300;
   font-size: 1rem;
   color: #8D99AE;
-  justify-self: center;
-  align-self: center;
+  justify-self: center; /* Horizontal */
+  align-self: center; /* Vertical */
 }
 #nav_text {
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  justify-self: center;
-  align-self: center;
+  justify-self: right; /* Horizontal */
+  align-self: center; /* Vertical */
 }
 
 /* Nav Style - Effects------------------------- */
