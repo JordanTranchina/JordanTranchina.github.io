@@ -109,18 +109,27 @@
   .nav_container div.hamburger {
     display: inline-block;
   }
-  .nav_container div.nav_tab,div.icon_personal_container{
+  .nav_container div.nav_tab,div.icon_personal_container,div.blanks{
     display: none;
   }
   .nav_container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto !important;
     column-gap: 16px;
   }
-}
-
-@media screen and (min-width: 768px) {
-
+  .hamburger {
+    cursor: pointer;
+    justify-self: left !important; /* Horizontal */
+    align-self: center; /* Vertical */
+  }
+  div#nav_text {
+    font-family: 'Interstate', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    justify-self: right; /* Horizontal */
+    align-self: center; /* Vertical */
+    padding-right: 16px;
+  }
 }
 /* Global Styles--------------------------- */
 body {
@@ -166,7 +175,7 @@ a:hover{
 /* Nav Styles--------------------------- */
 .nav_container {
   /* styles */
-  background-color: #cfcfcf;
+  background-color: #343434;
   max-height: 64px;
   top: 0;
   left: 0;
@@ -194,11 +203,14 @@ a:hover{
   justify-self: center; /* Horizontal */
   align-self: center; /* Vertical */
   display: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
 }
 .bar1, .bar2, .bar3 {
   width: 32px;
   height: 4px;
-  background-color: red;
+  background-color: #FFFFFF;
   margin: 6px 0;
   transition: 0.3s;
   border-radius: 10px;
