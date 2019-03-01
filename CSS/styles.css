@@ -103,7 +103,25 @@
   font-style: italic;
 }
 
+/* Media listeners--------------------------- */
+@media screen and (max-width: 768px) {
 
+  .nav_container div.hamburger {
+    display: inline-block;
+  }
+  .nav_container div.nav_tab,div.icon_personal_container{
+    display: none;
+  }
+  .nav_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+}
 /* Global Styles--------------------------- */
 body {
   background: #181818;
@@ -156,7 +174,7 @@ a:hover{
   position: fixed;
   /* grid */
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
   column-gap: 16px;
   list-style-type: none;
   align-content: center;
@@ -164,31 +182,32 @@ a:hover{
 }
 .nav_container.open {
   max-height: 100%;
-  height: 400%;
+  height: 200%;
   background-color: #3FF400;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-
 .hamburger {
-  display: inline-block;
   cursor: pointer;
   justify-self: center; /* Horizontal */
   align-self: center; /* Vertical */
+  display: none;
 }
 .bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
+  width: 32px;
+  height: 4px;
   background-color: red;
   margin: 6px 0;
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 
 /* rotate menu bars */
 .active .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-7px, 7px);
   /* transform: translateY(11px) translateX(0) rotate(45deg); */
   transition: 0.3s;
 }
@@ -197,7 +216,7 @@ a:hover{
   transition: .1s
 }
 .active .bar3 {
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-7px, -7px);
   /* transform: translateY(-11px) translateX(0) rotate(-45deg); */
   transition: 0.3s;
 }
