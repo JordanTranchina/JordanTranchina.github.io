@@ -109,18 +109,57 @@
   .nav_container div.hamburger {
     display: inline-block;
   }
-  .nav_container div.nav_tab,div.icon_personal_container,div.blanks{
+  .icon_personal_container{
     display: none;
+  }
+  .nav_tab{
+    display: none;
+  }
+  .blanks {
+    display: none;
+  }
+  .nav_tab.open{
+    display: block;
+    font-family: 'Interstate', Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    /* change style to be white */
+    color: red;
   }
   .nav_container {
     display: grid;
     grid-template-columns: auto auto !important;
+    grid-template-rows: auto auto auto auto auto auto;
     column-gap: 16px;
+    grid-template-areas:
+      "nav-left . nav-right"
+      ". row2 ."
+      ". row3 ."
+      ". row4 ."
+      ". row5 ."
+      ". row6 .";
   }
   .hamburger {
     cursor: pointer;
     justify-self: left !important; /* Horizontal */
     align-self: center; /* Vertical */
+    grid-area: nav-left;
+  }
+  div#nav_tab_about{
+    grid-area: row2;
+    padding-top: 32px;
+  }
+  div#nav_tab_work {
+    grid-area: row3;
+    padding-top: 32px;
+  }
+  div#nav_tab_skills {
+    grid-area: row4;
+    padding-top: 32px;
+  }
+  div#nav_tab_contact {
+    grid-area: row5;
+    padding-top: 32px;
   }
   div#nav_text {
     font-family: 'Interstate', Helvetica, sans-serif;
@@ -129,6 +168,7 @@
     justify-self: right; /* Horizontal */
     align-self: center; /* Vertical */
     padding-right: 16px;
+    grid-area: nav-right;
   }
 }
 /* Global Styles--------------------------- */
@@ -256,6 +296,7 @@ a:hover{
   font-size: 1rem;
   justify-self: right; /* Horizontal */
   align-self: center; /* Vertical */
+  padding-right: 16px;
 }
 
 /* Nav Style - Effects------------------------- */
