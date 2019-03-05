@@ -14,8 +14,4 @@ function mobileMenu(x) {
   document.getElementById("nav_tab_work").classList.toggle("open");
   document.getElementById("nav_tab_skills").classList.toggle("open");
   document.getElementById("nav_tab_contact").classList.toggle("open");
-<<<<<<< HEAD
-=======
-
->>>>>>> e43afe3546c262fec5a02afbba77685dda8d8569
 }
