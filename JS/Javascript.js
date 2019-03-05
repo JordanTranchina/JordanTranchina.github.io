@@ -9,7 +9,7 @@ document.getElementById('nav_tab_about').addEventListener("click", mobileMenu(x)
 function mobileMenu(x) {
   x.classList.toggle("active");
   document.getElementById("overlay").classList.toggle("open");
-  // return to grab by class not by id
+  // improve by grabing by class not by id
   document.getElementById("nav_tab_about").classList.toggle("open");
   document.getElementById("nav_tab_work").classList.toggle("open");
   document.getElementById("nav_tab_skills").classList.toggle("open");
