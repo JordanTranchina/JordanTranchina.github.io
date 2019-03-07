@@ -14,38 +14,47 @@
 
 <body>
   <header>
-    <nav>
-      <a href="../index.html">
-        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon_personal">
-          <title>J Logo</title>
-          <defs>
-            <linearGradient x1="14.6040568%" y1="100%" x2="85.3959432%" y2="0%" id="linearGradient-1">
-              <stop stop-color="#12A9FF" offset="0%"></stop>
-              <stop stop-color="#FF0096" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <circle fill="#333333" cx="12" cy="11.94" r="12"></circle>
-            <polygon points="18.57144 7.82616 14.68812 7.82616 12 7.82616 12 5.16 18.57144 5.16"></polygon>
-            <path d="M12.0021063,5.16 L17.3805494,5.16 L14.6827527,7.80073139 L14.6827527,13.044557 C14.6827527,16.5810127 13.1030779,18.9 9.57770614,18.9 C8.045129,18.9 6.72924975,18.3030871 5.82008559,17.4140986 C5.81142009,17.4056254 6.46074609,16.7540162 7.76806357,15.459271 C8.20030047,15.9163181 8.81488621,16.2138397 9.57770614,16.2138397 C11.2344382,16.2138397 11.985747,15.1509705 11.985747,13.1218565 L11.985747,5.16 L12.0021063,5.16 Z"
-              fill="url(#linearGradient-1)"></path>
-          </g>
-        </svg>
-      </a>
-      <ul>
-        <li><a href="#about" class="nav">About</a></li>
-        <li><a href="#work" class="nav">Work</a></li>
-        <li><a href="#skills" class="nav">Skills</a></li>
-        <li><a href="#contact" class="nav">Contact</a></li>
-      </ul>
-      <h3 class="nav_text">Jordan Tranchina</h3>
+    <nav class="nav_container" id="overlay">
+      <div class="hamburger" id="hamburger" onclick="mobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="icon_personal_container">
+        <a href="../index.html">
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon_personal">
+            <title>J Logo</title>
+            <defs>
+              <linearGradient x1="14.6040568%" y1="100%" x2="85.3959432%" y2="0%" id="linearGradient-1">
+                <stop stop-color="#12A9FF" offset="0%"></stop>
+                <stop stop-color="#FF0096" offset="100%"></stop>
+              </linearGradient>
+            </defs>
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <circle fill="#333333" cx="12" cy="11.94" r="12"></circle>
+              <polygon points="18.57144 7.82616 14.68812 7.82616 12 7.82616 12 5.16 18.57144 5.16"></polygon>
+              <path d="M12.0021063,5.16 L17.3805494,5.16 L14.6827527,7.80073139 L14.6827527,13.044557 C14.6827527,16.5810127 13.1030779,18.9 9.57770614,18.9 C8.045129,18.9 6.72924975,18.3030871 5.82008559,17.4140986 C5.81142009,17.4056254 6.46074609,16.7540162 7.76806357,15.459271 C8.20030047,15.9163181 8.81488621,16.2138397 9.57770614,16.2138397 C11.2344382,16.2138397 11.985747,15.1509705 11.985747,13.1218565 L11.985747,5.16 L12.0021063,5.16 Z"
+                fill="url(#linearGradient-1)"></path>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="nav_tab" id="nav_tab_about"><a href="../index.html#about" class="nav_tab_hover_effect">About</a></div>
+      <div class="nav_tab" id="nav_tab_work"><a href="../index.html#work" class="nav_tab_hover_effect">Work</a></div>
+      <div class="nav_tab" id="nav_tab_skills"><a href="../index.html#skills" class="nav_tab_hover_effect">Skills</a></div>
+      <div class="nav_tab" id="nav_tab_contact"><a href="../index.html#contact" class="nav_tab_hover_effect">Contact</a></div>
+      <div class="blanks"></div>
+      <div class="blanks"></div>
+      <div id="nav_text">Jordan Tranchina</div>
     </nav>
-    <img src="images/digital-cover.jpg" alt="Jordan Tranchina Profile Picture" width=100%>
+    <div class="container_coverimg">
+      <img src="images/digital-cover.jpg" alt="Jordan Tranchina Profile Picture" width=100% class="container_coverimg">
+      <h1 class="title">Hi, I’m Jordan!</h1>
+      <h2 class="subtitle">UX Designer & Strategy Consultant |  New York, NY</h2>
+    </div>
   </header>
   <main>
     <section class="about" id="about">
-      <h1 class="title">Hi, I’m Jordan!</h1>
-      <h2 class="subtitle">UX Designer & Strategy Consultant <br /> New York, NY</h2>
       <p>
         <b>Nice to meet you!</b> I'm a UX designer and overall nice human as described by my mom. My design skills, coupled with my financial knowledge, make me a key addition to any team. I’ve worked with multi-national companies to create
         unique user experiences for thousands of users. I’ve led complex programs to record success, and mentored others so they can do the same. I’m a passionate designer with the drive to solve difficult problems, and the attitude to keep the team
@@ -97,9 +106,9 @@
         </li>
       </ul>
     </section>
-    <section class="skills" id="skills">
+    <section id="skills">
       <h2>Skills</h2>
-      <ul id="skills_list">
+      <ul>
         <li>Sketch
           <div class="rear_skill_bar">
             <div class="front_skill_bar sketch"></div>
@@ -195,8 +204,8 @@
           </a>
         </li>
       </ul>
+      <p class="copyright">&copy; <script type="text/JavaScript">document.write(new Date().getFullYear());</script> Jordan Tranchina</p>
     </div>
-    <p class="copyright">&copy; <script type="text/JavaScript">document.write(new Date().getFullYear());</script> Jordan Tranchina</p>
   </footer>
 </body>
 
