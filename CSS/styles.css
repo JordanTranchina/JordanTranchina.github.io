@@ -104,7 +104,7 @@
 }
 
 /* Media listeners--------------------------- */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   .overlay-body {
     overflow: hidden;
@@ -156,11 +156,19 @@
     grid-area: 1 / nav-right / 1 / nav-far-right;
   }
 }
+@media screen and (min-width: 768px) {
+
+  body {
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-rows: 64px auto auto auto auto auto auto auto auto auto auto auto auto
+  }
+}
 /* Global Styles--------------------------- */
 body {
   background: #181818;
   color: #FFFFFF;
   font-family: 'Interstate', Helvetica, sans-serif;
+  display: grid;
 }
 main {
   margin-left: 16px;
@@ -187,6 +195,14 @@ b {
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+/* List Styles--------------------------- */
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 16px
 }
 
 /* Body link Styles--------------------------- */
@@ -222,7 +238,6 @@ a:hover{
   grid-template-columns: auto auto auto auto auto auto auto auto auto;
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-
 .hamburger {
   cursor: pointer;
   justify-self: left; /* Horizontal */
@@ -240,8 +255,6 @@ a:hover{
   transition: 0.3s;
   border-radius: 10px;
 }
-
-
 /* rotate menu bars */
 .active .bar1 {
   transform: rotate(-45deg) translate(-7px, 7px);
@@ -257,8 +270,6 @@ a:hover{
   /* transform: translateY(-11px) translateX(0) rotate(-45deg); */
   transition: 0.3s;
 }
-
-
 #icon_personal {
   display: grid;
   justify-content: start; /* Horizontal */
@@ -283,7 +294,6 @@ a:hover{
   align-self: center; /* Vertical */
   padding-right: 16px;
 }
-
 /* Nav Style - Effects------------------------- */
 .nav_tab_hover_effect {
   /* setting up hover fill linear left */
@@ -318,15 +328,13 @@ a:hover{
     width: 1ch;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+/* Cover Image Styles------------------- */
+.container_coverimg {
+  display: grid;
+
+}
 
 
-/* List Styles--------------------------- */
-ul {
-  list-style: none;
-}
-li {
-  margin-bottom: 16px
-}
 
 
 /* Work Box Styles------------------- */
