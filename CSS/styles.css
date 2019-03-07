@@ -106,6 +106,10 @@
 /* Media listeners--------------------------- */
 @media screen and (max-width: 768px) {
 
+  .overlay-body {
+    overflow: hidden;
+    position: fixed;
+  }
   .nav_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
@@ -198,10 +202,10 @@ a:hover{
   /* styles */
   background-color: #343434;
   max-height: 64px;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%; /* full width constant*/
-  position: fixed;
   /* grid */
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
