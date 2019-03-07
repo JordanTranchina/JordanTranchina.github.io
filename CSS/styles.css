@@ -103,7 +103,59 @@
   font-style: italic;
 }
 
+/* Media listeners--------------------------- */
+@media screen and (max-width: 768px) {
 
+  .overlay-body {
+    overflow: hidden;
+    position: fixed;
+  }
+  .nav_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 16px;
+    grid-template-areas:
+      "nav-far-left nav-left nav-right nav-far-right"
+      "second-far-left second-left second-right second-far-right"
+      "third-far-left third-left third-right third-far-right"
+      "fourth-far-left fourth-left fourth-right fourth-far-right"
+      "fifth-far-left fifth-left fifth-right fifth-far-right";
+  }
+  .nav_container div.hamburger {
+    display: inline-block;
+  }
+  .icon_personal_container,.nav_tab,.blanks{
+    display: none;
+  }
+  .hamburger {
+    cursor: pointer;
+    /* align-self: center; /* Vertical */
+    grid-area: 1 / nav-far-left / 1 / nav-left;
+  }
+  .nav_tab.open{
+    display: block;
+    font-family: 'Interstate', Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    padding-top: 64px;
+  }
+  div#nav_tab_about{
+    grid-area: 2 / second-left / 2 / second-right;
+  }
+  div#nav_tab_work {
+    grid-area: 3 / third-left / 3 / third-right;
+  }
+  div#nav_tab_skills {
+    grid-area: 4 / fourth-left / 4 / fourth-right;
+  }
+  div#nav_tab_contact {
+    grid-area: 5 / fifth-left / 5 / fifth-right;
+  }
+  div#nav_text {
+    grid-area: 1 / nav-right / 1 / nav-far-right;
+  }
+}
 /* Global Styles--------------------------- */
 body {
   background: #181818;
@@ -114,7 +166,6 @@ main {
   margin-left: 16px;
   margin-right: 16px;
 }
-
 
 /* Text Styles------------------- */
 h1 {
@@ -138,19 +189,80 @@ b {
   font-weight: 500;
 }
 
+/* Body link Styles--------------------------- */
+a{
+  color: #8D99AE;
+}
+a:hover{
+  color: #EDF2F4;
+}
+
 /* Nav Styles--------------------------- */
-#nav_container {
+.nav_container {
+  /* styles */
+  background-color: #343434;
+  max-height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* full width constant*/
+  /* grid */
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
   column-gap: 16px;
   list-style-type: none;
-  align-content: center;
-  max-height: 64px;
+  align-content: start;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+.nav_container.open {
+  max-height: 100%;
+  height: 200%;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.hamburger {
+  cursor: pointer;
+  justify-self: left; /* Horizontal */
+  align-self: center; /* Vertical */
+  display: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+}
+.bar1, .bar2, .bar3 {
+  width: 32px;
+  height: 4px;
+  background-color: #FFFFFF;
+  margin: 6px 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+
+/* rotate menu bars */
+.active .bar1 {
+  transform: rotate(-45deg) translate(-7px, 7px);
+  /* transform: translateY(11px) translateX(0) rotate(45deg); */
+  transition: 0.3s;
+}
+.active .bar2 {
+  opacity: 0;
+  transition: .1s
+}
+.active .bar3 {
+  transform: rotate(45deg) translate(-7px, -7px);
+  /* transform: translateY(-11px) translateX(0) rotate(-45deg); */
+  transition: 0.3s;
+}
+
+
 #icon_personal {
   display: grid;
-  justify-content: start;
-  align-content: center;
+  justify-content: start; /* Horizontal */
+  align-content: center; /* Vertical */
   width: 24px;
   height: 24px;
   padding: 20px;
@@ -160,15 +272,16 @@ b {
   font-weight: 300;
   font-size: 1rem;
   color: #8D99AE;
-  justify-self: center;
-  align-self: center;
+  justify-self: center; /* Horizontal */
+  align-self: center; /* Vertical */
 }
 #nav_text {
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  justify-self: center;
-  align-self: center;
+  justify-self: right; /* Horizontal */
+  align-self: center; /* Vertical */
+  padding-right: 16px;
 }
 
 /* Nav Style - Effects------------------------- */
@@ -216,7 +329,21 @@ li {
 }
 
 
-/* Client Icon Styles--------------------------- */
+/* Work Box Styles------------------- */
+.work_box {
+  /* box style*/
+  width: 316px;
+  height: 186px;
+  background-color: #9a9a9a;
+
+  /* internal box text style */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #e2e2e2;
+  text-decoration: none;
+}
 .icon_client {
   width: 40px;
   height: 40px;
@@ -235,22 +362,6 @@ li {
   background-position: 0%;
 }
 
-/* Work Box Styles------------------- */
-.work_box {
-  /* box style*/
-  width: 316px;
-  height: 186px;
-  background-color: #9a9a9a;
-
-  /* internal box text style */
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #e2e2e2;
-  text-decoration: none;
-}
-
 
 /* Skill Bar Styles------------------- */
 .rear_skill_bar {
@@ -259,7 +370,7 @@ li {
   border-radius: 100px;
 }
 .front_skill_bar {
-  padding: 10px; /* Add some padding */
+  padding: 8px; /* Add some padding */
   background-color: #4E4E4E; /* Foreground bar color */
   border-radius: 100px;
 }
@@ -273,14 +384,6 @@ li {
 .html {width: 34%;}
 .css {width: 34%;}
 .javascript {width: 34%;}
-
-/* Body link Styles--------------------------- */
-/* a{
-  color: #8D99AE;
-}
-a:hover{
-  color: #EDF2F4;
-} */
 
 
 /* Social Icon Styles--------------------------- */

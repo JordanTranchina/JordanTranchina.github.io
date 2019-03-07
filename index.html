@@ -14,8 +14,13 @@
 
 <body>
   <header>
-    <div id="nav_container">
-      <div>
+    <nav class="nav_container" id="overlay">
+      <div class="hamburger" id="hamburger" onclick="mobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="icon_personal_container">
         <a href="../index.html">
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon_personal">
             <title>J Logo</title>
@@ -34,14 +39,14 @@
           </svg>
         </a>
       </div>
-      <div class="nav_tab"><a href="#about" class="nav_tab_hover_effect">About</a></div>
-      <div class="nav_tab"><a href="#work" class="nav_tab_hover_effect">Work</a></div>
-      <div class="nav_tab"><a href="#skills" class="nav_tab_hover_effect">Skills</a></div>
-      <div class="nav_tab"><a href="#contact" class="nav_tab_hover_effect">Contact</a></div>
-      <div></div>
-      <div></div>
+      <div class="nav_tab" id="nav_tab_about"><a href="../index.html#about" class="nav_tab_hover_effect">About</a></div>
+      <div class="nav_tab" id="nav_tab_work"><a href="../index.html#work" class="nav_tab_hover_effect">Work</a></div>
+      <div class="nav_tab" id="nav_tab_skills"><a href="../index.html#skills" class="nav_tab_hover_effect">Skills</a></div>
+      <div class="nav_tab" id="nav_tab_contact"><a href="../index.html#contact" class="nav_tab_hover_effect">Contact</a></div>
+      <div class="blanks"></div>
+      <div class="blanks"></div>
       <div id="nav_text">Jordan Tranchina</div>
-    </div>
+    </nav>
     <div class="container_coverimg">
       <img src="images/digital-cover.jpg" alt="Jordan Tranchina Profile Picture" width=100% class="container_coverimg">
       <h1 class="title">Hi, I’m Jordan!</h1>
@@ -101,9 +106,9 @@
         </li>
       </ul>
     </section>
-    <section class="skills" id="skills">
+    <section id="skills">
       <h2>Skills</h2>
-      <ul id="skills_list">
+      <ul>
         <li>Sketch
           <div class="rear_skill_bar">
             <div class="front_skill_bar sketch"></div>
