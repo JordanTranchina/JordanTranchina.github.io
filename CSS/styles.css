@@ -158,10 +158,10 @@
 }
 @media screen and (min-width: 768px) {
 
-  body {
+  /* body {
     grid-template-columns: auto auto auto auto auto auto auto auto;
     grid-template-rows: 64px auto auto auto auto auto auto auto auto auto auto auto auto
-  }
+  } */
 }
 /* Global Styles--------------------------- */
 body {
@@ -330,12 +330,17 @@ a:hover{
 }
 /* Cover Image Styles------------------- */
 .container_coverimg {
-  display: grid;
-
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-
-
+.img-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Work Box Styles------------------- */
 .work_box {
