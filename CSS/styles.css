@@ -290,6 +290,7 @@ a:hover{
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  white-space: nowrap;
   justify-self: right; /* Horizontal */
   align-self: center; /* Vertical */
   padding-right: 16px;
@@ -331,15 +332,19 @@ a:hover{
 /* Cover Image Styles------------------- */
 .container_coverimg {
   position: relative;
-  text-align: center;
-  color: white;
+  z-index: -1;
 }
-
 .img-title {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.coverimg {
+  padding-top: 48px;
+  opacity: 0.8;
+  width: 100%
 }
 
 /* Work Box Styles------------------- */
