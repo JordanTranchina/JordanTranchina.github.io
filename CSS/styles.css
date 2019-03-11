@@ -105,7 +105,20 @@
 
 /* Media listeners--------------------------- */
 @media screen and (max-width: 767px) {
-
+  /* body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 16px;
+    grid-template-areas:
+    "nav-far-left" "nav-left" "nav-right" "nav-far-right"
+    "cover-image" "cover-image" "cover-image" "cover-image"
+    "cover-image-subtitle" "cover-image-subtitle" "cover-image-subtitle" "cover-image-subtitle"
+    "about" "about" "about" "about"
+    "work" "work" "work" "work"
+    "skills" "skills" "skills" "skills"
+    "footer-far-left" "footer-left" "footer-right" "footer-far-right"
+  } */
   .overlay-body {
     overflow: hidden;
     position: fixed;
@@ -168,7 +181,6 @@ body {
   background: #181818;
   color: #FFFFFF;
   font-family: 'Interstate', Helvetica, sans-serif;
-  display: grid;
 }
 main {
   margin-left: 16px;
@@ -183,7 +195,7 @@ h1 {
 }
 h2 {
   font-family: inherit;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 h3, p, ul {
@@ -334,6 +346,11 @@ a:hover{
   position: relative;
   z-index: -1;
 }
+.coverimg {
+  padding-top: 48px;
+  opacity: 0.3;
+  width: 100%
+}
 .img-title {
   position: absolute;
   top: 70%;
@@ -341,12 +358,19 @@ a:hover{
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
-.coverimg {
-  padding-top: 48px;
-  opacity: 0.8;
-  width: 100%
+#img-title-alt-color {
+  color: #12a9ff;
 }
-
+.img-subtitle {
+  width: 328px;
+  height: 56px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #d8d8d8;
+}
 /* Work Box Styles------------------- */
 .work_box {
   /* box style*/
