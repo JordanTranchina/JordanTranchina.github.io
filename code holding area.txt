@@ -1,0 +1,14 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  grid-template-rows: auto auto auto auto auto;
+  column-gap: 16px;
+  grid-template-areas:
+  "nav-far-left nav-left nav-right nav-far-right"
+  "cover-image cover-image cover-image cover-image"
+  "cover-image-subtitle cover-image-subtitle cover-image-subtitle cover-image-subtitle"
+  "about about about about"
+  "work work work work"
+  "skills skills skills skills"
+  "footer-far-left footer-left footer-right footer-far-right"
+}
