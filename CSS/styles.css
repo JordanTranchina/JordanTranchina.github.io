@@ -104,8 +104,21 @@
 }
 
 /* Media listeners--------------------------- */
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 767px) {
+  /* body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 16px;
+    grid-template-areas:
+    "nav-far-left" "nav-left" "nav-right" "nav-far-right"
+    "cover-image" "cover-image" "cover-image" "cover-image"
+    "cover-image-subtitle" "cover-image-subtitle" "cover-image-subtitle" "cover-image-subtitle"
+    "about" "about" "about" "about"
+    "work" "work" "work" "work"
+    "skills" "skills" "skills" "skills"
+    "footer-far-left" "footer-left" "footer-right" "footer-far-right"
+  } */
   .overlay-body {
     overflow: hidden;
     position: fixed;
@@ -156,6 +169,13 @@
     grid-area: 1 / nav-right / 1 / nav-far-right;
   }
 }
+@media screen and (min-width: 768px) {
+
+  /* body {
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-rows: 64px auto auto auto auto auto auto auto auto auto auto auto auto
+  } */
+}
 /* Global Styles--------------------------- */
 body {
   background: #181818;
@@ -175,7 +195,7 @@ h1 {
 }
 h2 {
   font-family: inherit;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 h3, p, ul {
@@ -187,6 +207,14 @@ b {
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+/* List Styles--------------------------- */
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 16px
 }
 
 /* Body link Styles--------------------------- */
@@ -222,7 +250,6 @@ a:hover{
   grid-template-columns: auto auto auto auto auto auto auto auto auto;
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-
 .hamburger {
   cursor: pointer;
   justify-self: left; /* Horizontal */
@@ -240,8 +267,6 @@ a:hover{
   transition: 0.3s;
   border-radius: 10px;
 }
-
-
 /* rotate menu bars */
 .active .bar1 {
   transform: rotate(-45deg) translate(-7px, 7px);
@@ -257,8 +282,6 @@ a:hover{
   /* transform: translateY(-11px) translateX(0) rotate(-45deg); */
   transition: 0.3s;
 }
-
-
 #icon_personal {
   display: grid;
   justify-content: start; /* Horizontal */
@@ -279,11 +302,11 @@ a:hover{
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  white-space: nowrap;
   justify-self: right; /* Horizontal */
   align-self: center; /* Vertical */
   padding-right: 16px;
 }
-
 /* Nav Style - Effects------------------------- */
 .nav_tab_hover_effect {
   /* setting up hover fill linear left */
@@ -318,17 +341,36 @@ a:hover{
     width: 1ch;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-
-
-/* List Styles--------------------------- */
-ul {
-  list-style: none;
+/* Cover Image Styles------------------- */
+.container_coverimg {
+  position: relative;
+  z-index: -1;
 }
-li {
-  margin-bottom: 16px
+.coverimg {
+  padding-top: 48px;
+  opacity: 0.3;
+  width: 100%
 }
-
-
+.img-title {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+#img-title-alt-color {
+  color: #12a9ff;
+}
+.img-subtitle {
+  width: 328px;
+  height: 56px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #d8d8d8;
+}
 /* Work Box Styles------------------- */
 .work_box {
   /* box style*/
