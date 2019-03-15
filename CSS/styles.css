@@ -447,19 +447,36 @@ a:hover{
 
 /* Section - Contact Styles------------------- */
 .contact {
- grid-area: contact;
+  grid-area: contact;
+  justify-self: center;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  background-color: #d8d8d8;
+  margin: 16px;
 }
 
 
-
-/* Section - Contact Styles------------------- */
+/* Section - Footer Styles------------------- */
 .social {
   grid-area: 8 / footer-far-left / 8 / footer-far-right
 }
-
-
-
-/* Section - Footer Styles--------------------------- */
+.icon_social_instagram {
+  grid-area: footer-far-left;
+  justify-self: center;
+}
+.icon_social_dribble {
+  grid-area: footer-left;
+  justify-self: center;
+}
+.icon_social_linkedin {
+  grid-area: footer-right;
+  justify-self: center;
+}
+.icon_social_email {
+  grid-area: footer-far-right;
+  justify-self: center;
+}
 .icon_social {
   width: 24px;
   height: 24px;
@@ -470,4 +487,7 @@ a:hover{
   width: 24px;
   height: 24px;
   fill: #FFFFFF;
+}
+.copyright {
+  grid-area: 8 / footer-left / 8 / footer-right;
 }
