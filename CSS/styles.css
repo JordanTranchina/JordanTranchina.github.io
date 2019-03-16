@@ -490,4 +490,6 @@ a:hover{
 }
 .copyright {
   grid-area: 8 / footer-left / 8 / footer-right;
+  padding-top: 16px;
+  justify-self: center;
 }
