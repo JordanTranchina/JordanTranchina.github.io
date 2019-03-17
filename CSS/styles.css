@@ -147,6 +147,10 @@
       "fifth fifth fifth fifth";
     transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
+  .nav_container.open .nav_tab {
+    font-size: 32px;
+    font-weight: 500;
+  }
   .nav_container div.hamburger {
     display: inline-block;
   }
@@ -218,6 +222,7 @@ li {
   margin-bottom: 16px
 }
 a{
+  font-family: 'Interstate', Helvetica, sans-serif;
   color: #8D99AE;
 }
 a:hover{
@@ -423,6 +428,10 @@ a:hover{
 .skills {
   grid-area: skills;
 }
+.container_skill-bar p {
+  margin-top: 24px;
+  margin-bottom: 2px;
+}
 .rear_skill_bar {
   width: 225px;
   background-color: #929292; /* Background bar color */
@@ -454,6 +463,16 @@ a:hover{
   border-radius: 4px;
   background-color: #d8d8d8;
   margin: 16px;
+}
+.contact a {
+  white-space: nowrap;
+  font-size: 1rem;
+  text-decoration: none;
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 117px;
+  padding-right: 117px;
 }
 
 
@@ -492,4 +511,5 @@ a:hover{
   grid-area: 8 / footer-left / 8 / footer-right;
   padding-top: 16px;
   justify-self: center;
+  white-space: nowrap;
 }
