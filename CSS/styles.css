@@ -147,43 +147,52 @@
       "fifth fifth fifth fifth";
     transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
-  .nav_container.open .nav_tab {
-    font-size: 32px;
-    font-weight: 500;
+  .nav_container .hamburger {
+    display: block;
   }
-  .nav_container div.hamburger {
-    display: inline-block;
-  }
-  .icon_personal_container,.nav_tab,.blanks{
+  .icon_personal_container,.blanks{
     display: none;
   }
   .hamburger {
     cursor: pointer;
     grid-area: 1 / nav-far-left / 1 / nav-left;
   }
-  div#nav_text {
-    grid-area: 1 / nav-right / 1 / nav-far-right;
+  #nav_text {
+    /* grid-area: 1 / nav-right / 1 / nav-far-right; */
+    /* the below position code is rough, come back and fix it when I better understand css animations as they relate to display:none and display:block so I can put it back in CSS Grid*/
+    position: absolute;
+    top: 23px;
+    right: 0px;
+  }
+  .nav_tab {
+    /* display: block; */
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
   }
   .nav_tab.open{
-    display: block;
-    font-family: 'Interstate', Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
+    /* display: block; */
+    height: auto;
+    font-size: 32px;
+    font-weight: 500;
     padding-top: 64px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear;
+    transition-delay: .15s;
   }
-  div#nav_tab_about{
+  #nav_tab_about{
     grid-area: second;
   }
-  div#nav_tab_work {
+  #nav_tab_work {
     grid-area: third;
   }
-  div#nav_tab_skills {
+  #nav_tab_skills {
     grid-area: fourth;
   }
-  div#nav_tab_contact {
+  #nav_tab_contact {
     grid-area: fifth;
   }
-
 }
 /* Global Styles--------------------------- */
 body {
@@ -244,7 +253,6 @@ a:hover{
   column-gap: 16px;
   list-style-type: none;
   align-content: start;
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .hamburger {
   cursor: pointer;
