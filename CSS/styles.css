@@ -147,10 +147,6 @@
       "fifth fifth fifth fifth";
     transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
-  .nav_container.open .nav_tab {
-    font-size: 32px;
-    font-weight: 500;
-  }
   .nav_container div.hamburger {
     display: inline-block;
   }
@@ -167,9 +163,12 @@
   .nav_tab.open{
     display: block;
     font-family: 'Interstate', Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
+    font-size: 32px;
+    font-weight: 500;
     padding-top: 64px;
+    /* animation: fadeIn;
+    animation-delay: 5s;
+    transition: 5s ease; */
   }
   div#nav_tab_about{
     grid-area: second;
@@ -183,7 +182,6 @@
   div#nav_tab_contact {
     grid-area: fifth;
   }
-
 }
 /* Global Styles--------------------------- */
 body {
