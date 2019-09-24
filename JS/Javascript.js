@@ -1,16 +1,8 @@
-document.getElementById('hamburger').addEventListener("click", mobileMenu(x));
-// return to grab by class not by id
-document.getElementById('nav_tab_about').addEventListener("click", mobileMenu(x));
-document.getElementById('nav_tab_work').addEventListener("click", mobileMenu(x));
-document.getElementById('nav_tab_skills').addEventListener("click", mobileMenu(x));
-document.getElementById('nav_tab_about').addEventListener("click", mobileMenu(x));
-
-
-function mobileMenu(x) {
-  x.classList.toggle("active");
-  document.getElementById("overlay").classList.toggle("open");
-  document.body.classList.add("overlay-body");
-  // improve by grabing by class not by id
+function mobileMenu() {
+  document.getElementById("hamburger").classList.toggle("active"); // toggling active class
+  document.body.classList.toggle("overlay-body"); //toggling overlay state on body
+  document.getElementById("overlay").classList.toggle("open"); //toggling overlay state on nav by setting classlist to "open"
+  // improve below by grabing by class not by id
   document.getElementById("nav_tab_about").classList.toggle("open");
   document.getElementById("nav_tab_work").classList.toggle("open");
   document.getElementById("nav_tab_skills").classList.toggle("open");
