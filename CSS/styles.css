@@ -158,20 +158,17 @@
     grid-area: 1 / nav-far-left / 1 / nav-left;
   }
   #nav_text {
-    /* grid-area: 1 / nav-right / 1 / nav-far-right; */
-    /* the below position code is rough, come back and fix it when I better understand css animations as they relate to display:none and display:block so I can put it back in CSS Grid*/
-    position: absolute;
-    top: 23px;
-    right: 0px;
+    grid-area: 1 / nav-right / 1 / nav-far-right;
   }
   .nav_tab {
-    /* display: block; */
+    display: block;
     height: 0;
+    width: 0;
     visibility: hidden;
     opacity: 0;
   }
   .nav_tab.open{
-    /* display: block; */
+    display: block;
     height: auto;
     font-size: 32px;
     font-weight: 500;
@@ -179,19 +176,35 @@
     visibility: visible;
     opacity: 1;
     transition: visibility 0s linear;
-    transition-delay: .15s;
+    /* transition-delay: .2s; */
   }
-  #nav_tab_about{
+  #nav_tab_about.open{
     grid-area: second;
+    transition-delay: .10s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
-  #nav_tab_work {
+  #nav_tab_work.open {
     grid-area: third;
+    transition-delay: .15s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
-  #nav_tab_skills {
+  #nav_tab_skills.open {
     grid-area: fourth;
+    transition-delay: .2s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
-  #nav_tab_contact {
+  #nav_tab_contact.open {
     grid-area: fifth;
+    transition-delay: .25s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
 }
 /* Global Styles--------------------------- */
