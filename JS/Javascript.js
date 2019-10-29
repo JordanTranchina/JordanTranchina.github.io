@@ -5,6 +5,5 @@ function mobileMenu() {
   // improve below by grabing by class not by id
   document.getElementById("nav_tab_about").classList.toggle("open");
   document.getElementById("nav_tab_work").classList.toggle("open");
-  document.getElementById("nav_tab_skills").classList.toggle("open");
   document.getElementById("nav_tab_contact").classList.toggle("open");
 }

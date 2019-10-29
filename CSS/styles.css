@@ -116,7 +116,6 @@
     "cover-image-subtitle cover-image-subtitle cover-image-subtitle cover-image-subtitle"
     "about about about about"
     "work work work work"
-    "skills skills skills skills"
     ". contact contact . "
     "footer-far-left footer-left footer-right footer-far-right"
   }
@@ -192,15 +191,8 @@
     height: auto;
     width: auto;
   }
-  #nav_tab_skills.open {
-    grid-area: fourth;
-    transition-delay: .2s;
-    justify-self: center;
-    height: auto;
-    width: auto;
-  }
   #nav_tab_contact.open {
-    grid-area: fifth;
+    grid-area: fourth;
     transition-delay: .25s;
     justify-self: center;
     height: auto;
@@ -436,37 +428,6 @@ a:hover{
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-position: 0%;
 }
-
-
-/* Section - Skills Styles------------------- */
-.skills {
-  grid-area: skills;
-}
-.container_skill-bar p {
-  margin-top: 24px;
-  margin-bottom: 2px;
-}
-.rear_skill_bar {
-  width: 225px;
-  background-color: #929292; /* Background bar color */
-  border-radius: 100px;
-}
-.front_skill_bar {
-  padding: 8px; /* Add some padding */
-  background-color: #4E4E4E; /* Foreground bar color */
-  border-radius: 100px;
-}
-.sketch {width: 68%;}
-.flinto {width: 68%;}
-.invision {width: 60%;}
-.mural {width: 60%;}
-.powerpoint {width: 77%;}
-.excel {width: 77%;}
-.word {width: 60%;}
-.html {width: 34%;}
-.css {width: 34%;}
-.javascript {width: 34%;}
-
 
 /* Section - Contact Styles------------------- */
 .contact {
