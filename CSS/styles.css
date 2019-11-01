@@ -242,7 +242,8 @@ li {
 }
 a{
   font-family: 'Interstate', Helvetica, sans-serif;
-  color: #8D99AE;
+  /* color: #8D99AE; */
+  color: red;
 }
 a:hover{
   color: #EDF2F4;
@@ -263,6 +264,7 @@ a:hover{
   column-gap: 16px;
   list-style-type: none;
   align-content: start;
+  z-index: 1;
 }
 .hamburger {
   cursor: pointer;
@@ -282,7 +284,7 @@ a:hover{
   transition: 0.3s;
   border-radius: 10px;
 }
-/* rotate menu bars */
+/* rotating menu bars */
 .active .bar1 {
   /* transform: rotate(-45deg) translate(-7px, 7px); */
   /* transform: rotate(45deg) translate(9px, 5px); */
@@ -402,10 +404,17 @@ a:hover{
   grid-area: work;
 }
 
+.work h2{
+  color: red;
+  /* grid-column-start: figure this out to center;
+  grid-column-end: figure this out to center; */
+}
+
 .work_card {
   position: relative;
   width: auto;
   height: auto;
+  margin-bottom: 16px;
   border-radius: 4px;
   /* need to add opacity to shadow below */
   box-shadow: 0 1px 4px #000000;
