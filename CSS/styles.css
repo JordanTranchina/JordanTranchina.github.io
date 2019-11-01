@@ -201,8 +201,8 @@
 }
 /* Global Styles--------------------------- */
 body {
-  background: #181818;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #000000;
   font-family: 'Interstate', Helvetica, sans-serif;
 }
 main {
@@ -219,15 +219,20 @@ h2 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-h3, p, ul {
+h3 {
   font-family: inherit;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 b {
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
+}
+p, ul {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
 }
 ul {
   list-style: none;
@@ -397,36 +402,42 @@ a:hover{
   grid-area: work;
 }
 
-.work_box {
+.work_card {
   position: relative;
   width: auto;
   height: auto;
   border-radius: 4px;
-  /* box-shadow: 0 1px 4px 0 #FFFFFF; */
+  /* need to add opacity to shadow below */
+  box-shadow: 0 1px 4px #000000;
 }
 
-.work_text {
+.work_text_bg {
   position: absolute;
   width: 100%;
   bottom: 0px;
-  background-color: #393939;
+  background-color: #FFFFFF;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-.work_text_title p{
+.work_text_bg h3{
   padding-left: 8px;
   margin-top: 8px;
   margin-bottom: 8px;
+  color: #393939;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.work_text_subtitle p{
+.work_text_bg p{
   padding-left: 8px;
   margin-top: 8px;
   margin-bottom: 8px;
+  color: #393939;
+  font-size: 14px;
 }
 
-.work_box img{
+a img{
   width: 100%;
 }
 
