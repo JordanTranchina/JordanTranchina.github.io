@@ -1,9 +1,11 @@
-/* Color Pallete-------------------
-#2B2D42 - dark blue
-#8D99AE - light blue
-#EDF2F4 - blue/white
-#EE2329 -red
-*/
+/* Color Pallete------------------- */
+:root {
+  --blue: #19a3ff;
+  --white: #ffffff;
+  --grey: #5e5e5e;
+  --dark-grey: #393939;
+  --black: #000000;
+}
 
 /* Fonts--------------------------- */
 @font-face {
@@ -405,9 +407,7 @@ a:hover{
 }
 
 .work h2{
-  color: red;
-  /* grid-column-start: figure this out to center;
-  grid-column-end: figure this out to center; */
+  text-align: center;
 }
 
 .work_card {
@@ -417,7 +417,8 @@ a:hover{
   margin-bottom: 16px;
   border-radius: 4px;
   /* need to add opacity to shadow below */
-  box-shadow: 0 1px 4px #000000;
+  /* box-shadow: 0 1px 4px #000000; */
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
 }
 
 .work_text_bg {
