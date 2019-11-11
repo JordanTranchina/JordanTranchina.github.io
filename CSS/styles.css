@@ -121,7 +121,6 @@
     "work work work work"
     "contact contact contact contact"
     "footer footer footer footer";
-    /* "footer-far-left footer-left footer-right footer-far-right" */
   }
 
   .overlay-body {
@@ -503,13 +502,12 @@ a img{
 
 
 /* Section - Footer Styles------------------- */
-.footer {
-  grid-area: footer;
-}
 .container_footer {
+  grid-area: footer;
   height: auto;
   box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.24);
   background-color: var(--white);
+  margin: 0px -16px;
 }
 .container_icon_social {
   display: flex;
