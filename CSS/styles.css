@@ -120,7 +120,8 @@
     "about about about about"
     "work work work work"
     "contact contact contact contact"
-    "footer-far-left footer-left footer-right footer-far-right";
+    "footer footer footer footer";
+    /* "footer-far-left footer-left footer-right footer-far-right" */
   }
 
   .overlay-body {
@@ -236,11 +237,11 @@ b {
   font-size: 1rem;
   font-weight: 500;
 }
-p, ul {
+/* p, ul {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 300;
-}
+} */
 ul {
   list-style: none;
 }
@@ -502,39 +503,32 @@ a img{
 
 
 /* Section - Footer Styles------------------- */
-.social {
-  grid-area: 8 / footer-far-left / 8 / footer-far-right
+.footer {
+  grid-area: footer;
 }
-.icon_social_instagram {
-  grid-area: footer-far-left;
-  justify-self: center;
+.container_footer {
+  height: auto;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
 }
-.icon_social_dribble {
-  grid-area: footer-left;
-  justify-self: center;
-}
-.icon_social_linkedin {
-  grid-area: footer-right;
-  justify-self: center;
-}
-.icon_social_email {
-  grid-area: footer-far-right;
-  justify-self: center;
+.container_icon_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon_social {
   width: 24px;
   height: 24px;
-  fill: #6F6F6F;
-  transition: fill 1s;
-}
-.icon_social:hover {
-  width: 24px;
-  height: 24px;
-  fill: #FFFFFF;
+  display: block;
+  justify-self: center;
+  margin: 16px 8px 0px 16px;
+  fill: var(--dark-grey);
 }
 .copyright {
-  grid-area: 8 / footer-left / 8 / footer-right;
-  padding-top: 16px;
-  justify-self: center;
+  margin: 0px;
+  padding: 8px 0px;
+  text-align:center;
   white-space: nowrap;
+  font-size: 10px;
+  font-weight: 400;
 }
