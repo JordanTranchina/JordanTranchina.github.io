@@ -373,7 +373,6 @@ a:hover{
 }
 .coverimg {
   padding-top: 48px;
-  opacity: 0.3;
   width: 100%;
 }
 .img-title {
@@ -386,14 +385,25 @@ a:hover{
 #img-title-alt-color {
   color: #12a9ff;
 }
-.img-subtitle {
+.container_img-subtitle {
   grid-area: cover-image-subtitle;
   width: 100%;
-  height: 56px;
+  height: 35px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  position: relative;
+}
+.img-subtitle {
+  position: absolute;
+  width: 100%;
+  margin: 10px 0px;
   display:flex;
   justify-content: center;
-  align-items:center;
-  background-color: #d8d8d8;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--dark-grey);
 }
 
 
