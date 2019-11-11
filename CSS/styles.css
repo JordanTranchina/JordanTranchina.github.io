@@ -112,6 +112,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
     grid-template-rows: auto auto auto auto auto;
     column-gap: 16px;
+    margin: 0px 16px;
     grid-template-areas:
     "nav-far-left nav-left nav-right nav-far-right"
     "cover-image cover-image cover-image cover-image"
@@ -119,7 +120,7 @@
     "about about about about"
     "work work work work"
     ". contact contact . "
-    "footer-far-left footer-left footer-right footer-far-right"
+    "footer-far-left footer-left footer-right footer-far-right";
   }
 
   .overlay-body {
@@ -206,10 +207,6 @@ body {
   background: #FFFFFF;
   color: #000000;
   font-family: 'Interstate', Helvetica, sans-serif;
-}
-main {
-  margin-left: 16px;
-  margin-right: 16px;
 }
 h1 {
   font-family: inherit;
