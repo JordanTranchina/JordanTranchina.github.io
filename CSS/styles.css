@@ -138,7 +138,7 @@
   .nav_container.open {
     max-height: 100%;
     height: 200%;
-    background-color: #000000;
+    background-color: var(--white);
     display: grid;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
@@ -180,22 +180,29 @@
     transition: visibility 0s linear;
     /* transition-delay: .2s; */
   }
-  #nav_tab_about.open{
+  #nav_tab_home.open{
     grid-area: second;
     transition-delay: .10s;
     justify-self: center;
     height: auto;
     width: auto;
   }
-  #nav_tab_work.open {
+  #nav_tab_about.open{
     grid-area: third;
+    transition-delay: .10s;
+    justify-self: center;
+    height: auto;
+    width: auto;
+  }
+  #nav_tab_work.open {
+    grid-area: fourth;
     transition-delay: .15s;
     justify-self: center;
     height: auto;
     width: auto;
   }
   #nav_tab_contact.open {
-    grid-area: fourth;
+    grid-area: fifth;
     transition-delay: .25s;
     justify-self: center;
     height: auto;
@@ -205,7 +212,7 @@
 /* Global Styles--------------------------- */
 body {
   background: #FFFFFF;
-  color: #000000;
+  color: var(--dark-grey);
   font-family: 'Interstate', Helvetica, sans-serif;
 }
 h1 {
@@ -251,7 +258,7 @@ a:hover{
 /* Section - Nav Styles--------------------------- */
 .nav_container {
   /* styles */
-  background-color: #343434;
+  background-color: var(--white);
   max-height: 64px;
   position: fixed;
   top: 0;
@@ -278,15 +285,13 @@ a:hover{
 .bar1, .bar2, .bar3 {
   width: 32px;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: var(--blue);
   margin: 6px 0;
   transition: 0.3s;
   border-radius: 10px;
 }
 /* rotating menu bars */
 .active .bar1 {
-  /* transform: rotate(-45deg) translate(-7px, 7px); */
-  /* transform: rotate(45deg) translate(9px, 5px); */
   transform: translate(0px, 10px) rotate(45deg);
   transition: 0.3s;
 }
@@ -295,7 +300,6 @@ a:hover{
   transition: .1s
 }
 .active .bar3 {
-  /* transform: rotate(-45deg) translate(9px, -5px); */
   transform: translate(0px, -10px) rotate(-45deg);
   transition: 0.3s;
 }
@@ -311,18 +315,19 @@ a:hover{
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: #8D99AE;
+  /* color: #8D99AE; */
   justify-self: center; /* Horizontal */
   align-self: center; /* Vertical */
 }
 #nav_text {
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   white-space: nowrap;
   justify-self: right; /* Horizontal */
   align-self: center; /* Vertical */
   padding-right: 16px;
+  color: var(--blue);
 }
 /* Nav Style - Effects------------------------- */
 .nav_tab_hover_effect {
