@@ -411,7 +411,22 @@ a:hover{
 .about {
   grid-area: about;
 }
-
+.container_about {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  margin: 32px 0px;
+}
+.container_about div{
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--dark-grey);
+  padding: 8px;
+}
 
 /* Section - Work Styles------------------- */
 .work {
