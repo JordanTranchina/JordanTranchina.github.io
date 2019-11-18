@@ -1,9 +1,11 @@
-/* Color Pallete-------------------
-#2B2D42 - dark blue
-#8D99AE - light blue
-#EDF2F4 - blue/white
-#EE2329 -red
-*/
+/* Color Pallete------------------- */
+:root {
+  --blue: #19a3ff;
+  --white: #ffffff;
+  --grey: #5e5e5e;
+  --dark-grey: #393939;
+  --black: #000000;
+}
 
 /* Fonts--------------------------- */
 @font-face {
@@ -110,15 +112,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
     grid-template-rows: auto auto auto auto auto;
     column-gap: 16px;
+    margin: 0px 16px;
     grid-template-areas:
     "nav-far-left nav-left nav-right nav-far-right"
     "cover-image cover-image cover-image cover-image"
     "cover-image-subtitle cover-image-subtitle cover-image-subtitle cover-image-subtitle"
     "about about about about"
     "work work work work"
-    "skills skills skills skills"
-    ". contact contact . "
-    "footer-far-left footer-left footer-right footer-far-right"
+    "contact contact contact contact"
+    "footer footer footer footer";
   }
 
   .overlay-body {
@@ -128,15 +130,16 @@
   .nav_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    /* height: 64px; */
     grid-template-rows: auto;
+    height: 64px;
     column-gap: 16px;
     grid-template-areas:
       "nav-far-left nav-left nav-right nav-far-right";
   }
   .nav_container.open {
-    max-height: 100%;
     height: 200%;
-    background-color: #000000;
+    background-color: var(--white);
     display: grid;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
@@ -158,20 +161,17 @@
     grid-area: 1 / nav-far-left / 1 / nav-left;
   }
   #nav_text {
-    /* grid-area: 1 / nav-right / 1 / nav-far-right; */
-    /* the below position code is rough, come back and fix it when I better understand css animations as they relate to display:none and display:block so I can put it back in CSS Grid*/
-    position: absolute;
-    top: 23px;
-    right: 0px;
+    grid-area: 1 / nav-right / 1 / nav-far-right;
   }
   .nav_tab {
-    /* display: block; */
+    display: block;
     height: 0;
+    width: 0;
     visibility: hidden;
     opacity: 0;
   }
   .nav_tab.open{
-    /* display: block; */
+    display: block;
     height: auto;
     font-size: 32px;
     font-weight: 500;
@@ -179,30 +179,42 @@
     visibility: visible;
     opacity: 1;
     transition: visibility 0s linear;
-    transition-delay: .15s;
+    /* transition-delay: .2s; */
   }
-  #nav_tab_about{
+  #nav_tab_home.open{
     grid-area: second;
+    transition-delay: .10s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
-  #nav_tab_work {
+  #nav_tab_about.open{
     grid-area: third;
+    transition-delay: .15s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
-  #nav_tab_skills {
+  #nav_tab_work.open {
     grid-area: fourth;
+    transition-delay: .20s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
-  #nav_tab_contact {
+  #nav_tab_contact.open {
     grid-area: fifth;
+    transition-delay: .25s;
+    justify-self: center;
+    height: auto;
+    width: auto;
   }
 }
 /* Global Styles--------------------------- */
 body {
-  background: #181818;
-  color: #FFFFFF;
+  background: var(--white);
+  color: var(--dark-grey);
   font-family: 'Interstate', Helvetica, sans-serif;
-}
-main {
-  margin-left: 16px;
-  margin-right: 16px;
 }
 h1 {
   font-family: inherit;
@@ -214,16 +226,21 @@ h2 {
   font-size: 1.5rem;
   font-weight: 400;
 }
-h3, p, ul {
+h3 {
   font-family: inherit;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 b {
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
+/* p, ul {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
+} */
 ul {
   list-style: none;
 }
@@ -232,7 +249,8 @@ li {
 }
 a{
   font-family: 'Interstate', Helvetica, sans-serif;
-  color: #8D99AE;
+  /* color: #8D99AE; */
+  color: red;
 }
 a:hover{
   color: #EDF2F4;
@@ -241,8 +259,9 @@ a:hover{
 /* Section - Nav Styles--------------------------- */
 .nav_container {
   /* styles */
-  background-color: #343434;
-  max-height: 64px;
+  background-color: var(--white);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+  height: 64px;
   position: fixed;
   top: 0;
   left: 0;
@@ -253,30 +272,27 @@ a:hover{
   column-gap: 16px;
   list-style-type: none;
   align-content: start;
+  z-index: 1;
 }
 .hamburger {
   cursor: pointer;
   justify-self: left; /* Horizontal */
   align-self: center; /* Vertical */
   display: none;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin: 20px 16px;
+  padding: 3px;
 }
 .bar1, .bar2, .bar3 {
-  width: 32px;
-  height: 4px;
-  background-color: #FFFFFF;
-  margin: 6px 0;
+  width: 18px;
+  height: 2px;
+  margin: 3px 0;
+  background-color: var(--blue);
   transition: 0.3s;
   border-radius: 10px;
 }
-/* rotate menu bars */
+/* rotating menu bars */
 .active .bar1 {
-  /* transform: rotate(-45deg) translate(-7px, 7px); */
-  /* transform: rotate(45deg) translate(9px, 5px); */
-  transform: translate(0px, 10px) rotate(45deg);
+  transform: translate(0px, 5px) rotate(45deg);
   transition: 0.3s;
 }
 .active .bar2 {
@@ -284,8 +300,7 @@ a:hover{
   transition: .1s
 }
 .active .bar3 {
-  /* transform: rotate(-45deg) translate(9px, -5px); */
-  transform: translate(0px, -10px) rotate(-45deg);
+  transform: translate(0px, -5px) rotate(-45deg);
   transition: 0.3s;
 }
 #icon_personal {
@@ -300,18 +315,19 @@ a:hover{
   font-family: 'Interstate', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: #8D99AE;
+  /* color: #8D99AE; */
   justify-self: center; /* Horizontal */
   align-self: center; /* Vertical */
 }
 #nav_text {
   font-family: 'Interstate', Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 16px;
   white-space: nowrap;
   justify-self: right; /* Horizontal */
   align-self: center; /* Vertical */
-  padding-right: 16px;
+  margin-right: 16px;
+  color: var(--blue);
 }
 /* Nav Style - Effects------------------------- */
 .nav_tab_hover_effect {
@@ -357,7 +373,6 @@ a:hover{
 }
 .coverimg {
   padding-top: 48px;
-  opacity: 0.3;
   width: 100%;
 }
 .img-title {
@@ -370,14 +385,25 @@ a:hover{
 #img-title-alt-color {
   color: #12a9ff;
 }
-.img-subtitle {
+.container_img-subtitle {
   grid-area: cover-image-subtitle;
   width: 100%;
-  height: 56px;
+  height: 35px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  position: relative;
+}
+.img-subtitle {
+  position: absolute;
+  width: 100%;
+  margin: 10px 0px;
   display:flex;
   justify-content: center;
-  align-items:center;
-  background-color: #d8d8d8;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--dark-grey);
 }
 
 
@@ -385,132 +411,122 @@ a:hover{
 .about {
   grid-area: about;
 }
-
+.container_about {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  margin: 32px 0px;
+}
+.container_about div{
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--dark-grey);
+  padding: 8px;
+}
 
 /* Section - Work Styles------------------- */
 .work {
   grid-area: work;
 }
-.work_box {
-  /* box style*/
-  width: 100%;
-  height: 192px;
-  background-color: #9a9a9a;
-  border-top: 100px;  /* internal distance from child elements */
-  margin-bottom: 16px;  /* external spacing */
-  /* internal box text style */
-  display: flex;
+
+.work h2{
   text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #e2e2e2;
-  text-decoration: none;
-}
-.icon_client {
-  width: 40px;
-  height: 40px;
-  fill: #6F6F6F;
-  display: inline-block;
-  margin:auto;
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-.icon_client:hover {
-  width: 64px;
-  height: 64px;
-  fill: #FFFFFF;
-  display: inline-block;
-  margin:auto;
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  background-position: 0%;
 }
 
+.work_card {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  /* need to add opacity to shadow below */
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+}
 
-/* Section - Skills Styles------------------- */
-.skills {
-  grid-area: skills;
+.work_text_bg {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
-.container_skill-bar p {
-  margin-top: 24px;
-  margin-bottom: 2px;
-}
-.rear_skill_bar {
-  width: 225px;
-  background-color: #929292; /* Background bar color */
-  border-radius: 100px;
-}
-.front_skill_bar {
-  padding: 8px; /* Add some padding */
-  background-color: #4E4E4E; /* Foreground bar color */
-  border-radius: 100px;
-}
-.sketch {width: 68%;}
-.flinto {width: 68%;}
-.invision {width: 60%;}
-.mural {width: 60%;}
-.powerpoint {width: 77%;}
-.excel {width: 77%;}
-.word {width: 60%;}
-.html {width: 34%;}
-.css {width: 34%;}
-.javascript {width: 34%;}
 
+.work_text_bg h3{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #393939;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.work_text_bg p{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #393939;
+  font-size: 14px;
+}
+
+a img{
+  width: 100%;
+}
 
 /* Section - Contact Styles------------------- */
 .contact {
   grid-area: contact;
   justify-self: center;
-  width: auto;
-  height: auto;
+  width: 100%
+}
+.contact button {
+  width: 100%;
+  height: 61px;
   border-radius: 4px;
-  background-color: #d8d8d8;
-  margin: 16px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--blue);
+  margin: 32px 0px;
 }
 .contact a {
-  white-space: nowrap;
-  font-size: 1rem;
   text-decoration: none;
   display: block;
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 117px;
-  padding-right: 117px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  padding: 20px;
 }
 
 
 /* Section - Footer Styles------------------- */
-.social {
-  grid-area: 8 / footer-far-left / 8 / footer-far-right
+.container_footer {
+  grid-area: footer;
+  height: auto;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  margin: 0px -16px;
 }
-.icon_social_instagram {
-  grid-area: footer-far-left;
-  justify-self: center;
-}
-.icon_social_dribble {
-  grid-area: footer-left;
-  justify-self: center;
-}
-.icon_social_linkedin {
-  grid-area: footer-right;
-  justify-self: center;
-}
-.icon_social_email {
-  grid-area: footer-far-right;
-  justify-self: center;
+.container_icon_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon_social {
   width: 24px;
   height: 24px;
-  fill: #6F6F6F;
-  transition: fill 1s;
-}
-.icon_social:hover {
-  width: 24px;
-  height: 24px;
-  fill: #FFFFFF;
+  display: block;
+  justify-self: center;
+  margin: 16px 8px 0px 16px;
+  fill: var(--dark-grey);
 }
 .copyright {
-  grid-area: 8 / footer-left / 8 / footer-right;
-  padding-top: 16px;
-  justify-self: center;
+  margin: 0px;
+  padding: 8px 0px;
+  text-align:center;
   white-space: nowrap;
+  font-size: 10px;
+  font-weight: 400;
 }
