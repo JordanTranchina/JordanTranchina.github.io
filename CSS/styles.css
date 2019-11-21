@@ -439,12 +439,13 @@ a:hover{
 /* .work .work_card:nth-of-type(odd){
     box-shadow: 0 1px 4px 0 red;
 } */
-.work h2{
+.about h2{
   text-align: center;
+  /* grid-column: 1 / 1; */
 }
 .work_card {
   /* declare that cards belong in the CSS Grid */
-
+  /* grid-row: 2 / span 3; */
   position: relative;
   width: auto;
   height: auto;
