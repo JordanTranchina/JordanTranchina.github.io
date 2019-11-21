@@ -125,7 +125,6 @@
 
   .overlay-body {
     overflow: hidden;
-
   }
   .nav_container {
     display: grid;
@@ -431,22 +430,26 @@ a:hover{
 /* Section - Work Styles------------------- */
 .work {
   grid-area: work;
+  /* figure out how to use the repeat feature in CSS Grid https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/ */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(352px, 660px));
+  grid-gap: 1rem; */
 }
 
+.work .work_card:nth-of-type(odd){
+    box-shadow: 0 1px 4px 0 red;
+}
 .work h2{
   text-align: center;
 }
-
 .work_card {
   position: relative;
   width: auto;
   height: auto;
   margin-bottom: 16px;
   border-radius: 4px;
-  /* need to add opacity to shadow below */
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
 }
-
 .work_text_bg {
   position: absolute;
   width: 100%;
@@ -455,7 +458,6 @@ a:hover{
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-
 .work_text_bg h3{
   padding-left: 8px;
   margin-top: 8px;
@@ -464,7 +466,6 @@ a:hover{
   font-size: 16px;
   font-weight: 500;
 }
-
 .work_text_bg p{
   padding-left: 8px;
   margin-top: 8px;
@@ -472,11 +473,9 @@ a:hover{
   color: #393939;
   font-size: 14px;
 }
-
 a img{
   width: 100%;
 }
-
 /* Section - Contact Styles------------------- */
 .contact {
   grid-area: contact;
