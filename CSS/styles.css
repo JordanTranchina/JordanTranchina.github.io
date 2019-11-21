@@ -106,7 +106,7 @@
 }
 
 /* Media listeners--------------------------- */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 679px) {
   body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
