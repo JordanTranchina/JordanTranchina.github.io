@@ -430,18 +430,15 @@ a:hover{
 /* Section - Work Styles------------------- */
 .work {
   grid-area: work;
-  display: grid;
-  /* trying to figure out how to set the grid template columns below correctly */
-  grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
-  column-gap: 16px;
 }
-
-/* .work .work_card:nth-of-type(odd){
-    box-shadow: 0 1px 4px 0 red;
-} */
-.about h2{
+.work h2{
   text-align: center;
   /* grid-column: 1 / 1; */
+}
+.container_work_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+  column-gap: 16px;
 }
 .work_card {
   /* declare that cards belong in the CSS Grid */
