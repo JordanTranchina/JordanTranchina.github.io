@@ -519,7 +519,6 @@ a img{
   display: block;
   justify-self: center;
   margin: 16px 8px 0px 16px;
-  fill: var(--dark-grey);
 }
 .copyright {
   margin: 0px;
