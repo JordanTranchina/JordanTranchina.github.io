@@ -214,6 +214,7 @@ body {
   background: var(--white);
   color: var(--dark-grey);
   font-family: 'Interstate', Helvetica, sans-serif;
+  margin: 0px 16px;
 }
 h1 {
   font-family: inherit;
@@ -248,12 +249,11 @@ li {
 }
 a{
   font-family: 'Interstate', Helvetica, sans-serif;
-  /* color: #8D99AE; */
-  color: red;
+  color: var(--blue);
 }
-a:hover{
+/* a:hover{
   color: #EDF2F4;
-}
+} */
 
 /* Section - Nav Styles--------------------------- */
 .nav_container {
@@ -312,11 +312,13 @@ a:hover{
 }
 .nav_tab {
   font-family: 'Interstate', Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  /* color: #8D99AE; */
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--blue);
   justify-self: center; /* Horizontal */
   align-self: center; /* Vertical */
+  /* moving the nav items down a bit to compensate for the underline effect */
+  margin-top: 4px;
 }
 #nav_text {
   font-family: 'Interstate', Helvetica, sans-serif;
@@ -334,16 +336,14 @@ a:hover{
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient( to right, #FFFFFF 50%, #6F6F6F 50%);
-  background-size: 200% 100%;
-  background-position: 100%;
+  background-image: linear-gradient( to right, var(--blue) 50%, var(--blue) 50%);
   /* On OffHover, reverse hover fill linear left*/
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   /* setting up underline linear left  */
   display: inline-block;
 }
 .nav_tab_hover_effect:hover {
-  color: #EDF2F4;
+  color: var(--blue);
   /* OnHover, execute hover fill linear left */
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-position: 0%;
@@ -354,12 +354,12 @@ a:hover{
     display: block;
     width: 0;
     height: 2px;
-    background: #FFFFFF;
+    background: var(--blue);
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 /* OnHover, execute underline linear left */
 .nav_tab_hover_effect:hover::after {
-    width: 1ch;
+    width: 100%;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
@@ -482,7 +482,7 @@ a img{
   justify-self: center;
   width: 100%
 }
-.contact button {
+.button {
   width: 100%;
   height: 61px;
   border-radius: 4px;
@@ -490,13 +490,14 @@ a img{
   background-color: var(--blue);
   margin: 32px 0px;
 }
-.contact a {
+.button a {
   text-decoration: none;
   display: block;
   font-size: 16px;
   font-weight: 500;
   color: var(--white);
-  padding: 20px;
+  text-align: center;
+  padding-top: 24px;
 }
 
 
