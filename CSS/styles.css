@@ -467,7 +467,7 @@ a{
   font-weight: 500;
 }
 .work_text_bg p{
-  padding-left: 8px;
+  padding: 0px 8px;
   margin-top: 8px;
   margin-bottom: 8px;
   color: #393939;
@@ -475,6 +475,7 @@ a{
 }
 a img{
   width: 100%;
+  /* Need to add in a max-height here to prevent super tall photos breaking the grid */
 }
 /* Section - Contact Styles------------------- */
 .contact {
