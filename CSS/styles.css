@@ -250,6 +250,7 @@ li {
 a{
   font-family: 'Interstate', Helvetica, sans-serif;
   color: var(--blue);
+  text-decoration: none;
 }
 /* a:hover{
   color: #EDF2F4;
