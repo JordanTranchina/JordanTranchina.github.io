@@ -332,23 +332,7 @@ a{
   color: var(--blue);
 }
 /* Nav Style - Effects------------------------- */
-.nav_tab_hover_effect {
-  /* setting up hover fill linear left */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient( to right, var(--blue) 50%, var(--blue) 50%);
-  /* On OffHover, reverse hover fill linear left*/
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  /* setting up underline linear left  */
-  display: inline-block;
-}
-.nav_tab_hover_effect:hover {
-  color: var(--blue);
-  /* OnHover, execute hover fill linear left */
-  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  background-position: 0%;
-}
+
 /* adding in underline for underline linear left*/
 .nav_tab_hover_effect::after {
     content: '';
