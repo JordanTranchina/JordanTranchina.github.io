@@ -348,15 +348,15 @@ a{
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-
 /* Section - Cover Image Styles------------------- */
 .container_coverimg {
   grid-area: cover-image;
   position: relative;
   z-index: -1;
+  margin-top: 64px;
 }
 .coverimg {
-  padding-top: 48px;
+  padding-top: 64px;
   width: 100%;
 }
 .img-title {
@@ -458,10 +458,16 @@ a{
   color: #393939;
   font-size: 14px;
 }
-a img{
+
+/* Need to add new code below to select both picture and a at the same time */
+a picture{
   width: 100%;
   /* Need to add in a max-height here to prevent super tall photos breaking the grid */
 }
+a img{
+  width: 100%;
+}
+
 /* Section - Contact Styles------------------- */
 .contact {
   grid-area: contact;
