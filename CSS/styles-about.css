@@ -1,0 +1,465 @@
+/* Color Pallete------------------- */
+:root {
+  --blue: #19a3ff;
+  --white: #ffffff;
+  --grey: #5e5e5e;
+  --dark-grey: #393939;
+  --black: #000000;
+}
+
+/* Fonts--------------------------- */
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Hairline.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Hairline-Italic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Thin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Thin-Italic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-ExtraLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-ExtraLight-Italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Light-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Regular.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Regular-Italic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Bold-Italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Black.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-Black-Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-UltraBlack.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Interstate';
+  src:  url('../fonts/Interstate-UltraBlack-Italic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Media listeners--------------------------- */
+@media screen and (max-width: 679px) {
+  body.PAGE-HOME{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 16px;
+    margin: 0px 16px;
+    grid-template-areas:
+    "nav-far-left nav-left nav-right nav-far-right"
+    "about about about about"
+    "work work work work"
+    "contact contact contact contact"
+    "footer footer footer footer";
+  }
+
+  .overlay-body {
+    overflow: hidden;
+  }
+  .nav_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    /* height: 64px; */
+    grid-template-rows: auto;
+    height: 64px;
+    column-gap: 16px;
+    grid-template-areas:
+      "nav-far-left nav-left nav-right nav-far-right";
+  }
+  .nav_container.open {
+    height: 200%;
+    background-color: var(--white);
+    display: grid;
+    /* grid-template-rows: auto auto auto auto auto; */
+    grid-template-areas:
+      "nav-far-left nav-left nav-right nav-far-right"
+      "second second second second"
+      "third third third third"
+      "fourth fourth fourth fourth"
+      "fifth fifth fifth fifth";
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  .nav_container .hamburger {
+    display: block;
+  }
+  .icon_personal_container,.blanks{
+    display: none;
+  }
+  .hamburger {
+    cursor: pointer;
+    grid-area: 1 / nav-far-left / 1 / nav-left;
+  }
+  #nav_text {
+    grid-area: 1 / nav-right / 1 / nav-far-right;
+  }
+  .nav_tab {
+    display: block;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .nav_tab.open{
+    display: block;
+    height: auto;
+    font-size: 32px;
+    font-weight: 500;
+    padding-top: 64px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear;
+    /* transition-delay: .2s; */
+  }
+  #nav_tab_home.open{
+    grid-area: second;
+    transition-delay: .10s;
+    justify-self: center;
+    height: auto;
+    width: auto;
+  }
+  #nav_tab_about.open{
+    grid-area: third;
+    transition-delay: .15s;
+    justify-self: center;
+    height: auto;
+    width: auto;
+  }
+  #nav_tab_work.open {
+    grid-area: fourth;
+    transition-delay: .20s;
+    justify-self: center;
+    height: auto;
+    width: auto;
+  }
+  #nav_tab_contact.open {
+    grid-area: fifth;
+    transition-delay: .25s;
+    justify-self: center;
+    height: auto;
+    width: auto;
+  }
+}
+
+/* Global Styles--------------------------- */
+body {
+  background: var(--white);
+  color: var(--dark-grey);
+  font-family: 'Interstate', Helvetica, sans-serif;
+  margin: 0px 16px;
+}
+h1 {
+  font-family: inherit;
+  font-size: 3rem;
+  font-weight: 400;
+}
+h2 {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+h3 {
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+b {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 16px
+}
+a{
+  font-family: 'Interstate', Helvetica, sans-serif;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Section - Nav Styles--------------------------- */
+.nav_container {
+  /* styles */
+  background-color: var(--white);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+  height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* full width constant*/
+  /* grid */
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  column-gap: 16px;
+  list-style-type: none;
+  align-content: start;
+  z-index: 1;
+}
+.hamburger {
+  cursor: pointer;
+  justify-self: left; /* Horizontal */
+  align-self: center; /* Vertical */
+  display: none;
+  margin: 20px 16px;
+  padding: 3px;
+}
+.bar1, .bar2, .bar3 {
+  width: 18px;
+  height: 2px;
+  margin: 3px 0;
+  background-color: var(--blue);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+/* rotating menu bars */
+.active .bar1 {
+  transform: translate(0px, 5px) rotate(45deg);
+  transition: 0.3s;
+}
+.active .bar2 {
+  opacity: 0;
+  transition: .1s
+}
+.active .bar3 {
+  transform: translate(0px, -5px) rotate(-45deg);
+  transition: 0.3s;
+}
+#icon_personal {
+  display: grid;
+  justify-content: start; /* Horizontal */
+  align-content: center; /* Vertical */
+  width: 24px;
+  height: 24px;
+  padding: 20px;
+}
+.nav_tab {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--blue);
+  justify-self: center; /* Horizontal */
+  align-self: center; /* Vertical */
+  /* moving the nav items down a bit to compensate for the underline effect */
+  margin-top: 4px;
+}
+#nav_text {
+  font-family: 'Interstate', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+  justify-self: right; /* Horizontal */
+  align-self: center; /* Vertical */
+  margin-right: 16px;
+  color: var(--blue);
+}
+/* Nav Style - Effects------------------------- */
+.nav_tab_hover_effect::after {
+  /* adding in underline for underline linear left*/
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--blue);
+    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.nav_tab_hover_effect:hover::after {
+  /* OnHover, execute underline linear left */
+    width: 100%;
+    transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/* Section - About Styles------------------- */
+/* Section - HOME Sub-Styles------- */
+.about {
+  grid-area: about;
+}
+.container_about {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  margin: 96px 0px;
+}
+.container_about div{
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--dark-grey);
+  padding: 8px;
+}
+
+/* Section - Work Styles------------------- */
+.work {
+  grid-area: work;
+}
+.work h2{
+  text-align: center;
+  /* grid-column: 1 / 1; */
+}
+.container_work_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+  column-gap: 16px;
+}
+.work_card {
+  /* declare that cards belong in the CSS Grid */
+  /* grid-row: 2 / span 3; */
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.24);
+}
+.work_text_bg {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.work_text_bg h3{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #393939;
+  font-size: 16px;
+  font-weight: 500;
+}
+.work_text_bg p{
+  padding: 0px 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #393939;
+  font-size: 14px;
+}
+a picture, a img{
+  width: 100%;
+  /* Need to add in a max-height here to prevent super tall photos breaking the grid */
+}
+/* Section - Contact Styles------------------- */
+.contact {
+  grid-area: contact;
+  justify-self: center;
+  width: 100%
+}
+.button {
+  width: 100%;
+  height: 61px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--blue);
+  margin: 32px 0px;
+}
+.button a {
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+  padding-top: 24px;
+}
+
+
+/* Section - Footer Styles------------------- */
+.container_footer {
+  grid-area: footer;
+  height: auto;
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+  margin: 0px -16px;
+}
+.container_icon_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon_social {
+  width: 24px;
+  height: 24px;
+  display: block;
+  justify-self: center;
+  margin: 16px 8px 0px 16px;
+}
+.copyright {
+  margin: 0px;
+  padding: 8px 0px;
+  text-align:center;
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 400;
+}

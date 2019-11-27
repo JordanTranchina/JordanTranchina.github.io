@@ -107,7 +107,7 @@
 
 /* Media listeners--------------------------- */
 @media screen and (max-width: 679px) {
-  body {
+  body.PAGE-HOME{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
     grid-template-rows: auto auto auto auto auto;
@@ -209,6 +209,7 @@
     width: auto;
   }
 }
+
 /* Global Styles--------------------------- */
 body {
   background: var(--white);
@@ -332,9 +333,8 @@ a{
   color: var(--blue);
 }
 /* Nav Style - Effects------------------------- */
-
-/* adding in underline for underline linear left*/
 .nav_tab_hover_effect::after {
+  /* adding in underline for underline linear left*/
     content: '';
     display: block;
     width: 0;
@@ -342,8 +342,8 @@ a{
     background: var(--blue);
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
-/* OnHover, execute underline linear left */
 .nav_tab_hover_effect:hover::after {
+  /* OnHover, execute underline linear left */
     width: 100%;
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
@@ -392,6 +392,7 @@ a{
 
 
 /* Section - About Styles------------------- */
+/* Section - HOME Sub-Styles------- */
 .about {
   grid-area: about;
 }
@@ -458,16 +459,10 @@ a{
   color: #393939;
   font-size: 14px;
 }
-
-/* Need to add new code below to select both picture and a at the same time */
-a picture{
+a picture, a img{
   width: 100%;
   /* Need to add in a max-height here to prevent super tall photos breaking the grid */
 }
-a img{
-  width: 100%;
-}
-
 /* Section - Contact Styles------------------- */
 .contact {
   grid-area: contact;
