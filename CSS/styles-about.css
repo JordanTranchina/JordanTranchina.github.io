@@ -390,8 +390,19 @@ p {
 .skills_title_bg {
   background-color: var(--light-grey);
   margin: 8px;
-  padding: 14px 8px;
+  padding: 0px 8px;
   border-radius: 4px;
+  display: grid;
+  grid-template-columns: 0.8fr 0.2fr;
+}
+.skills_title_bg p {
+  grid-column: 1 / 2;
+  align-self: center;
+}
+.skills_title_bg img {
+  grid-column: 2 / 3;
+  justify-self: end;
+  align-self: center;
 }
 .skills_body_text {
   margin: 8px 8px 8px 16px;
