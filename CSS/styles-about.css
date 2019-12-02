@@ -403,6 +403,9 @@ p {
   grid-column: 2 / 3;
   justify-self: end;
   align-self: center;
+  /* use the below to add stretch to the svgs, allowing them to scale responsively
+  align-self: stretch;
+  justify-self: stretch; */
 }
 .skills_body_text {
   margin: 8px 8px 8px 16px;
