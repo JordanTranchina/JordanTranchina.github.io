@@ -120,6 +120,7 @@
     "skills skills skills skills"
     "contact contact contact contact"
     "footer footer footer footer";
+    min-height: 100%;
   }
 
   .overlay-body {
@@ -210,11 +211,25 @@
 }
 
 /* Global Styles--------------------------- */
+html {
+  height: 100%;
+}
 body {
   background: var(--white);
   color: var(--dark-grey);
   font-family: 'Interstate', Helvetica, sans-serif;
   margin: 0px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  grid-template-rows: auto auto 1fr auto auto;
+  column-gap: 16px;
+  grid-template-areas:
+  "nav-far-left nav-left nav-right nav-far-right"
+  "about about about about"
+  "skills skills skills skills"
+  "contact contact contact contact"
+  "footer footer footer footer";
+  min-height: 100%;
 }
 h1 {
   font-family: inherit;
