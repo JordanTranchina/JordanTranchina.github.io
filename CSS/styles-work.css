@@ -111,7 +111,7 @@
   body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto 1fr auto auto;
     column-gap: 16px;
     margin: 0px 16px;
     grid-template-areas:
@@ -119,6 +119,7 @@
     "work-page-locked work-page-locked work-page-locked work-page-locked"
     "contact contact contact contact"
     "footer footer footer footer";
+    min-height: 100%;
   }
 
   .overlay-body {
@@ -209,11 +210,25 @@
 }
 
 /* Global Styles--------------------------- */
+html {
+  height: 100%;
+}
 body {
   background: var(--white);
   color: var(--dark-grey);
   font-family: 'Interstate', Helvetica, sans-serif;
   margin: 0px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  grid-template-rows: auto 1fr auto auto;
+  column-gap: 16px;
+  margin: 0px 16px;
+  grid-template-areas:
+  "nav-far-left nav-left nav-right nav-far-right"
+  "work-page-locked work-page-locked work-page-locked work-page-locked"
+  "contact contact contact contact"
+  "footer footer footer footer";
+  min-height: 100%;
 }
 h1 {
   font-family: inherit;
@@ -376,11 +391,11 @@ input {
   height: 32px;
   padding: 4px 0px 2px 0px;
 }
-/* make the below the value that is entered in the password field */
 .password input::placeholder {
   padding: 8px;
   color: var(--grey);
 }
+/* make the below the value that is entered in the password field */
 
 
 /* Section - Contact Styles------------------- */
@@ -412,7 +427,6 @@ input {
 /* Section - Footer Styles------------------- */
 .container_footer {
   grid-area: footer;
-  height: auto;
   box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.24);
   background-color: var(--white);
   margin: 0px -16px;
