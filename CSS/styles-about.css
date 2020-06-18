@@ -17,21 +17,9 @@
 }
 @font-face {
   font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Hairline-Italic.woff2') format('woff2');
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Interstate';
   src:  url('../fonts/Interstate-Thin.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Thin-Italic.woff2') format('woff2');
-  font-weight: 200;
-  font-style: italic;
 }
 @font-face {
   font-family: 'Interstate';
@@ -41,21 +29,9 @@
 }
 @font-face {
   font-family: 'Interstate';
-  src:  url('../fonts/Interstate-ExtraLight-Italic.woff2') format('woff2');
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Interstate';
   src:  url('../fonts/Interstate-Light.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Light-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
 }
 @font-face {
   font-family: 'Interstate';
@@ -65,21 +41,9 @@
 }
 @font-face {
   font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Regular-Italic.woff2') format('woff2');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Interstate';
   src:  url('../fonts/Interstate-Bold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Bold-Italic.woff2') format('woff2');
-  font-weight: 600;
-  font-style: italic;
 }
 @font-face {
   font-family: 'Interstate';
@@ -89,21 +53,9 @@
 }
 @font-face {
   font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Black-Italic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Interstate';
   src:  url('../fonts/Interstate-UltraBlack.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-UltraBlack-Italic.woff2') format('woff2');
-  font-weight: 800;
-  font-style: italic;
 }
 
 /* Media listeners--------------------------- */

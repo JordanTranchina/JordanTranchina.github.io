@@ -47,33 +47,15 @@
 }
 @font-face {
   font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Bold-Italic.woff2') format('woff2');
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Interstate';
   src:  url('../fonts/Interstate-Black.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Black-Italic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Interstate';
   src:  url('../fonts/Interstate-UltraBlack.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-UltraBlack-Italic.woff2') format('woff2');
-  font-weight: 800;
-  font-style: italic;
 }
 
 /* Media listeners--------------------------- */
@@ -377,12 +359,12 @@ input {
 /* make the below the value that is entered in the password field */
 
 /* Section - Work Page Unlocked Styles----------- */
-/* .story {
-  color: red;
-  padding: 12px 100px;
-} */
+
 .story-sub {
   padding: 0px 5% 32px 5%;
+}
+.story-sub span {
+  font-weight: 500;
 }
 
 /* Section - Contact Styles------------------- */
