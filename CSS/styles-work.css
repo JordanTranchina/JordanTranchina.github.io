@@ -117,11 +117,7 @@
     grid-template-areas:
     "nav-far-left nav-left nav-right nav-far-right"
     "work-page-locked work-page-locked work-page-locked work-page-locked"
-<<<<<<< Updated upstream
-    "contact contact contact contact"
-=======
     ". contact contact ."
->>>>>>> Stashed changes
     "footer footer footer footer";
     min-height: 100%;
   }
@@ -235,11 +231,7 @@ body {
   grid-template-areas:
   "nav-far-left nav-left nav-right nav-far-right"
   "work-page-locked work-page-locked work-page-locked work-page-locked"
-<<<<<<< Updated upstream
-  "contact contact contact contact"
-=======
   ". contact contact ."
->>>>>>> Stashed changes
   "footer footer footer footer";
   min-height: 100%;
 }
@@ -376,11 +368,7 @@ input {
     transition: width .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-<<<<<<< Updated upstream
-/* Section - Work Page Locked Styles----------- */
-=======
 /* Section - Work Page & Work Page Locked Styles----------- */
->>>>>>> Stashed changes
 .work-page-locked {
   grid-area: work-page-locked;
   margin-top: 96px;
@@ -412,17 +400,11 @@ input {
 }
 /* make the below the value that is entered in the password field */
 
-<<<<<<< Updated upstream
-=======
+
 /* Section - Work Page Unlocked Styles----------- */
-/* .story {
-  color: red;
-  padding: 12px 100px;
-} */
 .story-sub {
   padding: 0px 5% 32px 5%;
 }
->>>>>>> Stashed changes
 
 /* Section - Contact Styles------------------- */
 .contact {
