@@ -8,101 +8,53 @@
 }
 
 /* Fonts--------------------------- */
-@font-face {
+@font-face { /* Hairline - 100 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-Hairline.woff2') format('woff2');
   font-weight: 100;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Hairline-Italic.woff2') format('woff2');
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* Thin - 200 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-Thin.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Thin-Italic.woff2') format('woff2');
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* ExtraLight - 300 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-ExtraLight.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-ExtraLight-Italic.woff2') format('woff2');
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* Light - 400 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-Light.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Light-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* Regular - 500 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-Regular.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Regular-Italic.woff2') format('woff2');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* Bold - 600 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-Bold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Bold-Italic.woff2') format('woff2');
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* Blaack - 700 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-Black.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-Black-Italic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
+@font-face { /* UltraBlack - 800 */
   font-family: 'Interstate';
   src:  url('../fonts/Interstate-UltraBlack.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Interstate';
-  src:  url('../fonts/Interstate-UltraBlack-Italic.woff2') format('woff2');
-  font-weight: 800;
-  font-style: italic;
 }
 
 /* Media listeners--------------------------- */
