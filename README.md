@@ -1,4 +1,4 @@
-[![time tracker](https://wakatime.com/badge/github/JordanTranchina/JordanTranchina.github.io.svg?color=dark-green)](https://wakatime.com/badge/github/JordanTranchina/JordanTranchina.github.io?color=dark-green)
+[![time tracker](https://wakatime.com/badge/github/JordanTranchina/JordanTranchina.github.io?color=dark-green)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/JordanTranchina/JordanTranchina.github.io?color=dark-green)
 
 # Personal-Site
