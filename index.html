@@ -1,235 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168921596-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-168921596-1');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Description" content="Jordan Tranchina's portfolio - Home">
-  <meta name="theme-color" content="#343434">
   <title>Jordan Tranchina | Home</title>
-  <link rel="stylesheet" href="/CSS/styles-index.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.css" />
   <link rel="icon" href="images/icon-logo-dark.svg">
-  <script type="text/javascript" src="JS/Javascript.js"></script>
 </head>
 
 <body>
-  <nav class="nav_container" id="overlay">
-    <div class="hamburger" id="hamburger" onclick="mobileMenu()">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-    <div class="icon_personal_container">
-      <a href="../index.html">
-        <img src="/SVGs/icon-logo-white.svg" alt="icon-logo-j" id="icon_personal">
-      </a>
-    </div>
-    <div class="nav_tab" id="nav_tab_home"><a href="#container_coverimg" class="nav_tab_hover_effect" onclick="mobileMenu()">Home</a></div>
-    <div class="nav_tab" id="nav_tab_about"><a href="about.html" class="nav_tab_hover_effect" onclick="mobileMenu()">About</a></div>
-    <div class="nav_tab" id="nav_tab_work"><a href="#work" class="nav_tab_hover_effect" onclick="mobileMenu()">Work</a></div>
-    <div class="nav_tab" id="nav_tab_contact"><a href="#contact" class="nav_tab_hover_effect" onclick="mobileMenu()">Contact</a></div>
-    <div class="blanks"></div>
-    <div class="blanks"></div>
-    <div id="nav_text">Jordan Tranchina</div>
-  </nav>
-  <div class="container_coverimg" id="container_coverimg">
-    <picture>
-      <!-- <source srcset="images/profile-new.webp" type="image/webp" width=100%> -->
-      <source srcset="images/profile-new.jpg" type="image/jpg" width=100%>
-      <img src="images/profile-new.jpg" alt="Profile New!" width=100%>
-    </picture>
+  <!-- Navigation -->
+  <div class="containerNav - fixed w-screen z-50 grid grid-cols-9 h-16 bg-red-500 items-center justify-items-center">
+    <div>icon</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>Jordan Tranchina</div>
   </div>
-  <div class="container_img-subtitle" id="container_img-subtitle">
-    <div class="img-subtitle">Senior UX Designer | New York, NY</div>
+
+  <!-- Cover -->
+  <div class="containerCover - z-auto relative bg-black items-center">
+    <img class="opacity-50" src="images/sf-street.jpg" alt="sf-street">
+    <div class="absolute top-1/3 left-1/4 text-4xl text-white">
+      Jordan Tranchina <br>
+      <span class="text-sm">Product Manager, Designer, Developer</span>
+    </div>
   </div>
-  <section class="about" id="about">
-    <div class="container_about">
-      <div>
-        Nice to meet you!
-        My love for all things tech, coupled with my background in finance and business economics helps me create
-        innovative user experiences. I’ve worked with multi-national companies to create unique user experiences for
-        thousands of users. I’ve led complex programs to record success, and mentored others so they can do the same.
-        I’m a passionate designer with the drive to solve difficult problems, and the attitude to keep the team smiling
-        all the while.
-        When I'm not building websites, apps, and experiences I'm running, coding, exploring NYC, or dancing awkwardly
-        at my desk.
-      </div>
-    </div>
-  </section>
-  <section class="work" id="work">
-    <h2>Work</h2>
-    <div class="container_work_cards">
-      <div class="work_card" title="Work 1">
-        <a href="Work/Redirect-1.html">
-          <picture>
-            <!-- <source srcset="images/Work-1.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-1.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-1.jpg" alt="Work-1" width=100%>
-          </picture>
-        </a <a href="Work/Redirect-1.html">
-        <div class="work_text_bg">
-          <h3>Large Multinational Payments Company</h3>
-          <p>Using Design Thinking to integrate a leading payments company into the future of travel</p>
-        </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 2">
-        <a href="Work/Redirect-2.html">
-          <picture>
-            <!-- <source srcset="images/Work-2.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-2.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-2.jpg" alt="Work-2" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-2.html">
-          <div class="work_text_bg">
-            <h3>Large Multinational Financial Institution</h3>
-            <p>Clearing up confusion through human-centered design while pivoting quickly to meet deadlines in a fire drill</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 3">
-        <a href="Work/Redirect-3.html">
-          <picture>
-            <!-- <source srcset="images/Work-3.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-3.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-3.jpg" alt="Work-3" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-3.html">
-          <div class="work_text_bg">
-            <h3>Fortune 100 Global Financial Institution</h3>
-            <p>Leading a team of three other designers to redesign a global banking portal</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 4">
-        <a href="Work/Redirect-4.html">
-          <picture>
-            <!-- <source srcset="images/Work-4.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-4.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-4.jpg" alt="Work-4" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-4.html">
-          <div class="work_text_bg">
-            <h3>Government Mortgage Securitizer</h3>
-            <p>Improving the onboarding process for lenders by creating journey maps and reducing their paperwork</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 5">
-        <a href="Work/Redirect-5.html">
-          <picture>
-            <!-- <source srcset="images/Work-5.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-5.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-5.jpg" alt="Work-5" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-5.html">
-          <div class="work_text_bg">
-            <h3>Fortune 50 Health Insurance Provider</h3>
-            <p>Creating 9 customer journeys and a target operating model to prepare for the future of healthcare</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 6">
-        <a href="Work/Redirect-6.html">
-          <picture>
-            <!-- <source srcset="images/Work-6.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-6.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-6.jpg" alt="Work-6" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-6.html">
-          <div class="work_text_bg">
-            <h3>Idealab</h3>
-            <p>Leading a 142 person case competition across 11 international cities with 18 administrative team members</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 7">
-        <a href="Work/Redirect-7.html">
-          <picture>
-            <!-- <source srcset="images/Work-7.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-7.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-7.jpg" alt="Work-7" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-7.html">
-          <div class="work_text_bg">
-            <h3>DigitalHub</h3>
-            <p>Managing a group of six designers and product analysts to create a highly-customized shared document repository for my division</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 8">
-        <a href="Work/Redirect-8.html">
-          <picture>
-            <!-- <source srcset="images/Work-8.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-8.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-8.jpg" alt="Work-8" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-8.html">
-          <div class="work_text_bg">
-            <h3>CollegeMAP</h3>
-            <p>Raising over $125,000 with 320+ donations for 35 NYC and Chicago seniors graduating from local underprivileged high schools</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="contact" id="contact">
-    <div class="button">
-      <a href="mailto:Jordan12522@gmail.com">Get in touch</a>
-    </div>
-  </section>
-  <div class="container_footer">
-    <div class="container_icon_social">
-      <div class="icon_social_linkedin">
-        <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="/SVGs/icon-social-linkedin.svg" alt="icon-social-LinkedIn" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_dribble">
-        <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
-          <img src="/SVGs/icon-social-dribbble.svg" alt="icon-social-Dribbble" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_instagram">
-        <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="/SVGs/icon-social-instagram.svg" alt="icon-social-instagram" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_email">
-        <a href="mailto:Jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
-          <img src="/SVGs/icon-social-mail.svg" alt="icon-social-mail" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_calendar">
-        <a href="https://calendly.com/jordantranchina" target="_blank" rel="noopener" aria-label="calendar">
-          <img src="/SVGs/icon-social-schedule.svg" alt="icon-social-calendar" class="icon_social">
-        </a>
-      </div>
-    </div>
-    <p class="copyright">&copy; Jordan Tranchina |
-      <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
-    </p>
+  <!-- <div>About Me
+    <div>Bio</div>
+    <div>My Skills</div>
   </div>
+  <div>My Portfolio
+    <div>Portfolio Card 1</div>
+    <div>Portfolio Card 2</div>
+    <div>Portfolio Card 3</div>
+    <div>Portfolio Card 4</div>
+    <div>Portfolio Card 5</div>
+    <div>Portfolio Card 6</div>
+    <div>Portfolio Card 7</div>
+    <div>Portfolio Card 8</div>
+  </div>
+  <div>Footer
+    <div>Get in Touch</div>
+    <div>Icons
+      <div>Linkedin</div>
+      <div>Dribbble</div>
+      <div>Instagram</div>
+      <div>Email</div>
+      <div>Calendly</div>
+    </div>
+    <div>Copyright protection</div>
+  </div> -->
+  <script src="index.js"></script>
 </body>
 
 </html>
