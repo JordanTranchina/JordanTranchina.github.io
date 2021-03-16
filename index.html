@@ -10,7 +10,7 @@
   <link rel="icon" href="images/icon-logo-dark.svg">
 </head>
 
-<body>
+<body class="overscroll-none">
   <!-- Navigation -->
   <div class="containerNav - fixed w-screen z-50 grid grid-cols-9 bg-gradient-to-b from-black bg-opacity-50 h-16 items-center justify-items-center">
     <!-- <div class="text-white">icon</div> -->
@@ -29,12 +29,14 @@
   <div class="containerCover - z-auto relative bg-black items-center h-screen grid grid-cols-9 grid-rows-5">
     <img class="col-span-full row-span-full opacity-40 object-cover h-full w-full" src="images/sf-street.jpg" alt="sf-street">
     <!-- Title -->
-    <div class="absolute col-start-3 row-start-3 row-end-4 text-6xl text-white font-semibold tracking-widest">
+    <div class="absolute col-start-3 row-start-3 row-end-4 text-white ">
       <div class="space-y-4">
-        <div>JORDAN</div>
-        <div>TRANCHINA</div>
+        <div class="font-bold text-6xl tracking-widest">JORDAN</div>
+        <div class="font-bold text-6xl tracking-widest">TRANCHINA</div>
       </div>
-      <div class="pt-4 text-base font-light tracking-widest">PRODUCT MANAGER, DESIGNER, DEVELOPER</div>
+      <div class="pt-2 pl-2 font-light tracking-widest">
+        <span class="typed tracking-widest"></span>
+      </div>
     </div>
   </div>
   <!-- About Me -->
@@ -69,7 +71,25 @@
   </div>
 
   <!-- Script -->
+  <script src="typed.js"></script>
+  <script>
+    var typed = new Typed(".typed", {
+      strings: [
+        "PRODUCT MANAGER",
+        "DESIGNER",
+        "DEVELOPER"
+      ],
+      smartBackspace: false, // Default value
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+      loopCount: Infinity
+    });
+  </script>
   <script src="index.js"></script>
 </body>
 
 </html>
+
+<!-- thank you / credit -->
+<!-- Matt Boldt - typed.js -->
