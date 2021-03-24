@@ -52,13 +52,11 @@ function mobileMenu() {
 }
 
 function hoverOver(hoverId) {
-    // console.log(`Hover over card ${hoverId}`);
     document.getElementById(hoverId).firstElementChild.classList.remove("hidden")
     return
 }
 
 function hoverOff(hoverId) {
-    // console.log(`Hover off card ${hoverId}`);
     document.getElementById(hoverId).firstElementChild.classList.add("hidden")
     return
 }
