@@ -24,9 +24,6 @@ function mobileMenu() {
         document.querySelector(".nav-contact").classList.toggle("hidden")
         document.querySelector(".nav-contact").classList.remove("row-start-5", "justify-self-center", "col-start-2", "row-start-5", "self-start", "text-4xl", "font-medium")
 
-
-
-
     } else {
         // opening nav & toggling hamburger state to active
         document.querySelector(".hamburger").classList.toggle("active");
