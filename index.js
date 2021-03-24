@@ -50,3 +50,15 @@ function mobileMenu() {
         document.querySelector(".nav-contact").classList.add("row-start-5", "justify-self-center", "col-start-2", "row-start-5", "self-start", "text-4xl", "font-medium")
     }
 }
+
+function hoverOver(hoverId) {
+    // console.log(`Hover over card ${hoverId}`);
+    document.getElementById(hoverId).firstElementChild.classList.remove("hidden")
+    return
+}
+
+function hoverOff(hoverId) {
+    // console.log(`Hover off card ${hoverId}`);
+    document.getElementById(hoverId).firstElementChild.classList.add("hidden")
+    return
+}
