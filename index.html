@@ -8,6 +8,11 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="images/icon-logo-dark.svg">
 </head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 
 <body class="overscroll-y-none bg-gray-100">
   <!-- Navigation -->
@@ -22,9 +27,9 @@
     </div>
     <img src="images/icon-logo-white.svg" alt="Jordan Tranchina Logo" class="hidden sm:block justify-self-start ml-4">
     <a href="index.html" class="nav-index - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Home</a>
-    <a href="about.html" class="nav-about - hidden text-blue-400 sm:block sm:text-white sm:font-medium">About</a>
-    <a href="portfolio.html" class="nav-portfolio - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Portfolio</a>
-    <a href="contact.html" class="nav-contact - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Contact</a>
+    <a href="#AboutMe" class="nav-about - hidden text-blue-400 sm:block sm:text-white sm:font-medium">About</a>
+    <a href="#Portfolio" class="nav-portfolio - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Portfolio</a>
+    <a href="mailto:jordan1252@gmail.com" class="nav-contact - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Contact</a>
     <div class="col-start-2 sm:col-start-8 col-span-2 justify-self-end mr-4 text-blue-400 sm:text-white font-medium self-start mt-5">Jordan Tranchina
     </div>
   </div>
@@ -47,9 +52,9 @@
   </div>
 
   <!-- About Me -->
-  <div class="containerGlobalAboutMe sm:grid sm:grid-cols-6">
+  <div id="AboutMe" class="containerGlobalAboutMe sm:grid sm:grid-cols-6">
     <!-- about me -->
-    <div class="contianerAboutMe m-4 sm:col-start-2 sm:col-span-2">
+    <div class="contianerAboutMe - my-16 mx-4 sm:col-start-2 sm:col-span-2">
       <div class="font-semibold text-xs mb-1">ABOUT ME</div>
       <div class="font-thin text-gray-800 text-base justify-self-center">My love for all things tech, coupled with my background in finance and
         business economics helps me create innovative user experiences. I’ve worked
@@ -63,7 +68,7 @@
     </div>
 
     <!-- my skills -->
-    <div class="containerMySkills col-start-4 col-span-2 m-4">
+    <div class="containerMySkills - my-16 mx-4 col-start-4 col-span-2 m-4">
       <div class="font-semibold text-xs">MY SKILLS</div>
       <div class="flex flex-row h-16">
         <img src="images/icon-skill-product-management.svg" alt="">
@@ -81,13 +86,13 @@
   </div>
 
   <!-- My Portfolio -->
-  <div class="mx-4">My Portfolio</div>
+  <div id="Portfolio" class="mx-4 font-semibold text-xl text-center tracking-wide">MY PORTFOLIO</div>
   <div class="portfolioMasterContainer m-4 grid grid-cols-1 gap-4 sm:grid-cols-12 ">
 
     <!-- card 1 -->
 
     <a id="1" class="portfolioCard bg-white relative rounded-lg shadow-xl w-full sm:col-span-6 md:col-span-4 lg:col-span-3 2xl:col-span-2"
-      onmouseover="hoverOver(this.id)" onmouseout="hoverOff(this.id)" href="about.html">
+      onmouseover="hoverOver(this.id)" onmouseout="hoverOff(this.id)" href="portfolio/AMEXplore.html">
       <div class="cardShader - hidden absolute flex flex-col justify-center shadow-xl content-center bg-black rounded-lg h-full w-full bg-opacity-90">
 
         <div class="cardShaderTitle - max-w-xs mx-4 my-2 place-self-center text-s font-medium tracking-widest text-center text-white">
