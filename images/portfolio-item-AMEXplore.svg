@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo</title>
+    <defs>
+        <filter x="-22.6%" y="-22.6%" width="145.2%" height="145.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.16 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Flowchart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Welcome" transform="translate(-108.000000, -64.000000)">
+            <g id="Logo" filter="url(#filter-1)" transform="translate(128.000000, 84.000000)">
+                <rect id="Base" fill="#1174B8" x="0" y="0" width="119.523179" height="119.523179" rx="5.7218543"></rect>
+                <g id="AMEXplore" transform="translate(5.500000, 48.000000)" fill="#FFFFFF" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="21.25" font-weight="bold">
+                    <text id="Xplore">
+                        <tspan x="44.6475" y="21">Xplore</tspan>
+                    </text>
+                    <text id="ME">
+                        <tspan x="12.978125" y="21">ME</tspan>
+                    </text>
+                    <text id="A">
+                        <tspan x="0.221875" y="21">A</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

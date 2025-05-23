@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168921596-1"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Tranchina | Home</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="images/icon-logo-dark.svg">
+  <meta name="description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer.">
+  <meta property="og:title" content="Jordan Tranchina | Product Manager & UX Designer" />
+  <meta property="og:description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer." />
+  <meta property="og:image" content="images/icon-logo-dark.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jordantranchina.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jordan Tranchina | Product Manager & UX Designer" />
+  <meta name="twitter:description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer." />
+  <meta name="twitter:image" content="images/icon-logo-dark.svg" />
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<body class="overscroll-y-none bg-gray-100">
+  <!-- Navigation -->
+  <div
+    class="containerNav fixed w-full z-50 grid grid-cols-3 sm:grid-cols-9 sm:bg-gradient-to-b sm:from-black sm:bg-opacity-50 h-16 sm:bg-transparent items-center justify-items-center transition-h">
+
+    <img src="images/icon-logo-white.svg" alt="Jordan Tranchina Logo" class="justify-self-start ml-4">
+    <a href="index.html" class="nav-index hidden sm:block sm:text-white sm:font-medium">Home</a>
+    <a href="#AboutMe" class="nav-about hidden sm:block sm:text-white sm:font-medium">About</a>
+    <a href="mailto:jordan1252@gmail.com" class="nav-contact hidden sm:block sm:text-white sm:font-medium">Contact</a>
+    <div class="col-start-2 sm:col-start-8 col-span-2 justify-self-end mr-4 text-white font-medium self-start mt-5 block">Jordan Tranchina
+    </div>
+  </div>
+
+  <!-- Cover -->
+  <div class="containerCover - z-auto relative bg-black items-center sm:h-screen grid grid-cols-9 grid-rows-5">
+    <!-- Image -->
+    <img 
+      class="col-span-full row-span-full opacity-40 object-cover sm:h-full sm:w-full transition-opacity duration-700" 
+      src="images/sf-street.jpg" 
+      srcset="images/sf-street.jpg 1280w, images/sf-street-original.jpg 1920w" 
+      sizes="(max-width: 1280px) 100vw, 1920px" 
+      alt="Aerial view of San Francisco street" 
+      loading="lazy"
+    />
+    <!-- Title -->
+    <div class="absolute col-start-2 row-start-2 sm:col-start-3 sm:row-start-3 sm:row-end-4 text-white">
+      <div class="space-y-4">
+        <div class="sm:hidden font-bold text-xl tracking-widest">JORDAN TRANCHINA</div>
+        <div class="hidden sm:block font-bold sm:text-6xl sm:tracking-widest">JORDAN</div>
+        <div class="hidden sm:block font-bold sm:text-6xl sm:tracking-widest">TRANCHINA</div>
+      </div>
+      <div class="pt-2 -pl-2 sm:pl-2 font-light tracking-widest">
+        <span class="typed tracking-widest"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <div id="AboutMe" class="containerGlobalAboutMe sm:grid sm:grid-cols-6">
+    <!-- about me -->
+    <div class="contianerAboutMe my-16 mx-4 sm:col-start-2 sm:col-span-4 sm:mx-auto sm:justify-self-center">
+      <div class="font-semibold text-xs mb-1">ABOUT ME</div>
+      <div class="font-thin text-gray-800 text-base justify-self-center">My life’s mission is to create small improvements in people’s daily lives by working on products that give people time back in their day that they can use for whatever they're passionate about. I'm looking for a company that shares that mission!
+        <br><br>
+        I am a former UX Designer turned Product Manager, with a drive for moving fast, learning quickly, and having fun with the team as we all create together. I've got an MBA from Kellogg, a BS in Finance and Business Economics from Indiana University, and a love for creating from an early age.
+        <br><br>
+        Personally, I spend my time as a dad, a husband, a runner, and a lover of video games and video essays.
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="flex flex-col items-center">
+    <a href="mailto:jordan1252@gmail.com"
+      class="w-3/4 h-16 mt-4 mb-8 bg-white rounded-lg text-blue-400 shadow-xl flex items-center justify-center font-semibold transition-colors duration-200 hover:bg-gray-50 focus:bg-gray-100 focus:outline-none">Get in touch</a>
+    <div class="footerContainer - h-16 -mb-3 flex space-x-6 bg-white w-full items-center justify-center shadow-2xl">
+      <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
+      </a>
+      <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
+        <img src="images/icon-social-dribbble.svg" alt="Dribbble icon" />
+      </a>
+      <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="images/icon-social-instagram.svg" alt="Instagram icon" />
+      </a>
+      <a href="mailto:Jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+        <img src="images/icon-social-mail.svg" alt="Email icon" />
+      </a>
+      <a href="https://calendly.com/jordantranchina" target="_blank" rel="noopener" aria-label="Calendar">
+        <img src="images/icon-social-schedule.svg" alt="Calendar icon" />
+      </a>
+    </div>
+    <div class="copyright w-full text-center bg-white text-xs pb-2">&copy; Jordan Tranchina |
+      <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="typed.js"></script>
   <script>
+    var typed = new Typed(".typed", {
+      strings: [
+        "PRODUCT MANAGER",
+        "DAD",
+        "RUNNER",
+        "VIBECODER",
+        "HUSBAND"
+      ],
+      smartBackspace: false, // Default value
+      typeSpeed: 40,
+      backSpeed: 30,
+      loop: true,
+      loopCount: Infinity
+    });
+  </script>
+  <script title="Copyright Date">
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -15,221 +129,10 @@
 
     gtag('config', 'UA-168921596-1');
   </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Description" content="Jordan Tranchina's portfolio - Home">
-  <meta name="theme-color" content="#343434">
-  <title>Jordan Tranchina | Home</title>
-  <link rel="stylesheet" href="/CSS/styles-index.css">
-  <link rel="icon" href="images/icon-logo-dark.svg">
-  <script type="text/javascript" src="JS/Javascript.js"></script>
-</head>
-
-<body>
-  <nav class="nav_container" id="overlay">
-    <div class="hamburger" id="hamburger" onclick="mobileMenu()">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-    <div class="icon_personal_container">
-      <a href="../index.html">
-        <img src="/SVGs/icon-logo-white.svg" alt="icon-logo-j" id="icon_personal">
-      </a>
-    </div>
-    <div class="nav_tab" id="nav_tab_home"><a href="#container_coverimg" class="nav_tab_hover_effect" onclick="mobileMenu()">Home</a></div>
-    <div class="nav_tab" id="nav_tab_about"><a href="about.html" class="nav_tab_hover_effect" onclick="mobileMenu()">About</a></div>
-    <div class="nav_tab" id="nav_tab_work"><a href="#work" class="nav_tab_hover_effect" onclick="mobileMenu()">Work</a></div>
-    <div class="nav_tab" id="nav_tab_contact"><a href="#contact" class="nav_tab_hover_effect" onclick="mobileMenu()">Contact</a></div>
-    <div class="blanks"></div>
-    <div class="blanks"></div>
-    <div id="nav_text">Jordan Tranchina</div>
-  </nav>
-  <div class="container_coverimg" id="container_coverimg">
-    <picture>
-      <!-- <source srcset="images/profile-new.webp" type="image/webp" width=100%> -->
-      <source srcset="images/profile-new.jpg" type="image/jpg" width=100%>
-      <img src="images/profile-new.jpg" alt="Profile New!" width=100%>
-    </picture>
-  </div>
-  <div class="container_img-subtitle" id="container_img-subtitle">
-    <div class="img-subtitle">Senior UX Designer | New York, NY</div>
-  </div>
-  <section class="about" id="about">
-    <div class="container_about">
-      <div>
-        Nice to meet you!
-        My love for all things tech, coupled with my background in finance and business economics helps me create
-        innovative user experiences. I’ve worked with multi-national companies to create unique user experiences for
-        thousands of users. I’ve led complex programs to record success, and mentored others so they can do the same.
-        I’m a passionate designer with the drive to solve difficult problems, and the attitude to keep the team smiling
-        all the while.
-        When I'm not building websites, apps, and experiences I'm running, coding, exploring NYC, or dancing awkwardly
-        at my desk.
-      </div>
-    </div>
-  </section>
-  <section class="work" id="work">
-    <h2>Work</h2>
-    <div class="container_work_cards">
-      <div class="work_card" title="Work 1">
-        <a href="Work/Redirect-1.html">
-          <picture>
-            <!-- <source srcset="images/Work-1.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-1.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-1.jpg" alt="Work-1" width=100%>
-          </picture>
-        </a <a href="Work/Redirect-1.html">
-        <div class="work_text_bg">
-          <h3>Large Multinational Payments Company</h3>
-          <p>Using Design Thinking to integrate a leading payments company into the future of travel</p>
-        </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 2">
-        <a href="Work/Redirect-2.html">
-          <picture>
-            <!-- <source srcset="images/Work-2.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-2.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-2.jpg" alt="Work-2" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-2.html">
-          <div class="work_text_bg">
-            <h3>Large Multinational Financial Institution</h3>
-            <p>Clearing up confusion through human-centered design while pivoting quickly to meet deadlines in a fire drill</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 3">
-        <a href="Work/Redirect-3.html">
-          <picture>
-            <!-- <source srcset="images/Work-3.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-3.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-3.jpg" alt="Work-3" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-3.html">
-          <div class="work_text_bg">
-            <h3>Fortune 100 Global Financial Institution</h3>
-            <p>Leading a team of three other designers to redesign a global banking portal</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 4">
-        <a href="Work/Redirect-4.html">
-          <picture>
-            <!-- <source srcset="images/Work-4.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-4.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-4.jpg" alt="Work-4" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-4.html">
-          <div class="work_text_bg">
-            <h3>Government Mortgage Securitizer</h3>
-            <p>Improving the onboarding process for lenders by creating journey maps and reducing their paperwork</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 5">
-        <a href="Work/Redirect-5.html">
-          <picture>
-            <!-- <source srcset="images/Work-5.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-5.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-5.jpg" alt="Work-5" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-5.html">
-          <div class="work_text_bg">
-            <h3>Fortune 50 Health Insurance Provider</h3>
-            <p>Creating 9 customer journeys and a target operating model to prepare for the future of healthcare</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 6">
-        <a href="Work/Redirect-6.html">
-          <picture>
-            <!-- <source srcset="images/Work-6.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-6.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-6.jpg" alt="Work-6" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-6.html">
-          <div class="work_text_bg">
-            <h3>Idealab</h3>
-            <p>Leading a 142 person case competition across 11 international cities with 18 administrative team members</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 7">
-        <a href="Work/Redirect-7.html">
-          <picture>
-            <!-- <source srcset="images/Work-7.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-7.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-7.jpg" alt="Work-7" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-7.html">
-          <div class="work_text_bg">
-            <h3>DigitalHub</h3>
-            <p>Managing a group of six designers and product analysts to create a highly-customized shared document repository for my division</p>
-          </div>
-        </a>
-      </div>
-      <div class="work_card" title="Work 8">
-        <a href="Work/Redirect-8.html">
-          <picture>
-            <!-- <source srcset="images/Work-8.webp" type="image/webp" width=100%> -->
-            <source srcset="images/Work-8.jpg" type="image/jpg" width=100%>
-            <img src="images/Work-8.jpg" alt="Work-8" width=100%>
-          </picture>
-        </a>
-        <a href="Work/Redirect-8.html">
-          <div class="work_text_bg">
-            <h3>CollegeMAP</h3>
-            <p>Raising over $125,000 with 320+ donations for 35 NYC and Chicago seniors graduating from local underprivileged high schools</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="contact" id="contact">
-    <div class="button">
-      <a href="mailto:Jordan12522@gmail.com">Get in touch</a>
-    </div>
-  </section>
-  <div class="container_footer">
-    <div class="container_icon_social">
-      <div class="icon_social_linkedin">
-        <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="/SVGs/icon-social-linkedin.svg" alt="icon-social-LinkedIn" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_dribble">
-        <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
-          <img src="/SVGs/icon-social-dribbble.svg" alt="icon-social-Dribbble" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_instagram">
-        <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="/SVGs/icon-social-instagram.svg" alt="icon-social-instagram" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_email">
-        <a href="mailto:Jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
-          <img src="/SVGs/icon-social-mail.svg" alt="icon-social-mail" class="icon_social">
-        </a>
-      </div>
-      <div class="icon_social_calendar">
-        <a href="https://calendly.com/jordantranchina" target="_blank" rel="noopener" aria-label="calendar">
-          <img src="/SVGs/icon-social-schedule.svg" alt="icon-social-calendar" class="icon_social">
-        </a>
-      </div>
-    </div>
-    <p class="copyright">&copy; Jordan Tranchina |
-      <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
-    </p>
-  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
+
+<!-- thank you / credit -->
+<!-- Matt Boldt - typed.js -->

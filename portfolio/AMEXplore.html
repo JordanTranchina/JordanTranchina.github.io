@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Tranchina | AMEXplore</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../images/icon-logo-dark.svg">
+
+</head>
+
+<body class="bg-gray-100 overscroll-y-none flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <div
+        class="containerNav - fixed w-full z-50 grid grid-cols-3 sm:grid-cols-9 sm:bg-gradient-to-b sm:from-black sm:bg-opacity-50 h-16 bg-white sm:bg-transparent items-center justify-items-center transition-h">
+        <div class="hamburger - sm:hidden justify-self-start ml-4 space-y-1 self-start mt-6 pt-0.5" onclick="mobileMenu()">
+            <div class="bar1 bg-blue-400 w-6 h-0.5 duration-300"></div>
+            <div class="bar2 bg-blue-400 w-6 h-0.5 duration-75"></div>
+            <div class="bar3 bg-blue-400 w-6 h-0.5 duration-300"></div>
+        </div>
+        <img src="../images/icon-logo-white.svg" alt="Jordan Tranchina Logo" class="hidden sm:block justify-self-start ml-4">
+        <a href="../index.html" class="nav-index - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Home</a>
+        <a href="../index.html#AboutMe" class="nav-about - hidden text-blue-400 sm:block sm:text-white sm:font-medium">About</a>
+        <a href="mailto:jordan1252@gmail.com" class="nav-contact - hidden text-blue-400 sm:block sm:text-white sm:font-medium">Contact</a>
+        <div class="col-start-2 sm:col-start-8 col-span-2 justify-self-end mr-4 text-blue-400 sm:text-white font-medium self-start mt-5">Jordan
+            Tranchina
+        </div>
+    </div>
+
+    <div title="SPACER" class="mb-32"></div>
+    <main class="flex-grow">
+        <!-- Overview -->
+        <div class="container-Overview grid grid-cols-1 sm:grid-cols-2">
+            <div class="overview-metadata m-4 sm:col-span-1 sm:border-b border-red-400">
+                <div class="text-2xl font-semibold tracking-widest mb-1">SALESFORCE</div>
+                <div class="text-sm font-thin tracking-wide">FALL 2017</div>
+                <div class="text-sm font-thin tracking-wide">IN
+                    <span class="text-blue-400 font-light">
+                        <a href="../index.html#Portfolio">
+                            PRODUCT,
+                        </a>
+                    </span>
+                    <span class="text-blue-400 font-light">
+                        <a href="../index.html#Portfolio">
+                            STRATEGY
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div class="overview-description font-extralight text-gray-600 m-4 sm:col-span-1 border-b border-red-400 sm:pb-8">
+                I'm currently leading a team of seven in a consulting project with Salesforce's Einstein branch. We're working to position the
+                Einstein AI
+                product as a beneficial supplement for all businesses.
+            </div>
+        </div>
+
+
+        <!-- Deliverable 1 -->
+        <div class="container-Deliverable grid grid-cols-1 sm:grid-cols-2">
+            <div class="deliverable-metadata m-4 sm:col-span-1 sm:border-b border-red-400">
+                <div class="text-xl font-semibold tracking-widest mb-1">BRAND POSITIONING</div>
+                <div class="text-xs font-thin tracking-wide pb-8">DELIVERABLE 1</div>
+                <div>
+                    <div class="font-semibold text-xs tracking-wide">PROBLEM:</div>
+                    <div class="font-extralight text-gray-600">
+                        Artifical Intelligence can clearly automate and speed up human processes, but where does AI specifically fit inside the CRM
+                        industry?
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <div class="font-semibold text-xs tracking-wide">SOLUTION:</div>
+                    <div class="font-extralight text-gray-600">
+                        Understand the painpoints of CRM and its ultimate role in closing sales. Then, become familiar with the current processing
+                        power
+                        of Einstein and determine how it can mitigate CRM issues and augment prime features.
+                    </div>
+                </div>
+            </div>
+            <div class="deliverable-media m-4 sm:col-span-1 border-b border-red-400 sm:pb-8">
+                <img src="../images/sf-street.jpg" alt="">
+                </img>
+            </div>
+        </div>
+
+
+        <!-- Deliverable 2 -->
+        <div class="container-Deliverable grid grid-cols-1 sm:grid-cols-2">
+            <div class="deliverable-media m-4 sm:col-span-1 border-b border-red-400 sm:pb-8">
+                <img src="../images/sf-street.jpg" alt="">
+                </img>
+            </div>
+            <div class="deliverable-metadata m-4 sm:col-span-1 sm:border-b border-red-400">
+                <div class="text-xl font-semibold tracking-widest mb-1">GO-TO-MARKET STRATEGY</div>
+                <div class="text-xs font-thin tracking-wide pb-8">DELIVERABLE 2</div>
+                <div>
+                    <div class="font-semibold text-xs tracking-wide">PROBLEM:</div>
+                    <div class="font-extralight text-gray-600">
+                        How can we convince businesses in target verticals of Einstein's efficacy?
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <div class="font-semibold text-xs tracking-wide">SOLUTION:</div>
+                    <div class="font-extralight text-gray-600">
+                        Research how different companies use Salesforce (i.e. which products and subfeatures). Build and document Einstein use cases
+                        for
+                        target verticals, within the existing Salesforce product suite. Furthermore, design mockups of such use cases to visually
+                        display
+                        these uses.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div class="flex flex-col items-center">
+        <button class="w-3/4 h-16 mt-16 mb-8 bg-blue-400 rounded-lg text-white shadow-xl">Get in touch</button>
+        <div class="footerContainer - h-16 -mb-3 flex space-x-6 bg-white w-full items-center justify-center shadow-2xl">
+            <img class="" src="../images/icon-social-linkedin.svg" alt="linkedin icon">
+            <img class="" src="../images/icon-social-dribbble.svg" alt="dribbble icon">
+            <img class="" src="../images/icon-social-instagram.svg" alt="instagram icon">
+            <img class="" src="../images/icon-social-mail.svg" alt="mail icon">
+            <img class="" src="../images/icon-social-schedule.svg" alt="schedule icon">
+        </div>
+        <div class="copyright w-full text-center bg-white text-xs pb-2">&copy; Jordan Tranchina |
+            <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script title="Copyright Date">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168921596-1');
+    </script>
+    <script src="../index.js"></script>
+</body>
+
+</html>
+
+<!-- thank you / credit -->
+<!-- Matt Boldt - typed.js -->
