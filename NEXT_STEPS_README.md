@@ -22,3 +22,20 @@
 ---
 
 Let's start with step 1: Fixing the About Me section layout for desktop.
+
+# NEXT STEPS
+
+## Completed Tasks
+
+- Footer social links: All social icons are now clickable and accessible.
+- Accessibility: All images have descriptive alt text.
+- SEO & Meta Tags: Meta description and Open Graph/Twitter tags are present.
+- Performance: Main background image is optimized and uses srcset for progressive loading.
+- Favicon: Confirmed present and referenced in <head> as images/icon-logo-dark.svg.
+
+## Remaining Tasks
+
+- Review site on multiple devices and browsers for any visual or functional issues.
+- Continue to optimize and update content as needed.
+
+*Remove completed tasks from this list as you go!*
