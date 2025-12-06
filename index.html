@@ -1,137 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan Tranchina | Home</title>
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="icon" href="images/icon-logo-dark.svg">
-  <meta name="description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer.">
+
+  <!-- Meta Tags -->
+  <meta name="description"
+    content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer.">
   <meta property="og:title" content="Jordan Tranchina | Product Manager & UX Designer" />
-  <meta property="og:description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer." />
+  <meta property="og:description"
+    content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer." />
   <meta property="og:image" content="images/icon-logo-dark.svg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jordantranchina.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Jordan Tranchina | Product Manager & UX Designer" />
-  <meta name="twitter:description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer." />
-  <meta name="twitter:image" content="images/icon-logo-dark.svg" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Custom cursor effect or other specific styles can go here */
+  </style>
 </head>
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
 
-<body class="overscroll-y-none bg-gray-100">
+<body class="bg-zinc-950 text-zinc-200 antialiased selection:bg-white selection:text-black">
+
   <!-- Navigation -->
-  <div
-    class="containerNav fixed w-full z-50 grid grid-cols-3 sm:grid-cols-9 sm:bg-gradient-to-b sm:from-black sm:bg-opacity-50 h-16 sm:bg-transparent items-center justify-items-center transition-h">
+  <nav class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="hover:opacity-80 transition-opacity">
+        <img src="images/icon-logo-white.svg" alt="JT Logo" class="h-8 w-auto">
+      </a>
 
-    <img src="images/icon-logo-white.svg" alt="Jordan Tranchina Logo" class="justify-self-start ml-4">
-    <a href="index.html" class="nav-index hidden sm:block sm:text-white sm:font-medium">Home</a>
-    <a href="#AboutMe" class="nav-about hidden sm:block sm:text-white sm:font-medium">About</a>
-    <a href="mailto:jordan1252@gmail.com" class="nav-contact hidden sm:block sm:text-white sm:font-medium">Contact</a>
-    <div class="col-start-2 sm:col-start-8 col-span-2 justify-self-end mr-4 text-white font-medium self-start mt-5 block">Jordan Tranchina
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="#about" class="text-white/80 hover:text-white transition-colors">About</a>
+        <a href="mailto:jordan1252@gmail.com"
+          class="px-5 py-2 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-colors shadow-lg">Contact</a>
+      </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- Cover -->
-  <div class="containerCover - z-auto relative bg-black items-center sm:h-screen grid grid-cols-9 grid-rows-5">
-    <!-- Image -->
-    <img 
-      class="col-span-full row-span-full opacity-40 object-cover sm:h-full sm:w-full transition-opacity duration-700" 
-      src="images/sf-street.jpg" 
-      srcset="images/sf-street.jpg 1280w, images/sf-street-original.jpg 1920w" 
-      sizes="(max-width: 1280px) 100vw, 1920px" 
-      alt="Aerial view of San Francisco street" 
-      loading="lazy"
-    />
-    <!-- Title -->
-    <div class="absolute col-start-2 row-start-2 sm:col-start-3 sm:row-start-3 sm:row-end-4 text-white">
+  <!-- Hero Section -->
+  <main class="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
+
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/sf-street.jpg" alt="Background" class="w-full h-full object-cover opacity-60">
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <!-- Centered Container with Left-Aligned Text -->
+    <div class="relative z-10 flex flex-col items-start text-left text-white">
+      <!-- Original Hero Styling: Bold, Wide Tracking, Stacked on Desktop -->
+      <div class="flex flex-col items-start font-bold tracking-widest leading-tight">
+        <div class="md:hidden text-2xl mb-2">JORDAN TRANCHINA</div>
+        <div class="hidden md:block text-7xl lg:text-8xl">JORDAN</div>
+        <div class="hidden md:block text-7xl lg:text-8xl">TRANCHINA</div>
+      </div>
+
+      <div class="mt-6 flex items-start">
+        <span class="text-xl md:text-2xl font-light tracking-widest text-zinc-300 uppercase typed"></span>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="absolute bottom-10 z-10 animate-bounce text-white/50 hover:text-white transition-colors">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
+  </main>
+
+  <!-- About Section -->
+  <section id="about" class="py-32 px-6 bg-zinc-950 relative">
+    <div class="max-w-3xl mx-auto space-y-12">
       <div class="space-y-4">
-        <div class="sm:hidden font-bold text-xl tracking-widest">JORDAN TRANCHINA</div>
-        <div class="hidden sm:block font-bold sm:text-6xl sm:tracking-widest">JORDAN</div>
-        <div class="hidden sm:block font-bold sm:text-6xl sm:tracking-widest">TRANCHINA</div>
+        <h2 class="text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase">About Me</h2>
+        <div class="w-12 h-0.5 bg-zinc-800"></div>
       </div>
-      <div class="pt-2 -pl-2 sm:pl-2 font-light tracking-widest">
-        <span class="typed tracking-widest"></span>
-      </div>
-    </div>
-  </div>
 
-  <!-- About Me -->
-  <div id="AboutMe" class="containerGlobalAboutMe sm:grid sm:grid-cols-6">
-    <!-- about me -->
-    <div class="contianerAboutMe my-16 mx-4 sm:col-start-2 sm:col-span-4 sm:mx-auto sm:justify-self-center">
-      <div class="font-semibold text-xs mb-1">ABOUT ME</div>
-      <div class="font-thin text-gray-800 text-base justify-self-center">My life’s mission is to create small improvements in people’s daily lives by working on products that give people time back in their day that they can use for whatever they're passionate about. I'm looking for a company that shares that mission!
-        <br><br>
-        I am a former UX Designer turned Product Manager, with a drive for moving fast, learning quickly, and having fun with the team as we all create together. I've got an MBA from Kellogg, a BS in Finance and Business Economics from Indiana University, and a love for creating from an early age.
-        <br><br>
-        Personally, I spend my time as a dad, a husband, a runner, and a lover of video games and video essays.
+      <div class="prose prose-invert prose-lg text-zinc-300 font-light leading-relaxed">
+        <p class="text-xl md:text-2xl text-white font-normal mb-8">
+          My life’s mission is to create small improvements in people’s daily lives by working on products that give people time back in their day.
+        </p>
+        <p>
+          I am a former <span class="text-white font-medium">UX Designer turned Product Manager</span>, with a drive for moving fast, learning
+          quickly, and having fun with the team as we all create together. I've got an MBA from Kellogg, a BS in Finance and Business Economics from
+          Indiana University, and a love for creating from an early age.
+        </p>
+        <p>
+          Personally, I spend my time as a dad, a husband, a runner, and a lover of video games and video essays.
+        </p>
       </div>
-    </div>
-  </div>
+
+      <!-- Social Links -->
+      <div class="pt-8 flex flex-wrap gap-6 items-center">
+        <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener"
+          class="text-zinc-400 hover:text-white transition-colors">
+          LinkedIn
+        </a>
+        <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors">
+          Dribbble
+        </a>
+        <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors">
+          Instagram
+        </a>
+        <a href="mailto:Jordan12522@gmail.com" class="text-zinc-400 hover:text-white transition-colors">
+          Email
+        </a>
+      </div>
+    </div>∏
+  </section>
 
   <!-- Footer -->
-  <div class="flex flex-col items-center">
-    <a href="mailto:jordan1252@gmail.com"
-      class="w-3/4 h-16 mt-4 mb-8 bg-white rounded-lg text-blue-400 shadow-xl flex items-center justify-center font-semibold transition-colors duration-200 hover:bg-gray-50 focus:bg-gray-100 focus:outline-none">Get in touch</a>
-    <div class="footerContainer - h-16 -mb-3 flex space-x-6 bg-white w-full items-center justify-center shadow-2xl">
-      <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
-      </a>
-      <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
-        <img src="images/icon-social-dribbble.svg" alt="Dribbble icon" />
-      </a>
-      <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
-        <img src="images/icon-social-instagram.svg" alt="Instagram icon" />
-      </a>
-      <a href="mailto:Jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
-        <img src="images/icon-social-mail.svg" alt="Email icon" />
-      </a>
-      <a href="https://cal.com/jordan-tranchina/30min" target="_blank" rel="noopener" aria-label="Calendar">
-        <img src="images/icon-social-schedule.svg" alt="Calendar icon" />
-      </a>
-    </div>
-    <div class="copyright w-full text-center bg-white text-xs pb-2">&copy; Jordan Tranchina |
-      <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
-    </div>
-  </div>
+  <footer class="py-8 bg-zinc-950 border-t border-zinc-900 text-center">
+    <p class="text-zinc-600 text-xs">
+      &copy; Jordan Tranchina
+      <script>document.write(new Date().getFullYear());</script>
+    </p>
+  </footer>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script src="typed.js"></script>
+  <script src="index.js"></script>
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168921596-1"></script>
   <script>
-    var typed = new Typed(".typed", {
-      strings: [
-        "PRODUCT MANAGER",
-        "DAD",
-        "RUNNER",
-        "HUSBAND"
-      ],
-      smartBackspace: false, // Default value
-      typeSpeed: 40,
-      backSpeed: 30,
-      loop: true,
-      loopCount: Infinity
-    });
-  </script>
-  <script title="Copyright Date">
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'UA-168921596-1');
   </script>
-  <script src="index.js"></script>
 </body>
 
 </html>
 
 <!-- thank you / credit -->
 <!-- Matt Boldt - typed.js -->
+<!-- https://github.com/mattboldt/typed.js -->
