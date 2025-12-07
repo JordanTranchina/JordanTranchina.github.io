@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Jordan Tranchina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon-logo-dark.svg">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <style>
+        body {
+            font-family: 'nbintl', 'Inter', sans-serif;
+        }
+
+        /* Dark Mode Logic */
+        :root {
+            --bg-color: #fff;
+            --text-color: #111;
+            --zinc-500: #71717a;
+            --zinc-800: #27272a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #111;
+                --text-color: #f0f0f0;
+                --zinc-500: #a1a1aa;
+                --zinc-800: #d4d4d8;
+            }
+        }
+
+        html.dark {
+            --bg-color: #111 !important;
+            --text-color: #f0f0f0 !important;
+            --zinc-500: #a1a1aa !important;
+            --zinc-800: #d4d4d8 !important;
+        }
+
+        html.light {
+            --bg-color: #fff !important;
+            --text-color: #111 !important;
+            --zinc-500: #71717a !important;
+            --zinc-800: #27272a !important;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .text-zinc-500 {
+            color: var(--zinc-500);
+        }
+
+        .text-zinc-800 {
+            color: var(--zinc-800);
+        }
+
+        .bg-zinc-800 {
+            background-color: var(--zinc-800);
+        }
+
+        /* Matches ryo.lu underline style */
+        .border-link {
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .border-link:after {
+            content: "";
+            position: absolute;
+            bottom: -0.1em;
+            right: 0;
+            left: 0;
+            height: 1px;
+            background: var(--text-color);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .border-link:after {
+                background: #fff;
+            }
+        }
+
+        html.dark .border-link:after {
+            background: #fff !important;
+        }
+
+        html.light .border-link:after {
+            background: #111 !important;
+        }
+
+        .border-link:hover:after {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <!-- Navigation (Minimal) -->
+    <nav class="fixed top-0 w-full z-50 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="hover:opacity-100 transition-opacity"
+                style="color: var(--text-color); opacity: 0.7; font-size: 0.8em; text-transform: uppercase; font-family: 'nbintl-mono', monospace; text-decoration: none;">BACK</a>
+
+            <!-- Optional Toggle on About Page -->
+            <span id="themeToggle"
+                style="cursor: pointer; opacity: 0.7; font-size: 0.8em; text-transform: uppercase; font-family: 'nbintl-mono', monospace;">Theme</span>
+        </div>
+    </nav>
+
+    <!-- About Section Content (Preserved) -->
+    <section id="about" class="py-32 px-6 relative">
+        <div class="max-w-3xl mx-auto space-y-12">
+
+            <div class="space-y-4">
+                <h2 class="text-xs font-bold tracking-[0.2em] uppercase text-zinc-500">About Me</h2>
+                <div class="w-12 h-0.5 bg-zinc-800"></div>
+            </div>
+
+            <div class="prose prose-invert prose-lg font-light leading-relaxed" style="color: var(--zinc-500)">
+                <p class="text-xl md:text-2xl font-normal mb-8" style="color: var(--text-color)">
+                    My life’s mission is to create small improvements in people’s daily lives by working on products that give people time back in
+                    their day.
+                </p>
+                <p>
+                    I'm a former <span class="font-medium" style="color: var(--text-color)">UX Designer turned Product Manager</span>, with a drive
+                    for moving fast, learning
+                    quickly, and having fun with the team as we all create together. I've got an MBA from Kellogg, a BS in Finance and Business
+                    Economics from
+                    Indiana University, and a love for creating from an early age.
+                </p>
+                <p>
+                    Personally, I spend my time parenting, running, gaming, and hacking.
+                </p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-8 flex flex-wrap gap-6 items-center">
+                <!-- Links use basic text color inheriting from body or forced helper classes -->
+                <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" class="border-link"
+                    style="color: var(--zinc-500)">
+                    LinkedIn
+                </a>
+                <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" class="border-link" style="color: var(--zinc-500)">
+                    Dribbble
+                </a>
+                <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" class="border-link"
+                    style="color: var(--zinc-500)">
+                    Instagram
+                </a>
+                <a href="mailto:Jordan12522@gmail.com" class="border-link" style="color: var(--zinc-500)">
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+            html.classList.add('dark');
+            html.classList.remove('light');
+        } else {
+            html.classList.add('light');
+            html.classList.remove('dark');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+
+</html>

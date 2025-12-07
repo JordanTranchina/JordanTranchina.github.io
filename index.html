@@ -1,153 +1,419 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jordan Tranchina | Home</title>
+  <title>Jordan Tranchina</title>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" href="images/icon-logo-dark.svg">
-
-  <!-- Meta Tags -->
-  <meta name="description"
-    content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer.">
-  <meta property="og:title" content="Jordan Tranchina | Product Manager & UX Designer" />
-  <meta property="og:description"
-    content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer." />
-  <meta property="og:image" content="images/icon-logo-dark.svg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jordantranchina.com/" />
+  <link rel="stylesheet" href="fonts/fonts.css">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    /* authentic ryo.lu variable extraction */
+    :root {
+      --large-font-size: 8vw;
+      --small-font-size: 1.33333vw;
+      /* Using our local font names */
+      --header-font-family: "nbintl", "Inter", sans-serif;
+      --body-font-family: "nbintl-mono", monospace;
     }
 
-    /* Custom cursor effect or other specific styles can go here */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Base styles from reference */
+      background: #fff;
+      color: #111;
+      font-family: var(--body-font-family);
+      font-size: 2vw;
+      /* fallback/base */
+      line-height: 1.35em;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* .big class replication */
+    .big {
+      font-family: var(--header-font-family);
+      font-size: var(--large-font-size);
+      line-height: 1.3em;
+      letter-spacing: -0.015em;
+      font-weight: 500;
+    }
+
+    /* .small class replication */
+    .small {
+      font-size: var(--small-font-size);
+      line-height: 1.2em;
+      letter-spacing: 0.05em;
+    }
+
+    /* Media queries for .small scaling limits */
+    @media (min-width: 1440px) {
+      .small {
+        font-size: 16px;
+        line-height: 1.3em;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .small {
+        font-size: 12px;
+        line-height: 1.3em;
+      }
+    }
+
+    /* Authentic Underline using pseudo-element */
+    .underline-custom {
+      position: relative;
+      white-space: nowrap;
+      text-decoration: none !important;
+      /* ensure native underline is off */
+    }
+
+    .underline-custom:after {
+      content: "";
+      position: absolute;
+      bottom: 0.05em;
+      right: 0;
+      left: 2px;
+      height: 3px;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+
+    /* Underline media queries */
+    @media (max-width: 760px) {
+      .underline-custom:after {
+        height: 1.5px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .underline-custom:after {
+        height: 4px;
+      }
+    }
+
+    /* Hover effect for links matching reference */
+    a {
+      transition: opacity .4s cubic-bezier(.075, .82, .165, 1);
+      color: #111;
+      border: 0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    /* Layout Utilities */
+    .header-container {
+      padding: 10vw 10vw 2.5vw;
+      max-width: 1510px;
+      height: 50vh;
+      /* Approximate visual balance */
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 760px) {
+      .header-container {
+        padding: 5vw;
+        height: auto;
+        min-height: 40vh;
+      }
+    }
+
+    .section-container {
+      padding: 2vw 10vw 5vw;
+      max-width: 1510px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 760px) {
+      .section-container {
+        padding: 0 5vw 5vw;
+      }
+    }
+
+    /* Footer / Lists */
+    footer {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      line-height: 1.5em;
+    }
+
+    @media (max-width: 480px) {
+      footer {
+        flex-direction: column;
+      }
+
+      footer>div {
+        margin-bottom: 1em;
+      }
+    }
+
+    footer>div {
+      flex: 1 1;
+    }
+
+    .v-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    .h-list {
+      display: flex;
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .h-list li {
+      margin-left: 0;
+      margin-right: 1.2vw;
+    }
+
+    @media (max-width: 480px) {
+      .h-list li {
+        margin-right: 2vw;
+      }
+    }
+
+    .no-margins {
+      margin: 0;
+    }
+
+    /* Utility for border-bottom style links in footer (matches ryo.lu) */
+    .border-link {
+      position: relative;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .border-link:after {
+      content: "";
+      position: absolute;
+      bottom: -0.1em;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: var(--border-color);
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .border-link:hover:after {
+      opacity: 0.7;
+    }
+
+    /* Dark Mode Logic: System or Class based */
+    :root {
+      --bg-color: #fff;
+      --text-color: #111;
+      --link-color: #111;
+      --underline-color: rgba(0, 0, 0, 0.2);
+      --border-color: #111;
+      --zinc-800: #27272a;
+      --zinc-500: #71717a;
+    }
+
+    /* System Dark Preference */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #111;
+        --text-color: #f0f0f0;
+        --link-color: #f0f0f0;
+        --underline-color: hsla(0, 0%, 100%, .4);
+        --border-color: #fff;
+        --zinc-800: #d4d4d8;
+        --zinc-500: #a1a1aa;
+      }
+    }
+
+    /* Manual Overrides */
+    html.dark {
+      --bg-color: #111 !important;
+      --text-color: #f0f0f0 !important;
+      --link-color: #f0f0f0 !important;
+      --underline-color: hsla(0, 0%, 100%, .4) !important;
+      --border-color: #fff !important;
+      --zinc-800: #d4d4d8 !important;
+      --zinc-500: #a1a1aa !important;
+    }
+
+    html.light {
+      --bg-color: #fff !important;
+      --text-color: #111 !important;
+      --link-color: #111 !important;
+      --underline-color: rgba(0, 0, 0, 0.2) !important;
+      --border-color: #111 !important;
+      --zinc-800: #27272a !important;
+      --zinc-500: #71717a !important;
+    }
+
+    body,
+    html {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a,
+    a:hover {
+      color: var(--link-color);
+    }
+
+    .underline-custom:after {
+      background: var(--underline-color);
+    }
+
+    .border-link:after {
+      background: var(--border-color);
+    }
+
+    /* Helper classes mapped to variables */
+    .text-zinc-800 {
+      color: var(--zinc-800);
+    }
+
+    .text-zinc-500 {
+      color: var(--zinc-500);
+    }
+
+    .border-black {
+      border-color: var(--border-color);
+    }
+
+    /* Toggle Button Style */
+    .theme-toggle {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .theme-toggle:hover {
+      opacity: 0.7;
+    }
   </style>
 </head>
 
-<body class="bg-zinc-950 text-zinc-200 antialiased selection:bg-white selection:text-black">
+<body class="flex flex-col h-screen overflow-hidden justify-between">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#" class="hover:opacity-80 transition-opacity">
-        <img src="images/icon-logo-white.svg" alt="JT Logo" class="h-8 w-auto">
-      </a>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
-        <a href="#about" class="text-white/80 hover:text-white transition-colors">About</a>
-        <a href="mailto:jordan1252@gmail.com"
-          class="px-5 py-2 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-colors shadow-lg">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div id="root" class="flex flex-col h-full w-full justify-between">
 
-  <!-- Hero Section -->
-  <main class="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
+    <!-- Big Header -->
+    <header class="header-container big flex-grow">
+      <span>
+        <span>Jordan is making <a class="underline-custom" href="https://www.gusto.com" target="_blank" rel="noopener noreferrer">Gusto</a>.</span>
+      </span>
+    </header>
 
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
-      <img src="images/sf-street.jpg" alt="Background" class="w-full h-full object-cover opacity-60">
-      <div class="absolute inset-0 bg-black/60"></div>
-    </div>
+    <!-- Small Section -->
+    <section class="section-container small w-full space-y-8">
 
-    <!-- Centered Container with Left-Aligned Text -->
-    <div class="relative z-10 flex flex-col items-start text-left text-white">
-      <div class="space-y-4">
-        <div class="sm:hidden font-bold text-xl tracking-widest">JORDAN TRANCHINA</div>
-        <div class="hidden sm:block font-bold sm:text-6xl sm:tracking-widest">JORDAN</div>
-        <div class="hidden sm:block font-bold sm:text-6xl sm:tracking-widest">TRANCHINA</div>
-      </div>
-      <div class="pt-2 -pl-2 sm:pl-2 font-light tracking-widest min-h-[2rem]">
-        <span class="typed tracking-widest"></span>
-      </div>
-    </div>
+      <!-- Last Seen Status -->
+      <p class="last-seen" style="text-transform: uppercase; margin-bottom: 2em;">
+        <span class="text-zinc-800">LAST SEEN IN AUSTIN, TEXAS.</span>
+      </p>
 
-    <!-- Scroll Indicator -->
-    <a href="#about" class="absolute bottom-10 z-10 animate-bounce text-white/50 hover:text-white transition-colors">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </a>
-  </main>
+      <!-- Main Footer (Consolidated Left Layout) -->
+      <footer>
+        <!-- Left Column: About Me + Experience -->
+        <div>
+          <!-- About Me (Moved above Experience) -->
+          <div style="margin-bottom: 2em;">
+            <p class="no-margins">
+              <a href="about.html" class="border-link"><span>ABOUT ME</span></a>
+            </p>
+          </div>
 
-  <!-- About Section -->
-  <section id="about" class="py-32 px-6 bg-zinc-950 relative">
-    <div class="max-w-3xl mx-auto space-y-12">
-      <div class="space-y-4">
-        <h2 class="text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase">About Me</h2>
-        <div class="w-12 h-0.5 bg-zinc-800"></div>
-      </div>
+          <!-- Experience List -->
+          <div>
+            <span class="text-zinc-500 block mb-2">EXPERIENCE</span>
+            <ul class="v-list">
+              <li><span class="border-link cursor-default">EY DESIGN STUDIO (UX DESIGN)</span></li>
+              <li><span class="border-link cursor-default">KELLOGG (MBA)</span></li>
+              <li><span class="border-link cursor-default">INDIANA UNIVERSITY (FINANCE, ECONOMICS)</span></li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="prose prose-invert prose-lg text-zinc-300 font-light leading-relaxed">
-        <p class="text-xl md:text-2xl text-white font-normal mb-8">
-          My life’s mission is to create small improvements in people’s daily lives by working on products that give people time back in their day.
-        </p>
-        <p>
-          I am a former <span class="text-white font-medium">UX Designer turned Product Manager</span>, with a drive for moving fast, learning
-          quickly, and having fun with the team as we all create together. I've got an MBA from Kellogg, a BS in Finance and Business Economics from
-          Indiana University, and a love for creating from an early age.
-        </p>
-        <p>
-          Personally, I spend my time as a dad, a husband, a runner, and a lover of video games and video essays.
-        </p>
-      </div>
+        <!-- Right Column: Empty (Spacer) -->
+        <div></div>
+      </footer>
 
-      <!-- Social Links -->
-      <div class="pt-8 flex flex-wrap gap-6 items-center">
-        <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener"
-          class="text-zinc-400 hover:text-white transition-colors">
-          LinkedIn
-        </a>
-        <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors">
-          Dribbble
-        </a>
-        <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white transition-colors">
-          Instagram
-        </a>
-        <a href="mailto:Jordan12522@gmail.com" class="text-zinc-400 hover:text-white transition-colors">
-          Email
-        </a>
-      </div>
-    </div>
-  </section>
+      <!-- Socials Footer + Theme Toggle -->
+      <footer style="margin-top: 1em;">
+        <div>
+          <ul class="h-list contact">
+            <li>
+              <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener noreferrer"
+                class="border-link flex items-center gap-1">
+                <span>LINKEDIN</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://cal.com/" target="_blank" rel="noopener noreferrer" class="border-link flex items-center gap-1">
+                <span>BOOK TIME</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:Jordan12522@gmail.com" class="border-link flex items-center gap-1">
+                <span>EMAIL</span>
+              </a>
+            </li>
+            <!-- Theme Toggle -->
+            <li>
+              <span class="theme-toggle" id="themeToggle">THEME</span>
+            </li>
+          </ul>
+        </div>
+      </footer>
 
-  <!-- Footer -->
-  <footer class="py-8 bg-zinc-950 border-t border-zinc-900 text-center">
-    <p class="text-zinc-600 text-xs">
-      &copy; Jordan Tranchina
-      <script>document.write(new Date().getFullYear());</script>
-    </p>
-  </footer>
+    </section>
+  </div>
 
-  <!-- Scripts -->
-  <script src="typed.js"></script>
-  <script src="index.js"></script>
-
-  <!-- Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168921596-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-168921596-1');
+    // Theme Toggle Logic
+    const toggleBtn = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Check local storage or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+      html.classList.add('dark');
+      html.classList.remove('light');
+    } else {
+      html.classList.add('light'); // Explicitly set light if saved 'light' or system light
+      html.classList.remove('dark');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.remove('light');
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
   </script>
 </body>
 
 </html>
-
-<!-- thank you / credit -->
-<!-- Matt Boldt - typed.js -->
-<!-- https://github.com/mattboldt/typed.js -->
