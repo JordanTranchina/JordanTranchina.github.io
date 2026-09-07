@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan Tranchina | Home</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
   <link rel="icon" href="images/icon-logo-dark.svg">
   <meta name="description" content="Jordan Tranchina is a Product Manager and former UX Designer passionate about creating products that improve daily life. MBA from Kellogg. Dad, runner, gamer.">
   <meta property="og:title" content="Jordan Tranchina | Product Manager & UX Designer" />
@@ -22,30 +23,301 @@
   html {
     scroll-behavior: smooth;
   }
+
+  :root {
+    --jt-bg: oklch(0.17 0.014 70);
+    --jt-bg-footer: oklch(0.1 0.012 70);
+    --jt-text: oklch(0.92 0.01 70);
+    --jt-text-muted: oklch(0.8 0.02 70);
+    --jt-text-mutedmore: oklch(0.6 0.02 70);
+    --jt-border: oklch(0.38 0.02 70);
+    --jt-border-soft: oklch(0.32 0.02 70);
+    --jt-dot: oklch(0.5 0.02 70);
+    --jt-accent: #d98a55;
+  }
+
+  body {
+    background: var(--jt-bg);
+  }
+
+  .jt-serif {
+    font-family: "Newsreader", Georgia, serif;
+  }
+
+  .jt-sans {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+
+  .jt-theme a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .jt-theme a:hover {
+    opacity: 0.75;
+  }
+
+  .jt-social-icon {
+    filter: invert(1) brightness(1.7);
+    opacity: 0.85;
+  }
+
+  .jt-social-icon:hover {
+    opacity: 1;
+  }
+
+  /* Nav */
+  .jt-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 50;
+  }
+
+  .jt-nav-links {
+    display: none;
+  }
+
+  .jt-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px;
+  }
+
+  .jt-hamburger span {
+    height: 2px;
+    background: white;
+    display: block;
+  }
+
+  .jt-mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--jt-bg-footer);
+    z-index: 60;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .jt-mobile-menu.jt-open {
+    display: flex;
+  }
+
+  .jt-mobile-menu a {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 24px;
+    color: var(--jt-text);
+    letter-spacing: 0.04em;
+  }
+
+  .jt-mobile-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  @media (min-width: 640px) {
+    .jt-nav {
+      height: 88px;
+      padding: 0 56px;
+    }
+
+    .jt-nav-links {
+      display: flex;
+      gap: 40px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: white;
+      font-weight: 500;
+    }
+
+    .jt-hamburger,
+    .jt-mobile-menu {
+      display: none !important;
+    }
+  }
+
+  /* About + Facts grid */
+  .jt-about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: 640px) {
+    .jt-about-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 80px;
+    }
+
+    .jt-about-copy {
+      grid-column: span 2;
+    }
+  }
+
+  /* Timeline */
+  .jt-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .jt-timeline-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .jt-timeline-connector {
+    width: 1px;
+    height: 28px;
+    background: var(--jt-border);
+    margin-left: 4.5px;
+  }
+
+  @media (min-width: 640px) {
+    .jt-timeline {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .jt-timeline-item {
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .jt-timeline-item.jt-timeline-end {
+      align-items: flex-end;
+    }
+
+    .jt-timeline-connector {
+      width: auto;
+      height: 1px;
+      flex: 1;
+      margin: 0;
+    }
+  }
+
+  /* Chips */
+  .jt-chip-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .jt-chip {
+    padding: 9px 18px;
+    border: 1px solid var(--jt-border);
+    border-radius: 999px;
+    font-size: 13px;
+  }
+
+  @media (min-width: 640px) {
+    .jt-chip {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+
+  /* Fun fact card */
+  .jt-fun-card {
+    background: oklch(0.2 0.016 70);
+    border: 1px solid var(--jt-border-soft);
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  @media (min-width: 640px) {
+    .jt-fun-card {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      padding: 32px 36px;
+    }
+  }
+
+  .jt-roll-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--jt-accent);
+    color: oklch(0.17 0.014 70);
+    border: none;
+    border-radius: 999px;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .jt-roll-btn:hover {
+    opacity: 0.9;
+  }
 </style>
 
-<body class="overscroll-y-none bg-gray-100">
+<body class="jt-theme overscroll-y-none">
   <!-- Navigation -->
-  <div
-    class="containerNav fixed w-full z-50 grid grid-cols-3 sm:grid-cols-9 sm:bg-gradient-to-b sm:from-black sm:bg-opacity-50 h-16 sm:bg-transparent items-center justify-items-center transition-h">
-
-    <img src="images/icon-logo-white.svg" alt="Jordan Tranchina Logo" class="justify-self-start ml-4">
-    <a href="index.html" class="nav-index hidden sm:block sm:text-white sm:font-medium">Home</a>
-    <a href="#AboutMe" class="nav-about hidden sm:block sm:text-white sm:font-medium">About</a>
-    <a href="mailto:jordan1252@gmail.com" class="nav-contact hidden sm:block sm:text-white sm:font-medium">Contact</a>
-    <div class="col-start-2 sm:col-start-8 col-span-2 justify-self-end mr-4 text-white font-medium self-start mt-5 block">Jordan Tranchina
+  <div class="jt-nav">
+    <a href="index.html" class="jt-serif" style="font-size: 20px; font-weight: 500; color: white;">JT</a>
+    <div class="jt-nav-links">
+      <a href="index.html">HOME</a>
+      <a href="index.html#AboutMe">ABOUT</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="mailto:jordan12522@gmail.com">CONTACT</a>
     </div>
+    <button class="jt-hamburger" aria-label="Open menu" onclick="jtToggleMenu(true)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="jtMobileMenu" class="jt-mobile-menu">
+    <button class="jt-mobile-close" aria-label="Close menu" onclick="jtToggleMenu(false)">&times;</button>
+    <a href="index.html" onclick="jtToggleMenu(false)">Home</a>
+    <a href="index.html#AboutMe" onclick="jtToggleMenu(false)">About</a>
+    <a href="projects.html" onclick="jtToggleMenu(false)">Projects</a>
+    <a href="mailto:jordan12522@gmail.com" onclick="jtToggleMenu(false)">Contact</a>
   </div>
 
   <!-- Cover -->
   <div class="containerCover - z-auto relative bg-black items-center sm:h-screen grid grid-cols-9 grid-rows-5">
     <!-- Image -->
-    <img 
-      class="col-span-full row-span-full opacity-40 object-cover sm:h-full sm:w-full transition-opacity duration-700" 
-      src="images/sf-street.jpg" 
-      srcset="images/sf-street.jpg 1280w, images/sf-street-original.jpg 1920w" 
-      sizes="(max-width: 1280px) 100vw, 1920px" 
-      alt="Aerial view of San Francisco street" 
+    <img
+      class="col-span-full row-span-full opacity-40 object-cover sm:h-full sm:w-full transition-opacity duration-700"
+      src="images/sf-street.jpg"
+      srcset="images/sf-street.jpg 1280w, images/sf-street-original.jpg 1920w"
+      sizes="(max-width: 1280px) 100vw, 1920px"
+      alt="Aerial view of San Francisco street"
       loading="lazy"
     />
     <!-- Title -->
@@ -61,42 +333,102 @@
     </div>
   </div>
 
+  <!-- Mission pull-quote -->
+  <div class="jt-serif" style="max-width: 900px; margin: 0 auto; padding: 64px 24px 56px; text-align: center; color: var(--jt-text); font-size: 24px; line-height: 1.4; font-weight: 400;">
+    "My mission is to build small improvements that give people
+    <span style="color: var(--jt-accent); font-style: italic;">time back</span>
+    in their day, for whatever they're passionate about."
+  </div>
+
+  <div style="max-width: 1160px; margin: 0 auto; border-top: 1px solid var(--jt-border-soft);"></div>
+
   <!-- About Me -->
-  <div id="AboutMe" class="containerGlobalAboutMe sm:grid sm:grid-cols-6">
-    <!-- about me -->
-    <div class="contianerAboutMe my-16 mx-4 sm:col-start-2 sm:col-span-4 sm:mx-auto sm:justify-self-center">
-      <div class="font-semibold text-xs mb-1">ABOUT ME</div>
-      <div class="font-thin text-gray-800 text-base justify-self-center">My life’s mission is to create small improvements in people’s daily lives by working on products that give people time back in their day that they can use for whatever they're passionate about. I'm looking for a company that shares that mission!
+  <div id="AboutMe" class="jt-sans jt-about-grid" style="max-width: 1160px; margin: 0 auto; padding: 56px 24px;">
+    <div class="jt-about-copy">
+      <div style="font-size: 12px; letter-spacing: 0.14em; font-weight: 600; color: var(--jt-accent); margin-bottom: 16px;">ABOUT ME</div>
+      <div style="font-size: 16px; line-height: 1.75; font-weight: 300; color: var(--jt-text-muted);">
+        I'm a former UX Designer turned Product Manager, with a drive for moving fast, learning quickly, and having fun with a team as we build together.
         <br><br>
-        I am a former UX Designer turned Product Manager, with a drive for moving fast, learning quickly, and having fun with the team as we all create together. I've got an MBA from Kellogg, a BS in Finance and Business Economics from Indiana University, and a love for creating from an early age.
+        I hold an MBA from Kellogg and a B.S. in Finance and Business Economics from Indiana University, and I've had a love for creating things since I was a kid.
         <br><br>
         Personally, I spend my time as a dad, a husband, a runner, and a lover of video games and video essays.
       </div>
     </div>
+    <div>
+      <div style="font-size: 12px; letter-spacing: 0.14em; font-weight: 600; color: var(--jt-accent); margin-bottom: 16px;">FACTS</div>
+      <div style="display: flex; flex-direction: column; gap: 16px; font-size: 15px; font-weight: 400; color: var(--jt-text-muted);">
+        <div style="display: flex; flex-direction: column;"><span style="font-weight: 500; color: var(--jt-text);">Kellogg School of Management</span><span style="font-size: 13px; color: var(--jt-text-mutedmore);">MBA</span></div>
+        <div style="display: flex; flex-direction: column;"><span style="font-weight: 500; color: var(--jt-text);">Indiana University</span><span style="font-size: 13px; color: var(--jt-text-mutedmore);">B.S. Finance &amp; Business Economics</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="jt-sans jt-timeline" style="max-width: 1160px; margin: 0 auto; padding: 8px 24px 56px;">
+    <div class="jt-timeline-item">
+      <div style="width: 10px; height: 10px; border-radius: 999px; background: var(--jt-dot); flex-shrink: 0; margin-top: 5px;"></div>
+      <div class="jt-serif" style="font-size: 16px; color: var(--jt-text);">UX Designer</div>
+    </div>
+    <div class="jt-timeline-connector"></div>
+    <div class="jt-timeline-item">
+      <div style="width: 10px; height: 10px; border-radius: 999px; background: var(--jt-dot); flex-shrink: 0; margin-top: 5px;"></div>
+      <div class="jt-serif" style="font-size: 16px; color: var(--jt-text);">Kellogg MBA</div>
+    </div>
+    <div class="jt-timeline-connector"></div>
+    <div class="jt-timeline-item jt-timeline-end">
+      <div style="width: 12px; height: 12px; border-radius: 999px; background: var(--jt-accent); flex-shrink: 0; margin-top: 4px;"></div>
+      <div class="jt-serif" style="font-size: 16px; font-weight: 500; color: var(--jt-text);">Product Manager</div>
+    </div>
+  </div>
+
+  <!-- Off the clock -->
+  <div class="jt-sans" style="max-width: 1160px; margin: 0 auto; padding: 0 24px 40px;">
+    <div style="font-size: 12px; letter-spacing: 0.14em; font-weight: 600; color: var(--jt-accent); margin-bottom: 18px;">OFF THE CLOCK</div>
+    <div class="jt-chip-row" style="color: var(--jt-text);">
+      <div class="jt-chip">Dad</div>
+      <div class="jt-chip">Husband</div>
+      <div class="jt-chip">Runner</div>
+      <div class="jt-chip">Video games</div>
+      <div class="jt-chip">Video essays</div>
+    </div>
+  </div>
+
+  <!-- Fun fact roulette -->
+  <div class="jt-sans" style="max-width: 1160px; margin: 0 auto; padding: 0 24px 72px;">
+    <div class="jt-fun-card">
+      <div style="flex: 1;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; font-weight: 600; color: var(--jt-accent); margin-bottom: 10px;">RANDOM FACT</div>
+        <div id="jtFunFact" style="font-size: 16px; color: var(--jt-text); min-height: 48px;">Former UX Designer, now Product Manager. Still can't stop redesigning things nobody asked me to.</div>
+      </div>
+      <button class="jt-roll-btn" onclick="jtRollFact()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+        Roll a fact
+      </button>
+    </div>
   </div>
 
   <!-- Footer -->
-  <div class="flex flex-col items-center">
-    <a href="mailto:jordan1252@gmail.com"
-      class="w-3/4 h-16 mt-4 mb-8 bg-white rounded-lg text-blue-400 shadow-xl flex items-center justify-center font-semibold transition-colors duration-200 hover:bg-gray-50 focus:bg-gray-100 focus:outline-none">Get in touch</a>
-    <div class="footerContainer - h-16 -mb-3 flex space-x-6 bg-white w-full items-center justify-center shadow-2xl">
+  <div class="jt-sans" style="background: var(--jt-bg-footer); padding: 56px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+    <a href="mailto:jordan12522@gmail.com"
+      style="padding: 16px 48px; background: var(--jt-accent); color: white; border-radius: 999px; font-size: 15px; font-weight: 500; text-align: center;">Get in touch</a>
+    <div style="display: flex; gap: 24px; align-items: center;">
       <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
+        <img class="jt-social-icon" src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
       </a>
       <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
-        <img src="images/icon-social-dribbble.svg" alt="Dribbble icon" />
+        <img class="jt-social-icon" src="images/icon-social-dribbble.svg" alt="Dribbble icon" />
       </a>
       <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
-        <img src="images/icon-social-instagram.svg" alt="Instagram icon" />
+        <img class="jt-social-icon" src="images/icon-social-instagram.svg" alt="Instagram icon" />
       </a>
-      <a href="mailto:Jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
-        <img src="images/icon-social-mail.svg" alt="Email icon" />
+      <a href="mailto:jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+        <img class="jt-social-icon" src="images/icon-social-mail.svg" alt="Email icon" />
       </a>
       <a href="https://cal.com/jordan-tranchina/30min" target="_blank" rel="noopener" aria-label="Calendar">
-        <img src="images/icon-social-schedule.svg" alt="Calendar icon" />
+        <img class="jt-social-icon" src="images/icon-social-schedule.svg" alt="Calendar icon" />
       </a>
     </div>
-    <div class="copyright w-full text-center bg-white text-xs pb-2">&copy; Jordan Tranchina |
+    <div style="font-size: 12px; color: var(--jt-text-mutedmore);">&copy; Jordan Tranchina |
       <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
     </div>
   </div>
@@ -128,7 +460,24 @@
 
     gtag('config', 'UA-168921596-1');
   </script>
-  <script src="index.js"></script>
+  <script>
+    function jtToggleMenu(open) {
+      document.getElementById("jtMobileMenu").classList.toggle("jt-open", open);
+    }
+
+    var JT_FACTS = [
+      "Former UX Designer, now Product Manager. Still can't stop redesigning things nobody asked me to.",
+      "MBA from Kellogg. Occupational hazard: turning every family decision into a decision matrix.",
+      "Dad, husband, and runner. The schedule is a lot of spreadsheets and not enough sleep.",
+      "Will happily lose an evening to a good video essay rabbit hole.",
+      "Building this site's Projects page is itself a passion project. Very meta."
+    ];
+    var jtFactIndex = 0;
+    function jtRollFact() {
+      jtFactIndex = (jtFactIndex + 1) % JT_FACTS.length;
+      document.getElementById("jtFunFact").textContent = JT_FACTS[jtFactIndex];
+    }
+  </script>
 </body>
 
 </html>
