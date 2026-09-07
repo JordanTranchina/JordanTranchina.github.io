@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Tranchina | Projects</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+  <link rel="icon" href="images/icon-logo-dark.svg">
+  <meta name="description" content="A few passion projects Jordan Tranchina builds outside of work, straight from GitHub.">
+  <meta property="og:title" content="Jordan Tranchina | Projects" />
+  <meta property="og:description" content="A few passion projects Jordan Tranchina builds outside of work, straight from GitHub." />
+  <meta property="og:image" content="images/icon-logo-dark.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jordantranchina.com/projects.html" />
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --jt-bg: oklch(0.17 0.014 70);
+    --jt-bg-footer: oklch(0.1 0.012 70);
+    --jt-text: oklch(0.92 0.01 70);
+    --jt-text-muted: oklch(0.8 0.02 70);
+    --jt-text-mutedmore: oklch(0.6 0.02 70);
+    --jt-border: oklch(0.38 0.02 70);
+    --jt-border-soft: oklch(0.32 0.02 70);
+    --jt-card-bg: oklch(0.2 0.016 70);
+    --jt-accent: #d98a55;
+  }
+
+  body {
+    background: var(--jt-bg);
+  }
+
+  .jt-serif {
+    font-family: "Newsreader", Georgia, serif;
+  }
+
+  .jt-sans {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+
+  .jt-theme a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .jt-theme a:hover {
+    opacity: 0.75;
+  }
+
+  .jt-social-icon {
+    filter: invert(1) brightness(1.7);
+    opacity: 0.85;
+  }
+
+  .jt-social-icon:hover {
+    opacity: 1;
+  }
+
+  /* Nav */
+  .jt-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 50;
+    background: var(--jt-bg);
+  }
+
+  .jt-nav-links {
+    display: none;
+  }
+
+  .jt-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px;
+  }
+
+  .jt-hamburger span {
+    height: 2px;
+    background: white;
+    display: block;
+  }
+
+  .jt-mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--jt-bg-footer);
+    z-index: 60;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .jt-mobile-menu.jt-open {
+    display: flex;
+  }
+
+  .jt-mobile-menu a {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 24px;
+    color: var(--jt-text);
+    letter-spacing: 0.04em;
+  }
+
+  .jt-mobile-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  @media (min-width: 640px) {
+    .jt-nav {
+      height: 88px;
+      padding: 0 56px;
+    }
+
+    .jt-nav-links {
+      display: flex;
+      gap: 40px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: white;
+      font-weight: 500;
+    }
+
+    .jt-hamburger,
+    .jt-mobile-menu {
+      display: none !important;
+    }
+  }
+
+  /* Project cards */
+  .jt-project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  @media (min-width: 768px) {
+    .jt-project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .jt-project-card {
+    background: var(--jt-card-bg);
+    border: 1px solid var(--jt-border-soft);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .jt-tech-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .jt-tech-chip {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: oklch(0.26 0.018 70);
+    color: var(--jt-text-muted);
+  }
+
+  .jt-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--jt-accent);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+</style>
+
+<body class="jt-theme overscroll-y-none">
+  <!-- Navigation -->
+  <div class="jt-nav">
+    <a href="index.html" class="jt-serif" style="font-size: 20px; font-weight: 500; color: white;">JT</a>
+    <div class="jt-nav-links">
+      <a href="index.html">HOME</a>
+      <a href="index.html#AboutMe">ABOUT</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="mailto:jordan12522@gmail.com">CONTACT</a>
+    </div>
+    <button class="jt-hamburger" aria-label="Open menu" onclick="jtToggleMenu(true)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="jtMobileMenu" class="jt-mobile-menu">
+    <button class="jt-mobile-close" aria-label="Close menu" onclick="jtToggleMenu(false)">&times;</button>
+    <a href="index.html" onclick="jtToggleMenu(false)">Home</a>
+    <a href="index.html#AboutMe" onclick="jtToggleMenu(false)">About</a>
+    <a href="projects.html" onclick="jtToggleMenu(false)">Projects</a>
+    <a href="mailto:jordan12522@gmail.com" onclick="jtToggleMenu(false)">Contact</a>
+  </div>
+
+  <!-- Header -->
+  <div class="jt-sans" style="max-width: 1160px; margin: 0 auto; padding: 140px 24px 8px;">
+    <div style="font-size: 12px; letter-spacing: 0.14em; font-weight: 600; color: var(--jt-accent); margin-bottom: 16px;">PASSION PROJECTS</div>
+    <div class="jt-serif" style="font-size: 40px; font-weight: 500; color: var(--jt-text); line-height: 1.15;">Things I build for fun.</div>
+    <div style="max-width: 620px; margin-top: 16px; font-size: 16px; line-height: 1.7; color: var(--jt-text-muted);">
+      A couple of projects I work on outside of my day job, straight from my GitHub. Click through for the code, the setup, and the rest of the story.
+    </div>
+  </div>
+
+  <!-- Project cards -->
+  <div class="jt-sans jt-project-grid" style="max-width: 1160px; margin: 0 auto; padding: 48px 24px 96px;">
+
+    <div class="jt-project-card">
+      <div>
+        <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Stash</div>
+        <div style="font-size: 13px; color: var(--jt-text-mutedmore); margin-top: 4px;">A self-hosted read-it-later app</div>
+      </div>
+      <div style="font-size: 15px; line-height: 1.7; color: var(--jt-text-muted);">
+        Save articles, highlights, and YouTube transcripts to your own database, then turn them into a conversational AI podcast with Listen Later. No subscription and no third-party server, just Supabase and your own account.
+      </div>
+      <div class="jt-tech-row">
+        <div class="jt-tech-chip">JavaScript</div>
+        <div class="jt-tech-chip">Supabase</div>
+        <div class="jt-tech-chip">Chrome &amp; Firefox Extensions</div>
+      </div>
+      <a href="https://github.com/JordanTranchina/stash" target="_blank" rel="noopener" class="jt-project-link">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <div class="jt-project-card">
+      <div>
+        <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Wikily</div>
+        <div style="font-size: 13px; color: var(--jt-text-mutedmore); margin-top: 4px;">Realtime coaching on video calls, powered by local wikis</div>
+      </div>
+      <div style="font-size: 15px; line-height: 1.7; color: var(--jt-text-muted);">
+        A local-first macOS overlay that listens on-device during a call and surfaces the right page from your own markdown wiki, plus grounded Q&amp;A for a quick recap or fact-check. Nothing leaves the machine.
+      </div>
+      <div class="jt-tech-row">
+        <div class="jt-tech-chip">Swift</div>
+        <div class="jt-tech-chip">macOS</div>
+        <div class="jt-tech-chip">On-device AI</div>
+      </div>
+      <a href="https://github.com/JordanTranchina/wikily" target="_blank" rel="noopener" class="jt-project-link">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="jt-sans" style="background: var(--jt-bg-footer); padding: 56px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+    <a href="mailto:jordan12522@gmail.com"
+      style="padding: 16px 48px; background: var(--jt-accent); color: white; border-radius: 999px; font-size: 15px; font-weight: 500; text-align: center;">Get in touch</a>
+    <div style="display: flex; gap: 24px; align-items: center;">
+      <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img class="jt-social-icon" src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
+      </a>
+      <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
+        <img class="jt-social-icon" src="images/icon-social-dribbble.svg" alt="Dribbble icon" />
+      </a>
+      <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img class="jt-social-icon" src="images/icon-social-instagram.svg" alt="Instagram icon" />
+      </a>
+      <a href="mailto:jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+        <img class="jt-social-icon" src="images/icon-social-mail.svg" alt="Email icon" />
+      </a>
+      <a href="https://cal.com/jordan-tranchina/30min" target="_blank" rel="noopener" aria-label="Calendar">
+        <img class="jt-social-icon" src="images/icon-social-schedule.svg" alt="Calendar icon" />
+      </a>
+    </div>
+    <div style="font-size: 12px; color: var(--jt-text-mutedmore);">&copy; Jordan Tranchina |
+      <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script title="Copyright Date">
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168921596-1');
+  </script>
+  <script>
+    function jtToggleMenu(open) {
+      document.getElementById("jtMobileMenu").classList.toggle("jt-open", open);
+    }
+  </script>
+</body>
+
+</html>
