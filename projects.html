@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan Tranchina | Projects</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
   <link rel="icon" href="images/icon-logo-dark.svg">
   <meta name="description" content="A few passion projects Jordan Tranchina builds outside of work, straight from GitHub.">
   <meta property="og:title" content="Jordan Tranchina | Projects" />
@@ -34,6 +35,7 @@
 
   body {
     background: var(--jt-bg);
+    color: var(--jt-text);
   }
 
   .jt-serif {
@@ -178,28 +180,20 @@
     gap: 16px;
   }
 
-  .jt-tech-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .jt-tech-chip {
-    font-size: 12px;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: oklch(0.26 0.018 70);
-    color: var(--jt-text-muted);
-  }
-
-  .jt-project-link {
+  .jt-theme a.jt-github-link,
+  .jt-github-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
     color: var(--jt-accent);
-    font-weight: 500;
-    margin-top: 4px;
+    text-decoration: none;
+    transition: color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+  }
+
+  .jt-theme a.jt-github-link:hover,
+  .jt-github-link:hover {
+    color: #e89c68;
+    opacity: 1;
+    transform: translateY(-1px);
   }
 </style>
 
@@ -209,7 +203,6 @@
     <a href="index.html" class="jt-serif" style="font-size: 20px; font-weight: 500; color: white;">JT</a>
     <div class="jt-nav-links">
       <a href="index.html">HOME</a>
-      <a href="index.html#AboutMe">ABOUT</a>
       <a href="projects.html">PROJECTS</a>
       <a href="mailto:jordan12522@gmail.com">CONTACT</a>
     </div>
@@ -223,7 +216,6 @@
   <div id="jtMobileMenu" class="jt-mobile-menu">
     <button class="jt-mobile-close" aria-label="Close menu" onclick="jtToggleMenu(false)">&times;</button>
     <a href="index.html" onclick="jtToggleMenu(false)">Home</a>
-    <a href="index.html#AboutMe" onclick="jtToggleMenu(false)">About</a>
     <a href="projects.html" onclick="jtToggleMenu(false)">Projects</a>
     <a href="mailto:jordan12522@gmail.com" onclick="jtToggleMenu(false)">Contact</a>
   </div>
@@ -242,48 +234,51 @@
 
     <div class="jt-project-card">
       <div>
-        <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Stash</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Stash</div>
+          <a href="https://github.com/JordanTranchina/stash" target="_blank" rel="noopener" class="jt-github-link" aria-label="View Stash on GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+        </div>
         <div style="font-size: 13px; color: var(--jt-text-mutedmore); margin-top: 4px;">A self-hosted read-it-later app</div>
       </div>
       <div style="font-size: 15px; line-height: 1.7; color: var(--jt-text-muted);">
-        Save articles, highlights, and YouTube transcripts to your own database, then turn them into a conversational AI podcast with Listen Later. No subscription and no third-party server, just Supabase and your own account.
+        Save articles, highlights, and YouTube transcripts to your own database, then turn them into a conversational AI podcast with Listen Later. No
+        subscription and no third-party server, just Supabase and your own account.
       </div>
-      <div class="jt-tech-row">
-        <div class="jt-tech-chip">JavaScript</div>
-        <div class="jt-tech-chip">Supabase</div>
-        <div class="jt-tech-chip">Chrome &amp; Firefox Extensions</div>
-      </div>
-      <a href="https://github.com/JordanTranchina/stash" target="_blank" rel="noopener" class="jt-project-link">
-        View on GitHub
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      </a>
     </div>
 
     <div class="jt-project-card">
       <div>
-        <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Wikily</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Wikily</div>
+          <a href="https://github.com/JordanTranchina/wikily" target="_blank" rel="noopener" class="jt-github-link"
+            aria-label="View Wikily on GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+        </div>
         <div style="font-size: 13px; color: var(--jt-text-mutedmore); margin-top: 4px;">Realtime coaching on video calls, powered by local wikis</div>
       </div>
       <div style="font-size: 15px; line-height: 1.7; color: var(--jt-text-muted);">
-        A local-first macOS overlay that listens on-device during a call and surfaces the right page from your own markdown wiki, plus grounded Q&amp;A for a quick recap or fact-check. Nothing leaves the machine.
+        A local-first macOS overlay that listens on-device during a call and surfaces the right page from your own markdown wiki, plus grounded
+        Q&amp;A for a quick recap or fact-check. Nothing leaves the machine.
       </div>
-      <div class="jt-tech-row">
-        <div class="jt-tech-chip">Swift</div>
-        <div class="jt-tech-chip">macOS</div>
-        <div class="jt-tech-chip">On-device AI</div>
-      </div>
-      <a href="https://github.com/JordanTranchina/wikily" target="_blank" rel="noopener" class="jt-project-link">
-        View on GitHub
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
-      </a>
     </div>
 
   </div>
 
   <!-- Footer -->
-  <div class="jt-sans" style="background: var(--jt-bg-footer); padding: 56px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+  <div class="jt-sans"
+    style="background: var(--jt-bg-footer); padding: 56px 24px 32px; display: flex; flex-direction: column; align-items: center; gap: 32px;">
     <a href="mailto:jordan12522@gmail.com"
-      style="padding: 16px 48px; background: var(--jt-accent); color: white; border-radius: 999px; font-size: 15px; font-weight: 500; text-align: center;">Get in touch</a>
+      style="padding: 16px 48px; background: var(--jt-accent); color: white; border-radius: 999px; font-size: 15px; font-weight: 500; text-align: center;">Get
+      in touch</a>
     <div style="display: flex; gap: 24px; align-items: center;">
       <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <img class="jt-social-icon" src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
