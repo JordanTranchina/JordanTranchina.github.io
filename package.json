@@ -5,6 +5,7 @@
   "scripts": {},
   "author": "",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "firebase": "^10.9.0",
     "typed.js": "^2.0.11",
