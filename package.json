@@ -2,7 +2,9 @@
   "name": "final",
   "version": "1.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  },
   "author": "",
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
