@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jordan Tranchina | Projects</title>
+  <title>Stash | A self-hosted read-it-later app</title>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
-  <link rel="icon" href="images/icon-logo-dark.svg">
-  <meta name="description" content="A few passion projects Jordan Tranchina builds outside of work, straight from GitHub.">
-  <meta property="og:title" content="Jordan Tranchina | Projects" />
-  <meta property="og:description" content="A few passion projects Jordan Tranchina builds outside of work, straight from GitHub." />
-  <meta property="og:image" content="images/icon-logo-dark.svg" />
+  <link rel="icon" href="/images/icon-logo-dark.svg">
+  <meta name="description" content="Stash is a self-hosted read-it-later app. Save articles, highlights, and YouTube transcripts to your own library and read or listen to them later.">
+  <meta property="og:title" content="Stash" />
+  <meta property="og:description" content="Stash is a self-hosted read-it-later app. Save articles, highlights, and YouTube transcripts to your own library and read or listen to them later." />
+  <meta property="og:image" content="/images/icon-logo-dark.svg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jordantranchina.com/projects.html" />
+  <meta property="og:url" content="https://jordantranchina.com/projects/stash/" />
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -200,15 +200,84 @@
     opacity: 1;
     transform: translateY(-1px);
   }
+
+  /* Stash page */
+  .jt-stash-section {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px 56px;
+  }
+
+  .jt-stash-h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--jt-text);
+    margin-bottom: 16px;
+  }
+
+  .jt-stash-p {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--jt-text-muted);
+  }
+
+  .jt-stash-p + .jt-stash-p {
+    margin-top: 12px;
+  }
+
+  .jt-stash-list {
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--jt-text-muted);
+    list-style: disc;
+    padding-left: 22px;
+  }
+
+  .jt-stash-list li + li {
+    margin-top: 8px;
+  }
+
+  .jt-theme a.jt-inline-link {
+    color: var(--jt-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .jt-button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .jt-theme a.jt-button {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid var(--jt-accent);
+  }
+
+  .jt-theme a.jt-button-primary {
+    background: var(--jt-accent);
+    color: white;
+  }
+
+  .jt-theme a.jt-button-secondary {
+    color: var(--jt-accent);
+  }
 </style>
 
 <body class="jt-theme overscroll-y-none">
   <!-- Navigation -->
   <div class="jt-nav">
-    <a href="index.html" class="jt-serif" style="font-size: 20px; font-weight: 500; color: white;">JT</a>
+    <a href="/" class="jt-serif" style="font-size: 20px; font-weight: 500; color: white;">JT</a>
     <div class="jt-nav-links">
-      <a href="index.html">HOME</a>
-      <a href="projects.html">PROJECTS</a>
+      <a href="/">HOME</a>
+      <a href="/projects.html">PROJECTS</a>
       <a href="mailto:jordan12522@gmail.com">CONTACT</a>
     </div>
     <button class="jt-hamburger" aria-label="Open menu" onclick="jtToggleMenu(true)">
@@ -220,63 +289,62 @@
 
   <div id="jtMobileMenu" class="jt-mobile-menu">
     <button class="jt-mobile-close" aria-label="Close menu" onclick="jtToggleMenu(false)">&times;</button>
-    <a href="index.html" onclick="jtToggleMenu(false)">Home</a>
-    <a href="projects.html" onclick="jtToggleMenu(false)">Projects</a>
+    <a href="/" onclick="jtToggleMenu(false)">Home</a>
+    <a href="/projects.html" onclick="jtToggleMenu(false)">Projects</a>
     <a href="mailto:jordan12522@gmail.com" onclick="jtToggleMenu(false)">Contact</a>
   </div>
 
   <!-- Header -->
-  <div class="jt-sans" style="max-width: 1160px; margin: 0 auto; padding: 140px 24px 8px;">
-    <div style="font-size: 12px; letter-spacing: 0.14em; font-weight: 600; color: var(--jt-accent); margin-bottom: 16px;">PASSION PROJECTS</div>
-    <div class="jt-serif" style="font-size: 40px; font-weight: 500; color: var(--jt-text); line-height: 1.15;">Things I build for fun.</div>
-    <div style="max-width: 620px; margin-top: 16px; font-size: 16px; line-height: 1.7; color: var(--jt-text-muted);">
-      A couple of projects I work on outside of my day job, straight from my GitHub. Click through for the code, the setup, and the rest of the story.
+  <div class="jt-sans" style="max-width: 1160px; margin: 0 auto; padding: 140px 24px 56px;">
+    <div style="font-size: 12px; letter-spacing: 0.14em; font-weight: 600; color: var(--jt-accent); margin-bottom: 16px;"><a href="/projects.html">PASSION PROJECTS</a> / STASH</div>
+    <h1 class="jt-serif" style="font-size: 48px; font-weight: 500; color: var(--jt-text); line-height: 1.1;">Stash</h1>
+    <div class="jt-serif" style="font-size: 24px; color: var(--jt-text-muted); margin-top: 8px;">A self-hosted read-it-later app.</div>
+    <p class="jt-stash-p" style="margin-top: 20px;">
+      Stash is a personal replacement for Pocket and Instapaper. Save an article from your browser or your phone, and Stash keeps a clean,
+      readable copy in your own library. Read it later on any device, or let Stash turn your saves into a short AI podcast you can play in any podcast app.
+    </p>
+    <div class="jt-button-row">
+      <a class="jt-button jt-button-primary" href="https://stash-lemon-zeta.vercel.app">Open Stash</a>
+      <a class="jt-button jt-button-secondary" href="https://github.com/JordanTranchina/stash" target="_blank" rel="noopener">View the code on GitHub</a>
     </div>
   </div>
 
-  <!-- Project cards -->
-  <div class="jt-sans jt-project-grid" style="max-width: 1160px; margin: 0 auto; padding: 48px 24px 96px;">
+  <!-- What it does -->
+  <div class="jt-sans jt-stash-section">
+    <h2 class="jt-serif jt-stash-h2">What Stash does</h2>
+    <ul class="jt-stash-list">
+      <li><strong>Save from anywhere.</strong> Use the Chrome or Firefox extension, a bookmarklet, the share sheet on iOS and Android, or paste a link in the web app.</li>
+      <li><strong>Read without clutter.</strong> Stash pulls out the article text so you get a clean reading view with themes, font sizes, search, folders, and tags.</li>
+      <li><strong>Keep highlights.</strong> Import Kindle highlights and CSV exports from other read-it-later apps.</li>
+      <li><strong>Save videos too.</strong> Save a YouTube link and Stash keeps its transcript next to your articles.</li>
+      <li><strong>Listen instead of read.</strong> Once a day, Stash can turn your recent saves into a two-host AI podcast, published as a private RSS feed.</li>
+      <li><strong>Works offline.</strong> The web app installs to your home screen and queues saves until you are back online.</li>
+    </ul>
+  </div>
 
-    <div class="jt-project-card">
-      <div>
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <a href="/projects/stash/" class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Stash</a>
-          <a href="https://github.com/JordanTranchina/stash" target="_blank" rel="noopener" class="jt-github-link" aria-label="View Stash on GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
-          </a>
-        </div>
-        <div style="font-size: 13px; color: var(--jt-text-mutedmore); margin-top: 4px;">A self-hosted read-it-later app</div>
-      </div>
-      <div style="font-size: 15px; line-height: 1.7; color: var(--jt-text-muted);">
-        Save articles, highlights, and YouTube transcripts to your own database, then turn them into a conversational AI podcast. No
-        subscription and no third-party server, just Supabase and your own account.
-      </div>
-      <a href="/projects/stash/" class="jt-github-link" style="font-size: 14px; font-weight: 500; align-self: flex-start;">Learn more about Stash &rarr;</a>
-    </div>
+  <!-- Sign in with Google -->
+  <div class="jt-sans jt-stash-section">
+    <h2 class="jt-serif jt-stash-h2">Signing in with Google</h2>
+    <p class="jt-stash-p">
+      Stash uses Google sign-in only to create your account and keep your library private to you. Stash asks Google for your name, email address,
+      and profile picture, and nothing else. It does not read your Gmail, Drive, contacts, or any other Google data.
+    </p>
+    <p class="jt-stash-p">
+      Stash is invite-only. It is a personal project run by Jordan Tranchina for a small group of invited testers, and it is not a commercial product.
+      Your data is never sold or used for advertising. The full details are in the
+      <a class="jt-inline-link" href="/projects/stash/privacy/">Privacy Policy</a> and the
+      <a class="jt-inline-link" href="/projects/stash/terms/">Terms of Service</a>.
+    </p>
+  </div>
 
-    <div class="jt-project-card">
-      <div>
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <div class="jt-serif" style="font-size: 22px; font-weight: 500; color: var(--jt-text);">Wikily</div>
-          <a href="https://github.com/JordanTranchina/wikily" target="_blank" rel="noopener" class="jt-github-link"
-            aria-label="View Wikily on GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
-          </a>
-        </div>
-        <div style="font-size: 13px; color: var(--jt-text-mutedmore); margin-top: 4px;">Realtime coaching on video calls, powered by local wikis</div>
-      </div>
-      <div style="font-size: 15px; line-height: 1.7; color: var(--jt-text-muted);">
-        A local-first macOS overlay that listens on-device during a call and surfaces the right page from your own markdown wiki, plus grounded
-        Q&amp;A for a quick recap or fact-check. Nothing leaves the machine.
-      </div>
-    </div>
-
+  <!-- Contact -->
+  <div class="jt-sans jt-stash-section" style="padding-bottom: 96px;">
+    <h2 class="jt-serif jt-stash-h2">Questions or data requests</h2>
+    <p class="jt-stash-p">
+      To ask a question or to delete your account and all of its data, email
+      <a class="jt-inline-link" href="mailto:jordan12522@gmail.com">jordan12522@gmail.com</a> or open an issue on
+      <a class="jt-inline-link" href="https://github.com/JordanTranchina/stash" target="_blank" rel="noopener">GitHub</a>.
+    </p>
   </div>
 
   <!-- Footer -->
@@ -287,19 +355,19 @@
       in touch</a>
     <div style="display: flex; gap: 24px; align-items: center;">
       <a href="https://www.linkedin.com/in/jordantranchina/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img class="jt-social-icon" src="images/icon-social-linkedin.svg" alt="LinkedIn icon" />
+        <img class="jt-social-icon" src="/images/icon-social-linkedin.svg" alt="LinkedIn icon" />
       </a>
       <a href="https://www.dribbble.com/JordanTranchina" target="_blank" rel="noopener" aria-label="Dribbble">
-        <img class="jt-social-icon" src="images/icon-social-dribbble.svg" alt="Dribbble icon" />
+        <img class="jt-social-icon" src="/images/icon-social-dribbble.svg" alt="Dribbble icon" />
       </a>
       <a href="https://www.instagram.com/jordan.tranchina/" target="_blank" rel="noopener" aria-label="Instagram">
-        <img class="jt-social-icon" src="images/icon-social-instagram.svg" alt="Instagram icon" />
+        <img class="jt-social-icon" src="/images/icon-social-instagram.svg" alt="Instagram icon" />
       </a>
       <a href="mailto:jordan12522@gmail.com" target="_blank" rel="noopener" aria-label="Email">
-        <img class="jt-social-icon" src="images/icon-social-mail.svg" alt="Email icon" />
+        <img class="jt-social-icon" src="/images/icon-social-mail.svg" alt="Email icon" />
       </a>
       <a href="https://cal.com/jordan-tranchina/30min" target="_blank" rel="noopener" aria-label="Calendar">
-        <img class="jt-social-icon" src="images/icon-social-schedule.svg" alt="Calendar icon" />
+        <img class="jt-social-icon" src="/images/icon-social-schedule.svg" alt="Calendar icon" />
       </a>
     </div>
     <div style="font-size: 12px; color: var(--jt-text-mutedmore);">&copy; Jordan Tranchina |
