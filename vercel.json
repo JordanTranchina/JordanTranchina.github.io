@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/portfolio/AMEXplore.html", "destination": "/projects/amexplore/", "permanent": true }
+  ]
+}
